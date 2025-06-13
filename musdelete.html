@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прибрати фон зображення</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #4a4a4a;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tool {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tool:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .tool img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .tool-name {
+            font-weight: bold;
+            color: #4a4a4a;
+            font-size: 18px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<p>Це не є серйозним витвором мистецтва, проте може вийти щось дійсно цікаве</p>
+
+<div class="container">
+    <div class="tool">
+        <a href="https://uvronline.app/ai?locale=ru_RU" target="_blank">
+            <img src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/1910540/259ecc7d692346ca9bad05f7292c205c/eyJ3IjoyMDB9/2.png?token-hash=D73Wb8qHlKuGT3mbhXUYqPBrz5Ee4M5tbEsWxhGun6Y%3D" alt="UVRonline">
+            <div class="tool-name">UVRonline</div>
+        </a>
+    </div>
+    <div class="tool">
+        <a href="https://vocalremover.org/ru/" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwpfGP06vKiz-T5z0Diof4CGhCXiTtPJjEUA&s" alt="Vocalremover">
+            <div class="tool-name">Vocalremover</div>
+        </a>
+    </div>
+    <div class="tool">
+        <a href="https://vocalremover.com/ru" target="_blank">
+            <img src="https://play-lh.googleusercontent.com/b3iP5M-056d9GvASJB18-25DMY0FzueD70_oKg76qkWM51PpxjDRatJAPaWbDWXX5ao" alt="VocalRemover">
+            <div class="tool-name">VocalRemover</div>
+        </a>
+    </div>
+
+</div>
+</body>
+</html>
