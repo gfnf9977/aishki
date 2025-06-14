@@ -59,6 +59,27 @@
             color: #666;
         }
 
+        .featured-category {
+            background-color: #ffcccb; /* Brighter background color */
+            border: 3px solid #ff0000; /* Bold red border */
+            transform: scale(1.1); /* Larger scale */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+            position: relative; /* For positioning the ribbon */
+        }
+
+        .featured-category::before {
+            content: "ТРЕНД";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ff0000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
         footer {
             background-color: #6a5acd;
             color: white;
@@ -76,7 +97,7 @@
 </header>
 
 <div class="container">
-    <a href="chatbots.html" class="category">
+    <a href="chatbots.html" class="category featured-category">
         <h2>ЧатБоти/універсальні ШІ</h2>
         <p>Тут ви знайдете інформацію про різні чатботи та універсальні штучні інтелекти.</p>
     </a>
@@ -118,37 +139,37 @@
 
     <a href="writetransform.html" class="category">
         <h2>Надрукований текст в написаний</h2>
-        <p>Зекономте час, аби не переписувати вручну </p>
+        <p>Зекономте час, аби не переписувати вручну</p>
     </a>
 
     <a href="createfood.html" class="category">
         <h2>Створити страву з наявних інгредієнтів</h2>
-        <p>Більше фановий інструмент, але може бути корисним </p>
+        <p>Більше фановий інструмент, але може бути корисним</p>
     </a>
 
     <a href="createlogo.html" class="category">
         <h2>Зробити логотип</h2>
-        <p>Створіть логотип для власної компанії за відповідним описом </p>
+        <p>Створіть логотип для власної компанії за відповідним описом</p>
     </a>
 
     <a href="carrepair.html" class="category">
         <h2>Ремонт авто</h2>
-        <p>Підкине відео як розв'язувати проблему для кожного авто </p>
+        <p>Підкине відео як розв'язувати проблему для кожного авто</p>
     </a>
 
     <a href="aidetector.html" class="category">
         <h2>Виявлення ШІ</h2>
-        <p>Перевіряє текст на наявність ШІ </p>
+        <p>Перевіряє текст на наявність ШІ</p>
     </a>
 
     <a href="screedesign.html" class="category">
         <h2>Зробити ефектний дизайн для скріншота</h2>
-        <p>Оформити фото для кращого представлення </p>
+        <p>Оформити фото для кращого представлення</p>
     </a>
 
     <a href="sourcesdesign.html" class="category">
         <h2>Оформити джерела до роботи (UA Standart)</h2>
-        <p>Оформити джерела для кращого представлення курсової/дипломної </p>
+        <p>Оформити джерела для кращого представлення курсової/дипломної</p>
     </a>
 
     <a href="drawaihelper.html" class="category">
@@ -174,6 +195,16 @@
     <a href="musdelete.html" class="category">
         <h2>Прибрати вокал чи мелодію з аудіофайлу</h2>
         <p>Використовується для завантаження вокалу чи мелодії окремо</p>
+    </a>
+
+    <a href="linkcorr.html" class="category">
+        <h2>Скоротити посилання</h2>
+        <p>Допоможе зробити посилання більш компактним</p>
+    </a>
+
+    <a href="qrcreate.html" class="category">
+        <h2>Посилання в QR</h2>
+        <p>Допоможе трансформувати посилання в працюючий QR</p>
     </a>
 
     <a href="texttospeech.html" class="category">
@@ -213,7 +244,6 @@
         <h2>Спілкування з ШІ</h2>
         <p>Заходь сюди, більше для фану</p>
     </a>
-
 </div>
 
 <footer>
