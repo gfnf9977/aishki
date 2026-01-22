@@ -3,266 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мій сайт</title>
+    <title>AI Hub — Всі інструменти</title>
     <style>
+        :root {
+            --primary: #6a5acd;
+            --bg: #f4f4f9;
+            --card-bg: #ffffff;
+            --text: #333;
+        }
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text);
+            line-height: 1.6;
         }
-
         header {
-            background-color: #6a5acd;
+            background: linear-gradient(135deg, #6a5acd, #483d8b);
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        h1 {
-            margin: 0;
-        }
-
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+            margin-bottom: 80px;
         }
-
-        .category {
-            background-color: white;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .main-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
             text-decoration: none;
             color: inherit;
-            display: block;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-
-        .category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        .main-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106, 90, 205, 0.2);
+            border-color: var(--primary);
         }
-
-        .category h2 {
-            color: #6a5acd;
-            border-bottom: 2px solid #6a5acd;
-            padding-bottom: 10px;
+        .main-card h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
         }
-
-        .category p {
+        .main-card p {
             color: #666;
+            font-size: 0.95rem;
         }
-
-        .featured-category {
-            background-color: #ffcccb; /* Brighter background color */
-            border: 3px solid #ff0000; /* Bold red border */
-            transform: scale(1.1); /* Larger scale */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
-            position: relative; /* For positioning the ribbon */
-        }
-
-        .featured-category::before {
-            content: "ТРЕНД";
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background-color: #ff0000;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
+        .badge {
+            display: inline-block;
+            background: #eef;
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: bold;
+            margin-top: 15px;
         }
-
         footer {
-            background-color: #6a5acd;
-            color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>НЕ ВСІ елементи є ШІ, але всеодно можуть бути корисними чи фановими інструментами</h1>
+    <h1>Центр ШІ Інструментів</h1>
+    <p>Все для роботи, навчання та розваг в одному місці</p>
 </header>
 
 <div class="container">
-    <a href="chatbots.html" class="category featured-category">
-        <h2>ЧатБоти/універсальні ШІ</h2>
-        <p>Тут ви знайдете інформацію про різні чатботи та універсальні штучні інтелекти.</p>
+    <a href="text_tools.html" class="main-card">
+        <div>
+            <h2>🤖 Текст та Асистенти</h2>
+            <p>Чат-боти, написання текстів, перефразування та Claude Connect.</p>
+        </div>
+        <span class="badge">ChatGPT, Claude, Jasper...</span>
     </a>
 
-    <a href="image_creation.html" class="category">
-        <h2>Створення зображення</h2>
-        <p>Тут ви знайдете інформацію про створення зображень.</p>
+    <a href="visual_tools.html" class="main-card">
+        <div>
+            <h2>🎨 Дизайн та Фото</h2>
+            <p>Генерація зображень, логотипів, 3D-моделей та видалення фону.</p>
+        </div>
+        <span class="badge">Midjourney, Leonardo, LogoMaker...</span>
     </a>
 
-    <a href="presentation_creation.html" class="category">
-        <h2>Створення презентацій</h2>
-        <p>Тут ви знайдете інформацію про створення презентацій.</p>
+    <a href="video_audio.html" class="main-card">
+        <div>
+            <h2>🎥 Відео та Аудіо</h2>
+            <p>Створення відео, музики, озвучення тексту та переклад роликів.</p>
+        </div>
+        <span class="badge">Sora, Heygen, Suno, ElevenLabs...</span>
     </a>
 
-    <a href="video_creation.html" class="category">
-        <h2>Створення відео</h2>
-        <p>Створення смішних, іноді правдоподібних відео</p>
+    <a href="dev_tools.html" class="main-card">
+        <div>
+            <h2>💻 Програмування та Веб</h2>
+            <p>Створення сайтів, робота з кодом, автоматизація та QR-коди.</p>
+        </div>
+        <span class="badge">Devin, Framer, Zapier...</span>
     </a>
 
-    <a href="translator.html" class="category">
-        <h2>Перекладач</h2>
-        <p>Працює більш ефективно, ніж Google-перекладач</p>
+    <a href="edu_work.html" class="main-card">
+        <div>
+            <h2>🎓 Навчання та Робота</h2>
+            <p>Презентації, оформлення джерел (ДСТУ), детектори ШІ та рукописний текст.</p>
+        </div>
+        <span class="badge">Gamma, Canva, Grafiati...</span>
     </a>
 
-    <a href="sitewtite.html" class="category">
-        <h2>Створення сайтів</h2>
-        <p>Допомога в написанні сайту з нуля</p>
+    <a href="media_extract.html" class="main-card">
+        <div>
+            <h2>📥 Робота з контентом</h2>
+            <p>Завантаження відео, резюме з YouTube, аудіо в текст та видалення водяних знаків.</p>
+        </div>
+        <span class="badge">SaveFrom, Eightify, Whisper...</span>
     </a>
 
-    <a href="codefix.html" class="category">
-        <h2>Робота з кодом</h2>
-        <p>Генератор, фіксер коду</p>
-    </a>
-
-    <a href="perephrasetool.html" class="category">
-        <h2>Перефразування</h2>
-        <p>Дані інструменти допоможуть зберегти суть іншими словами.</p>
-    </a>
-
-    <a href="writetransform.html" class="category">
-        <h2>Надрукований текст в написаний</h2>
-        <p>Зекономте час, аби не переписувати вручну</p>
-    </a>
-
-    <a href="createfood.html" class="category">
-        <h2>Створити страву з наявних інгредієнтів</h2>
-        <p>Більше фановий інструмент, але може бути корисним</p>
-    </a>
-
-    <a href="createlogo.html" class="category">
-        <h2>Зробити логотип</h2>
-        <p>Створіть логотип для власної компанії за відповідним описом</p>
-    </a>
-
-    <a href="carrepair.html" class="category">
-        <h2>Ремонт авто</h2>
-        <p>Підкине відео як розв'язувати проблему для кожного авто</p>
-    </a>
-
-    <a href="aidetector.html" class="category">
-        <h2>Виявлення ШІ</h2>
-        <p>Перевіряє текст на наявність ШІ</p>
-    </a>
-
-    <a href="screedesign.html" class="category">
-        <h2>Зробити ефектний дизайн для скріншота</h2>
-        <p>Оформити фото для кращого представлення</p>
-    </a>
-
-    <a href="sourcesdesign.html" class="category">
-        <h2>Оформити джерела до роботи (UA Standart)</h2>
-        <p>Оформити джерела для кращого представлення курсової/дипломної</p>
-    </a>
-
-    <a href="drawaihelper.html" class="category">
-        <h2>Інтерактивне малювання від руки</h2>
-        <p>Малювання з допомогою ШІ</p>
-    </a>
-
-    <a href="contenthelper.html" class="category">
-        <h2>Допомога з ідеями для створення контенту</h2>
-        <p>Генерація ідей для відео</p>
-    </a>
-
-    <a href="removebg.html" class="category">
-        <h2>Видалити фон зображення</h2>
-        <p>Видалити фон аби зображення, що необхідно вставити було на порожньому фоні</p>
-    </a>
-
-    <a href="muscreate.html" class="category">
-        <h2>Створення музики</h2>
-        <p>Створить твій музичний шедевр з твоїми словами та мелодією</p>
-    </a>
-
-    <a href="musdelete.html" class="category">
-        <h2>Прибрати вокал чи мелодію з аудіофайлу</h2>
-        <p>Використовується для завантаження вокалу чи мелодії окремо</p>
-    </a>
-
-    <a href="linkcorr.html" class="category">
-        <h2>Скоротити посилання</h2>
-        <p>Допоможе зробити посилання більш компактним</p>
-    </a>
-
-    <a href="qrcreate.html" class="category">
-        <h2>Посилання в QR</h2>
-        <p>Допоможе трансформувати посилання в працюючий QR</p>
-    </a>
-
-    <a href="texttospeech.html" class="category">
-        <h2>Озвучення тексту</h2>
-        <p>Перетворити текст/озвучити/змінити голос</p>
-    </a>
-    <a href="videotranslate.html" class="category">
-        <h2>Переклад відео</h2>
-        <p>Перекласти відео на зрозумілу користувачу мову</p>
-    </a>
-    <a href="videosence.html" class="category">
-        <h2>Побачити основний зміст відео</h2>
-        <p>Допоможе студентам зекономити час та засвоїти необхідний матеріал</p>
-    </a>
-    <a href="automatization.html" class="category">
-        <h2>Автоматизація</h2>
-        <p>Допоможе автоматизувати та відстежувати відповідні процеси</p>
-    </a>
-    <a href="videodownload.html" class="category">
-        <h2>Завантажити відео за посиланням</h2>
-        <p>Хочете завантажити відео для постійного доступу чи роботи з ним - вам сюди</p>
-    </a>
-    <a href="textwriter.html" class="category">
-        <h2>Допомога з написанням тексту</h2>
-        <p>Корисно для копірайтерів</p>
-    </a>
-    <a href="socialmedia.html" class="category">
-        <h2>Керівництво соц-мережами</h2>
-        <p>Допоможе автоматизувати управління соц-мережами</p>
-    </a>
-    <a href="audiototext.html" class="category">
-        <h2>Перетворення аудіофайлу на текст</h2>
-        <p>Допоможе вивести транскрипцію текстового файлу</p>
-    </a>
-
-    <a href="character.html" class="category">
-        <h2>Спілкування з ШІ</h2>
-        <p>Заходь сюди, більше для фану</p>
-    </a>
-
-    <a href="3dmodelcreate.html" class="category">
-        <h2>Створення 3d-моделей</h2>
-        <p>Можна погратися, може бути кориснии для геймдеву</p>
-    </a>
-
-    <a href="claudeconnect.html" class="category">
-        <h2>Доєднати claude</h2>
-        <p>Набір інструментів, які дозволяють підключити Claude до різних сервісів для керування ними</p>
-    </a>
-
-    <a href="watermarkremove.html" class="category">
-        <h2>Прибрати водяний знак</h2>
-        <p>Безкоштовна нейромережа для видалення водних знаків Sora 2</p>
+    <a href="lifestyle.html" class="main-card">
+        <div>
+            <h2>💡 Лайфстайл та Хобі</h2>
+            <p>Рецепти страв, ремонт авто, ідеї для контенту та малювання.</p>
+        </div>
+        <span class="badge">ChefGPT, Carcare, AutoDraw...</span>
     </a>
 </div>
 
 <footer>
-    <p>&copy; 2025 Мій сайт. Усі права захищені.</p>
+    <p>© 2026 Твій ШІ Хаб. Усі права захищені.</p>
 </footer>
 </body>
 </html>
