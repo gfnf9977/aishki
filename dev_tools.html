@@ -6,13 +6,16 @@
     <title>Dev Tools — AI Hub</title>
     <style>
         :root { --primary: #6a5acd; --bg: #f4f4f9; }
-        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
         .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
-        .tool { background: white; padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; border-radius: 5px; }
-        .tool a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
+        .tool { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 12px; border-radius: 5px; }
+        .tool a { text-decoration: none; color: inherit; display: block; }
+        .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
+        .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -21,23 +24,91 @@
 
     <h2 class="section-title">Створення сайтів</h2>
     <div class="container">
-        <div class="tool"><a href="https://www.framer.com/features/ai/" target="_blank"><img src="https://res.cloudinary.com/apideck/image/upload/w_196,f_auto/v1557455842/catalog/framer/icon128x128.jpg"><div>Framer AI</div></a></div>
-        <div class="tool"><a href="https://Devin.ai" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzTt1qoovi_NjVmWY4PdzGGz4HgLbOcpu2g&s"><div>Devin</div></a></div>
-        <div class="tool"><a href="https://durable.co/" target="_blank"><img src="https://storage.googleapis.com/aiagents_1/agent-logos/1738775230735-dfqbIXSp400x400.png"><div>Durable</div></a></div>
-        <div class="tool"><a href="https://ua.weblium.com/" target="_blank"><img src="https://www.toolpilot.ai/cdn/shop/files/webliumlogo.jpg?v=1685516163"><div>Weblium</div></a></div>
+        <div class="tool">
+            <a href="https://lovable.dev/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7huCfzuRMXWijcRCrp3F8iQvrRfQakxugNw&s">
+                <div class="tool-name">Lovable</div>
+                <div class="tool-desc">Швидка розробка повноцінних веб-застосунків за допомогою ШІ.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://Devin.ai" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzTt1qoovi_NjVmWY4PdzGGz4HgLbOcpu2g&s">
+                <div class="tool-name">Devin</div>
+                <div class="tool-desc">Перший у світі автономний ШІ-інженер для написання коду.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://www.framer.com/features/ai/" target="_blank">
+                <img src="https://res.cloudinary.com/apideck/image/upload/w_196,f_auto/v1557455842/catalog/framer/icon128x128.jpg">
+                <div class="tool-name">Framer AI</div>
+                <div class="tool-desc">Створення професійних лендінгів та сайтів з тексту.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://durable.co/" target="_blank">
+                <img src="https://storage.googleapis.com/aiagents_1/agent-logos/1738775230735-dfqbIXSp400x400.png">
+                <div class="tool-name">Durable</div>
+                <div class="tool-desc">Конструктор сайтів, що створює готовий проєкт за 30 секунд.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://ua.weblium.com/" target="_blank">
+                <img src="https://www.toolpilot.ai/cdn/shop/files/webliumlogo.jpg?v=1685516163">
+                <div class="tool-name">Weblium</div>
+                <div class="tool-desc">Розумний конструктор сайтів з великою кількістю шаблонів.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Код та Автоматизація</h2>
     <div class="container">
-        <div class="tool"><a href="https://codepal.ai/code-fixer" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C4D0BAQGvQ08IjkQ9_Q/company-logo_200_200/company-logo_200_200/0/1676074453364?e=2147483647&v=beta&t=a2w7whDQTX4lzz4l6bgGbSTt9-AtEoaX3xv6I09UkVI"><div>Codepal</div></a></div>
-        <div class="tool"><a href="https://zapier.com/app/home" target="_blank"><img src="https://appstore.superoffice.com/Image/GetDetailPageAppIcon?applicationId=197"><div>Zapier</div></a></div>
-        <div class="tool"><a href="https://eu2.make.com/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT48-xVEGFDXQORy1gdLzWzVCIR8GHZlYV2Hw&s"><div>Make AI</div></a></div>
+        <div class="tool">
+            <a href="https://codepal.ai/code-fixer" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGvQ08IjkQ9_Q/company-logo_200_200/company-logo_200_200/0/1676074453364?e=2147483647&v=beta&t=a2w7whDQTX4lzz4l6bgGbSTt9-AtEoaX3xv6I09UkVI">
+                <div class="tool-name">Codepal</div>
+                <div class="tool-desc">Виправлення помилок у коді та генерація нових функцій.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://zapier.com/app/home" target="_blank">
+                <img src="https://appstore.superoffice.com/Image/GetDetailPageAppIcon?applicationId=197">
+                <div class="tool-name">Zapier</div>
+                <div class="tool-desc">Автоматизація робочих процесів шляхом з'єднання різних сервісів.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://eu2.make.com/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT48-xVEGFDXQORy1gdLzWzVCIR8GHZlYV2Hw&s">
+                <div class="tool-name">Make AI</div>
+                <div class="tool-desc">Візуальна платформа для створення складних автоматизацій.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://github.com/features/copilot" target="_blank">
+                <img src="https://github.githubassets.com/assets/copilot-logo-00627e777f98.png">
+                <div class="tool-name">GitHub Copilot</div>
+                <div class="tool-desc">Найпопулярніший ШІ-автодоповнювач коду, що працює прямо у вашому IDE.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Корисні дрібниці</h2>
     <div class="container">
-        <div class="tool"><a href="https://surl.li/uk" target="_blank"><img src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoibGlmZXRpbW8uY29tIiwidiI6Mjk1ODgxMTI4NSwiciI6MX0/wp-content/uploads/2024/07/Surli-Free-URL-Shortener-by-HyperHost-Logo.jpg"><div>Скорочення URL</div></a></div>
-        <div class="tool"><a href="https://me-qr.com/uk/" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/6086a505b7542b00017dc44b/0x0.png"><div>Генератор QR</div></a></div>
+        <div class="tool">
+            <a href="https://surl.li/uk" target="_blank">
+                <img src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoibGlmZXRpbW8uY29tIiwidiI6Mjk1ODgxMTI4NSwiciI6MX0/wp-content/uploads/2024/07/Surli-Free-URL-Shortener-by-HyperHost-Logo.jpg">
+                <div class="tool-name">Surli</div>
+                <div class="tool-desc">Надійний сервіс для швидкого скорочення довгих посилань.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://me-qr.com/uk/" target="_blank">
+                <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/6086a505b7542b00017dc44b/0x0.png">
+                <div class="tool-name">ME-QR</div>
+                <div class="tool-desc">Генерація QR-кодів для посилань, текстів або Wi-Fi мереж.</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>

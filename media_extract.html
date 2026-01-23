@@ -6,13 +6,16 @@
     <title>Контент — AI Hub</title>
     <style>
         :root { --primary: #6a5acd; --bg: #f4f4f9; }
-        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
         .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
-        .tool { background: white; padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; border-radius: 5px; }
-        .tool a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
+        .tool { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 12px; border-radius: 5px; }
+        .tool a { text-decoration: none; color: inherit; display: block; }
+        .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
+        .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -21,20 +24,56 @@
 
     <h2 class="section-title">Відео (Завантаження та Саммарі)</h2>
     <div class="container">
-        <div class="tool"><a href="https://uk.savefrom.net/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfvJ4AoThVtmKIoeb0ye9qGjtMB9qFXfNzxA&s"><div>SaveFrom</div></a></div>
-        <div class="tool"><a href="https://eightify.app/ru/" target="_blank"><img src="https://play-lh.googleusercontent.com/oa1pJsFkrzBjUakOJsnb3kEHCPRHvEbzZ40sW0hDESh1_9bmNo0k1FQqwinsVBn-Dew"><div>Eightify (YouTube)</div></a></div>
-        <div class="tool"><a href="https://sider.ai/" target="_blank"><img src="https://play-lh.googleusercontent.com/VghuZRn0-oLvbaGqptsM-9Qr6Ka7Pmw7lfmu6_UQ56mZS6bsXbET9Uf0wF0FECP8lEM"><div>Sider</div></a></div>
+        <div class="tool">
+            <a href="https://uk.savefrom.net/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfvJ4AoThVtmKIoeb0ye9qGjtMB9qFXfNzxA&s">
+                <div class="tool-name">SaveFrom</div>
+                <div class="tool-desc">Найпростіший спосіб завантажити відео з YouTube та інших платформ.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://eightify.app/ru/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/oa1pJsFkrzBjUakOJsnb3kEHCPRHvEbzZ40sW0hDESh1_9bmNo0k1FQqwinsVBn-Dew">
+                <div class="tool-name">Eightify</div>
+                <div class="tool-desc">Швидке створення тез та резюме будь-якого YouTube-відео.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://sider.ai/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/VghuZRn0-oLvbaGqptsM-9Qr6Ka7Pmw7lfmu6_UQ56mZS6bsXbET9Uf0wF0FECP8lEM">
+                <div class="tool-name">Sider</div>
+                <div class="tool-desc">ШІ-помічник у браузері для аналізу контенту та перекладу сторінок.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Аудіо в Текст</h2>
     <div class="container">
-        <div class="tool"><a href="https://app.aurisai.io/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYoYnGjfbF4Nv6yohdndHsYRhIjYl5C_AHOw&s"><div>Aurisai</div></a></div>
-        <div class="tool"><a href="https://www.clipto.com/" target="_blank"><img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/66695025b542ed9261ae0202/0x0.png"><div>Clipto</div></a></div>
+        <div class="tool">
+            <a href="https://app.aurisai.io/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYoYnGjfbF4Nv6yohdndHsYRhIjYl5C_AHOw&s">
+                <div class="tool-name">Aurisai</div>
+                <div class="tool-desc">Транскрибація аудіо в текст та автоматичне створення субтитрів.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://www.clipto.com/" target="_blank">
+                <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/66695025b542ed9261ae0202/0x0.png">
+                <div class="tool-name">Clipto</div>
+                <div class="tool-desc">Професійне перетворення аудіо та відео файлів на текстові документи.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Інше</h2>
     <div class="container">
-        <div class="tool"><a href="https://www.topyappers.com/tools/sora-watermark-remover" target="_blank"><img src="https://www.topyappers.com/logo.png"><div>Sora Watermark Remove</div></a></div>
+        <div class="tool">
+            <a href="https://www.topyappers.com/tools/sora-watermark-remover" target="_blank">
+                <img src="https://www.topyappers.com/logo.png">
+                <div class="tool-name">Sora Watermark Remover</div>
+                <div class="tool-desc">Видалення водяних знаків та маркувань з відео, створених ШІ.</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>

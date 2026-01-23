@@ -6,13 +6,16 @@
     <title>Текст та Асистенти — AI Hub</title>
     <style>
         :root { --primary: #6a5acd; --bg: #f4f4f9; }
-        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
         .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
-        .tool { background: white; padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; border-radius: 5px; }
-        .tool a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
+        .tool { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 12px; border-radius: 5px; }
+        .tool a { text-decoration: none; color: inherit; display: block; }
+        .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
+        .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -21,26 +24,105 @@
 
     <h2 class="section-title">Універсальні Чат-боти</h2>
     <div class="container">
-        <div class="tool"><a href="https://chat.openai.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png"><div>ChatGPT</div></a></div>
-        <div class="tool"><a href="https://claude.ai/new" target="_blank"><img src="https://cdn-1.webcatalog.io/catalog/claude/claude-icon-filled-256.png?v=1748824349555"><div>Claude</div></a></div>
-        <div class="tool"><a href="https://gemini.google.com/app" target="_blank"><img src="https://www.gstatic.com/lamda/images/gemini_thumbnail_v2_55a4e3be7b83404a620e5.jpg"><div>Gemini</div></a></div>
-        <div class="tool"><a href="https://chat.deepseek.com/" target="_blank"><img src="https://play-lh.googleusercontent.com/d2zqBFBEymSZKaVg_dRo1gh3hBFn7_Kl9rO74xkDmnJeLgDW0MoJD3cUx0QzZN6jdsg"><div>Deepseek</div></a></div>
-        <div class="tool"><a href="https://grok.com/" target="_blank"><img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI"><div>Grok</div></a></div>
-        <div class="tool"><a href="https://chat.mistral.ai/chat" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg/800px-Mistral_AI_logo_%282025%E2%80%93%29.svg.png"><div>Mistral</div></a></div>
+        <div class="tool">
+            <a href="https://chat.openai.com/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png">
+                <div class="tool-name">ChatGPT</div>
+                <div class="tool-desc">Найвідоміший ШІ для текстів, коду та планування задач.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://claude.ai/new" target="_blank">
+                <img src="https://cdn-1.webcatalog.io/catalog/claude/claude-icon-filled-256.png?v=1748824349555">
+                <div class="tool-name">Claude</div>
+                <div class="tool-desc">Лідер у роботі з великими документами та програмуванні.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://gemini.google.com/app" target="_blank">
+                <img src="https://www.gstatic.com/lamda/images/gemini_thumbnail_v2_55a4e3be7b83404a620e5.jpg">
+                <div class="tool-name">Gemini</div>
+                <div class="tool-desc">Потужний ШІ від Google з інтеграцією в екосистему сервісів.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://chat.deepseek.com/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/d2zqBFBEymSZKaVg_dRo1gh3hBFn7_Kl9rO74xkDmnJeLgDW0MoJD3cUx0QzZN6jdsg">
+                <div class="tool-name">Deepseek</div>
+                <div class="tool-desc">Високоточна модель, що стрімко набирає популярність у світі.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://grok.com/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/dQRKhi30KpzG3gww3TdVLzyIAVuOAWylnAcgnEUxqfpm2A8dEt2sgApVvtKAy-DO8aI">
+                <div class="tool-name">Grok</div>
+                <div class="tool-desc">ШІ від X (Twitter) з доступом до актуальних новин у реальному часі.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://chat.mistral.ai/chat" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg/800px-Mistral_AI_logo_%282025%E2%80%93%29.svg.png">
+                <div class="tool-name">Mistral</div>
+                <div class="tool-desc">Європейська альтернатива з відкритим кодом та швидкою відповіддю.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://chat.qwen.ai/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/yfxVdEoIReE0nVy7vtBToy7Dss9-1Ylih8WJIcaBMwjYr7eoz-nd0D45oaI7k-EDzzY=w240-h480-rw">
+                <div class="tool-name">Qwen</div>
+                <div class="tool-desc">Універсальний чат-бот від Alibaba, що чудово розуміє складні логічні запити.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Написання та Перефразування</h2>
     <div class="container">
-        <div class="tool"><a href="https://app.writesonic.com/ru" target="_blank"><img src="https://avatars.githubusercontent.com/u/83169781?s=280&v=4"><div>Writesonic</div></a></div>
-        <div class="tool"><a href="https://app.rytr.me/create" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D560BAQEGlrXuASrgOA/company-logo_200_200/company-logo_200_200/0/1709652570071/rytr_me_logo?e=2147483647&v=beta&t=S1QXG1KDXyerogZ84vCO4GX3f3vC89VCjjoVQHozZgY"><div>RYTR</div></a></div>
-        <div class="tool"><a href="https://neuralwriter.com/uk/" target="_blank"><img src="https://www.bestaitools.com/wp-content/uploads/2024/06/neuralwriter-ico.png"><div>NeuralWriter</div></a></div>
-        <div class="tool"><a href="https://retext.ai/ru" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQFEN-IelOBc1Q/company-logo_200_200/company-logo_200_200/0/1729886453222/retext_ai_logo?e=2147483647&v=beta&t=W59OAXA5IB7p3zVIZpQy4C2EUntTkRZlT3ui9NQcw30"><div>ReText</div></a></div>
+        <div class="tool">
+            <a href="https://app.writesonic.com/ru" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/83169781?s=280&v=4">
+                <div class="tool-name">Writesonic</div>
+                <div class="tool-desc">Професійний інструмент для SEO-статей та маркетингових текстів.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://app.rytr.me/create" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/D560BAQEGlrXuASrgOA/company-logo_200_200/company-logo_200_200/0/1709652570071/rytr_me_logo?e=2147483647&v=beta&t=S1QXG1KDXyerogZ84vCO4GX3f3vC89VCjjoVQHozZgY">
+                <div class="tool-name">RYTR</div>
+                <div class="tool-desc">Швидкий помічник для написання листів, постів та описів.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://neuralwriter.com/uk/" target="_blank">
+                <img src="https://www.bestaitools.com/wp-content/uploads/2024/06/neuralwriter-ico.png">
+                <div class="tool-name">NeuralWriter</div>
+                <div class="tool-desc">Потужний багатомовний інструмент для якісного рерайту тексту.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://retext.ai/ru" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFEN-IelOBc1Q/company-logo_200_200/company-logo_200_200/0/1729886453222/retext_ai_logo?e=2147483647&v=beta&t=W59OAXA5IB7p3zVIZpQy4C2EUntTkRZlT3ui9NQcw30">
+                <div class="tool-name">ReText</div>
+                <div class="tool-desc">Сервіс для зміни тональності тексту та розширення його змісту.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Переклад та Спеціальні</h2>
     <div class="container">
-        <div class="tool"><a href="https://www.deepl.com/uk/translator" target="_blank"><img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxnCzTIURlExTvn6vGrmhWYr6qq9Wyqf4yHAX5J05LTdObixKM1Rzi2UxtiHC.jApv6q6tMwTPL1Kz3Nur9RJDuw-&format=source"><div>DeepL</div></a></div>
-        <div class="tool"><a href="https://claude.ai/directory" target="_blank"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQFko-zWIZk_pw/company-logo_200_200/B4EZhiRWKvHgAI-/0/1753995371543/claude_logo?e=2147483647&v=beta&t=CVNmFKyWig0Uo78oAr3II6KVLu_o0aXPtnt4S6XgOr8"><div>Claude Directory</div></a></div>
+        <div class="tool">
+            <a href="https://www.deepl.com/uk/translator" target="_blank">
+                <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxnCzTIURlExTvn6vGrmhWYr6qq9Wyqf4yHAX5J05LTdObixKM1Rzi2UxtiHC.jApv6q6tMwTPL1Kz3Nur9RJDuw-&format=source">
+                <div class="tool-name">DeepL</div>
+                <div class="tool-desc">Найточніший перекладач, що зберігає контекст та стиль оригіналу.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://claude.ai/directory" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFko-zWIZk_pw/company-logo_200_200/B4EZhiRWKvHgAI-/0/1753995371543/claude_logo?e=2147483647&v=beta&t=CVNmFKyWig0Uo78oAr3II6KVLu_o0aXPtnt4S6XgOr8">
+                <div class="tool-name">Claude Directory</div>
+                <div class="tool-desc">Каталог офіційних та корисних інтеграцій для екосистеми Claude.</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>

@@ -6,13 +6,16 @@
     <title>Lifestyle — AI Hub</title>
     <style>
         :root { --primary: #6a5acd; --bg: #f4f4f9; }
-        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
         .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
-        .tool { background: white; padding: 15px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 10px; border-radius: 5px; }
-        .tool a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.9rem; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
+        .tool { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; align-items: center; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool img { width: 50px; height: 50px; object-fit: contain; margin-bottom: 12px; border-radius: 5px; }
+        .tool a { text-decoration: none; color: inherit; display: block; }
+        .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
+        .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -21,16 +24,52 @@
 
     <h2 class="section-title">Побут та Хобі</h2>
     <div class="container">
-        <div class="tool"><a href="https://www.chefgpt.xyz/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPdFK1AiGD82xLyfQFzUqI5szUG8qOce_JbA&s"><div>ChefGPT (Рецепти)</div></a></div>
-        <div class="tool"><a href="https://www.carcarekiosk.com/" target="_blank"><img src="https://www.eu-startups.com/wp-content/uploads/2022/06/Carcare-Systems-Europe.jpg"><div>Carcare (Ремонт)</div></a></div>
-        <div class="tool"><a href="https://www.autodraw.com/" target="_blank"><img src="https://www.autodraw.com/assets/images/autodraw-shareimage.png"><div>AutoDraw</div></a></div>
+        <div class="tool">
+            <a href="https://www.chefgpt.xyz/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPdFK1AiGD82xLyfQFzUqI5szUG8qOce_JbA&s">
+                <div class="tool-name">ChefGPT</div>
+                <div class="tool-desc">Складання рецептів на основі продуктів, які вже є у вашому холодильнику.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://www.carcarekiosk.com/" target="_blank">
+                <img src="https://www.eu-startups.com/wp-content/uploads/2022/06/Carcare-Systems-Europe.jpg">
+                <div class="tool-name">Carcare</div>
+                <div class="tool-desc">Велика база відеоінструкцій з ремонту та обслуговування авто.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://www.autodraw.com/" target="_blank">
+                <img src="https://www.autodraw.com/assets/images/autodraw-shareimage.png">
+                <div class="tool-name">AutoDraw</div>
+                <div class="tool-desc">Перетворення ваших простих ескізів на професійні іконки та малюнки.</div>
+            </a>
+        </div>
     </div>
 
     <h2 class="section-title">Соціальні мережі та Фан</h2>
     <div class="container">
-        <div class="tool"><a href="https://vidiq.com/ru/" target="_blank"><img src="https://play-lh.googleusercontent.com/dK_aPCxnVWxv1agmDGUsPCP4ClImkoFcWpequyJewqudNkgqLlpc3B21aEtQhstriA"><div>vidiq (Ідеї)</div></a></div>
-        <div class="tool"><a href="https://character.ai/" target="_blank"><img src="https://media.licdn.com/dms/image/v2/C560BAQFnYb3w5mQMKQ/company-logo_200_200/company-logo_200_200/0/1679554051094/character_ai_logo?e=2147483647&v=beta&t=CrD2N3TToQOyeAI6JSoHIqeA1NlgVA22iIWMTmQcdWc"><div>Character AI</div></a></div>
-        <div class="tool"><a href="https://www.radaar.io/ru/" target="_blank"><img src="https://play-lh.googleusercontent.com/gnDC1wTLl0tYPLBiy4cGnhHznzY0BFAJ5jdh8z5wLZOCF8o4vc7TZ3kT_ReYPpNY-Q"><div>Radaar</div></a></div>
+        <div class="tool">
+            <a href="https://vidiq.com/ru/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/dK_aPCxnVWxv1agmDGUsPCP4ClImkoFcWpequyJewqudNkgqLlpc3B21aEtQhstriA">
+                <div class="tool-name">vidiq</div>
+                <div class="tool-desc">Аналітика та генерація ідей для успішного просування YouTube-каналу.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://character.ai/" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/C560BAQFnYb3w5mQMKQ/company-logo_200_200/company-logo_200_200/0/1679554051094/character_ai_logo?e=2147483647&v=beta&t=CrD2N3TToQOyeAI6JSoHIqeA1NlgVA22iIWMTmQcdWc">
+                <div class="tool-name">Character AI</div>
+                <div class="tool-desc">Спілкування з віртуальними персонажами, відомими особами або асистентами.</div>
+            </a>
+        </div>
+        <div class="tool">
+            <a href="https://www.radaar.io/ru/" target="_blank">
+                <img src="https://play-lh.googleusercontent.com/gnDC1wTLl0tYPLBiy4cGnhHznzY0BFAJ5jdh8z5wLZOCF8o4vc7TZ3kT_ReYPpNY-Q">
+                <div class="tool-name">Radaar</div>
+                <div class="tool-desc">Універсальна платформа для управління контентом та планування постів.</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>
