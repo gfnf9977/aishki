@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend & Design — AI Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        :root { --primary: #6a5acd; --bg: #f4f4f9; }
+        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
+        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .tool { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+        .tool a { text-decoration: none; color: inherit; font-weight: bold; font-size: 1.1rem; margin-bottom: 8px; display: block; }
+        .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; flex-grow: 1; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← На головну</a>
+    <h1>✨ Frontend та Дизайн-ресурси</h1>
+    <p>Інструменти, анімації та джерела натхнення для розробника.</p>
+
+    <h2 class="section-title">Анімації та CSS-ефекти</h2>
+    <div class="container">
+        <div class="tool">
+            <i class="fas fa-paint-brush"></i>
+            <a href="https://github.com/ML78-AI/ouidevcss" target="_blank">Ouidevcss</a>
+            <p class="tool-desc">Колекція чистих CSS-скриптів: лоадери, бордери, градієнти та hover-ефекти.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-fill-drip"></i>
+            <a href="https://neat.firecms.co/" target="_blank">Neat</a>
+            <p class="tool-desc">Генератор анімованих 3D-градієнтів для фону сайту. Експорт у CSS/JSON.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-spinner"></i>
+            <a href="https://css-loaders.com/" target="_blank">CSS Loaders</a>
+            <p class="tool-desc">Понад 600 лоадерів на чистому CSS. Копіювання коду в один клік.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-play"></i>
+            <a href="https://animista.net/" target="_blank">Animista</a>
+            <p class="tool-desc">Конструктор базових CSS анімацій з налаштуванням easing та delay.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Іконки та Графіка</h2>
+    <div class="container">
+        <div class="tool">
+            <i class="fas fa-icons"></i>
+            <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
+            <p class="tool-desc">500,000+ безкоштовних SVG-векторів та іконок з відкритою ліцензією.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-play-circle"></i>
+            <a href="https://lottiefiles.com/" target="_blank">LottieFiles</a>
+            <p class="tool-desc">Найбільша бібліотека легких анімованих іконок та ілюстрацій (JSON).</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-code"></i>
+            <a href="https://css.gg/icons" target="_blank">CSS.gg</a>
+            <p class="tool-desc">700+ іконок у форматі чистого CSS. Мінімалістичні та легкі для UI.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Розробка та Дані</h2>
+    <div class="container">
+        <div class="tool">
+            <i class="fas fa-database"></i>
+            <a href="https://fakerapi.it/" target="_blank">Faker API</a>
+            <p class="tool-desc">Генерація мок-даних (користувачі, продукти, адреси) для тестування фронтенду.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-square"></i>
+            <a href="https://cssbuttons.io/" target="_blank">CSSButtons</a>
+            <p class="tool-desc">Колекція стильних анімованих кнопок. Частина спільноти Uiverse.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Натхнення (Inspiration) ❤️</h2>
+    <div class="container">
+        <div class="tool">
+            <i class="far fa-eye"></i>
+            <a href="https://www.a1.gallery/" target="_blank">A1 Gallery</a>
+            <p class="tool-desc">Галерея найкращих сайтів світу з фільтрами за стилем та технологіями.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-moon"></i>
+            <a href="https://www.dark.design/" target="_blank">Dark Design</a>
+            <p class="tool-desc">Найкращі зразки веб-дизайну у темній темі.</p>
+        </div>
+        <div class="tool">
+            <i class="fas fa-landmark"></i>
+            <a href="https://land-book.com/" target="_blank">Land-book</a>
+            <p class="tool-desc">Величезна добірка лендінгів, відсортована за типом та кольором.</p>
+        </div>
+    </div>
+</body>
+</html>
