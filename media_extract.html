@@ -16,6 +16,20 @@
         .tool a { text-decoration: none; color: inherit; display: block; }
         .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.7); border-color: #6a5acd; }
+            70% { box-shadow: 0 0 0 15px rgba(106, 90, 205, 0); border-color: #6a5acd; }
+            100% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); border-color: #6a5acd; }
+        }
+
+        .highlight-active {
+            border: 3px solid #6a5acd !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -24,21 +38,21 @@
 
     <h2 class="section-title">Відео (Завантаження та Саммарі)</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="SaveFrom">
             <a href="https://uk.savefrom.net/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfvJ4AoThVtmKIoeb0ye9qGjtMB9qFXfNzxA&s">
                 <div class="tool-name">SaveFrom</div>
                 <div class="tool-desc">Найпростіший спосіб завантажити відео з YouTube та інших платформ.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Eightify">
             <a href="https://eightify.app/ru/" target="_blank">
                 <img src="https://play-lh.googleusercontent.com/oa1pJsFkrzBjUakOJsnb3kEHCPRHvEbzZ40sW0hDESh1_9bmNo0k1FQqwinsVBn-Dew">
                 <div class="tool-name">Eightify</div>
                 <div class="tool-desc">Швидке створення тез та резюме будь-якого YouTube-відео.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Sider">
             <a href="https://sider.ai/" target="_blank">
                 <img src="https://play-lh.googleusercontent.com/VghuZRn0-oLvbaGqptsM-9Qr6Ka7Pmw7lfmu6_UQ56mZS6bsXbET9Uf0wF0FECP8lEM">
                 <div class="tool-name">Sider</div>
@@ -49,14 +63,14 @@
 
     <h2 class="section-title">Аудіо в Текст</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Aurisai">
             <a href="https://app.aurisai.io/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYoYnGjfbF4Nv6yohdndHsYRhIjYl5C_AHOw&s">
                 <div class="tool-name">Aurisai</div>
                 <div class="tool-desc">Транскрибація аудіо в текст та автоматичне створення субтитрів.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Clipto">
             <a href="https://www.clipto.com/" target="_blank">
                 <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/66695025b542ed9261ae0202/0x0.png">
                 <div class="tool-name">Clipto</div>
@@ -67,7 +81,7 @@
 
     <h2 class="section-title">Інше</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="SoraWatermarkRemover">
             <a href="https://www.topyappers.com/tools/sora-watermark-remover" target="_blank">
                 <img src="https://www.topyappers.com/logo.png">
                 <div class="tool-name">Sora Watermark Remover</div>
@@ -75,5 +89,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetTool = document.querySelector(hash);
+                if (targetTool) {
+                    targetTool.classList.add('highlight-active');
+                    targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

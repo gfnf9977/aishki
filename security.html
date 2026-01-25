@@ -6,7 +6,7 @@
     <title>Security — AI Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <style>
-        :root { --primary: #e74c3c; --bg: #f4f4f9; } /* Червоний для безпеки */
+        :root { --primary: #e74c3c; --bg: #f4f4f9; }
         body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
         .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
@@ -17,6 +17,20 @@
         .tool-name { font-weight: bold; color: #333; margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
         a { text-decoration: none; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); border-color: #e74c3c; }
+            70% { box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); border-color: #e74c3c; }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); border-color: #e74c3c; }
+        }
+
+        .highlight-active {
+            border: 3px solid #e74c3c !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -25,17 +39,17 @@
 
     <h2 class="section-title">Перевірка та Приватність</h2>
     <div class="container">
-        <a href="https://haveibeenpwned.com/" target="_blank" class="tool">
+        <a href="https://haveibeenpwned.com/" target="_blank" class="tool" id="HaveIBeenPwned">
             <i class="fas fa-user-shield"></i>
             <div class="tool-name">Have I Been Pwned</div>
             <div class="tool-desc">Перевірка витоку твоїх паролів та пошт у глобальних базах даних.</div>
         </a>
-        <a href="https://www.deepware.ai/" target="_blank" class="tool">
+        <a href="https://www.deepware.ai/" target="_blank" class="tool" id="DeepwareScanner">
             <i class="fas fa-mask"></i>
             <div class="tool-name">Deepware Scanner</div>
             <div class="tool-desc">Детектор дипфейків: перевіряє відео на наявність маніпуляцій ШІ.</div>
         </a>
-        <a href="https://duckduckgo.com/email/" target="_blank" class="tool">
+        <a href="https://duckduckgo.com/email/" target="_blank" class="tool" id="DDGEmailProtection">
             <i class="fas fa-envelope-open-text"></i>
             <div class="tool-name">DDG Email Protection</div>
             <div class="tool-desc">Створення анонімних адрес для захисту основної пошти від спаму та трекерів.</div>
@@ -44,11 +58,24 @@
 
     <h2 class="section-title">Розвідка (OSINT)</h2>
     <div class="container">
-        <a href="https://osintframework.com/" target="_blank" class="tool">
+        <a href="https://osintframework.com/" target="_blank" class="tool" id="OSINTFramework">
             <i class="fas fa-search-location"></i>
             <div class="tool-name">OSINT Framework</div>
             <div class="tool-desc">Величезна карта інструментів для збору інформації з відкритих джерел.</div>
         </a>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetTool = document.querySelector(hash);
+                if (targetTool) {
+                    targetTool.classList.add('highlight-active');
+                    targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

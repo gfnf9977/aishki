@@ -16,6 +16,20 @@
         .tool a { text-decoration: none; color: inherit; display: block; }
         .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.7); border-color: #6a5acd; }
+            70% { box-shadow: 0 0 0 15px rgba(106, 90, 205, 0); border-color: #6a5acd; }
+            100% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); border-color: #6a5acd; }
+        }
+
+        .highlight-active {
+            border: 3px solid #6a5acd !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -24,60 +38,60 @@
 
     <h2 class="section-title">Побут та Хобі</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="ChefGPT">
             <a href="https://www.chefgpt.xyz/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPdFK1AiGD82xLyfQFzUqI5szUG8qOce_JbA&s">
                 <div class="tool-name">ChefGPT</div>
                 <div class="tool-desc">Складання рецептів на основі продуктів, які вже є у вашому холодильнику.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Carcare">
             <a href="https://www.carcarekiosk.com/" target="_blank">
                 <img src="https://www.eu-startups.com/wp-content/uploads/2022/06/Carcare-Systems-Europe.jpg">
                 <div class="tool-name">Carcare</div>
                 <div class="tool-desc">Велика база відеоінструкцій з ремонту та обслуговування авто.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="AutoDraw">
             <a href="https://www.autodraw.com/" target="_blank">
                 <img src="https://www.autodraw.com/assets/images/autodraw-shareimage.png">
                 <div class="tool-name">AutoDraw</div>
                 <div class="tool-desc">Перетворення ваших простих ескізів на професійні іконки та малюнки.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="GeminiRestoration">
             <a href="https://gemini.google.com/" target="_blank">
                 <img src="https://www.gstatic.com/lamda/images/gemini_thumbnail_v2_55a4e3be7b83404a620e5.jpg">
                 <div class="tool-name">Gemini: Реставрація</div>
-                <div class="tool-desc">Генеруйте історичні сцени суто за координатами та часом. Неймовірна точність візуалізації минулого</div>
+                <div class="tool-desc">Генеруйте історичні сцени суто за координатами та часом. Неймовірна точність візуалізації минулого.</div>
             </a>
         </div>
     </div>
 
     <h2 class="section-title">Соціальні мережі та Фан</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Vidiq">
             <a href="https://vidiq.com/ru/" target="_blank">
                 <img src="https://play-lh.googleusercontent.com/dK_aPCxnVWxv1agmDGUsPCP4ClImkoFcWpequyJewqudNkgqLlpc3B21aEtQhstriA">
                 <div class="tool-name">vidiq</div>
                 <div class="tool-desc">Аналітика та генерація ідей для успішного просування YouTube-каналу.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="CharacterAI">
             <a href="https://character.ai/" target="_blank">
                 <img src="https://media.licdn.com/dms/image/v2/C560BAQFnYb3w5mQMKQ/company-logo_200_200/company-logo_200_200/0/1679554051094/character_ai_logo?e=2147483647&v=beta&t=CrD2N3TToQOyeAI6JSoHIqeA1NlgVA22iIWMTmQcdWc">
                 <div class="tool-name">Character AI</div>
                 <div class="tool-desc">Спілкування з віртуальними персонажами, відомими особами або асистентами.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Radaar">
             <a href="https://www.radaar.io/ru/" target="_blank">
                 <img src="https://play-lh.googleusercontent.com/gnDC1wTLl0tYPLBiy4cGnhHznzY0BFAJ5jdh8z5wLZOCF8o4vc7TZ3kT_ReYPpNY-Q">
                 <div class="tool-name">Radaar</div>
                 <div class="tool-desc">Універсальна платформа для управління контентом та планування постів.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="SoraMarker">
             <a href="https://soramarker.t3.gg/" target="_blank">
                 <img src="https://nofilmschool.com/media-library/removing-the-watermarks-from-sora-2.jpg?id=61750389&width=1245&height=700&coordinates=0%2C0%2C0%2C1">
                 <div class="tool-name">Sora Marker</div>
@@ -85,5 +99,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetTool = document.querySelector(hash);
+                if (targetTool) {
+                    targetTool.classList.add('highlight-active');
+                    targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

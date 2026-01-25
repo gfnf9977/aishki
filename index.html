@@ -208,7 +208,7 @@
         </div>
         <span class="badge">Have I Been Pwned, Deepware...</span>
     </a>
-    
+
     <a href="lifestyle.html" class="main-card">
         <div>
             <h2>💡 Лайфстайл та Хобі</h2>
@@ -224,20 +224,19 @@
 
 <script>
     const pages = [
-        'text_tools.html', 
-        'visual_tools.html', 
-        'video_audio.html', 
-        'dev_tools.html', 
+        'text_tools.html',
+        'visual_tools.html',
+        'video_audio.html',
+        'dev_tools.html',
         'frontend_dev.html',
-        'edu_work.html', 
-        'media_extract.html', 
+        'edu_work.html',
+        'media_extract.html',
         'security.html',
         'lifestyle.html'
     ];
 
     let dynamicTools = [];
 
-    // Функція збору даних
     async function buildSearchIndex() {
         const parser = new DOMParser();
 
@@ -245,23 +244,26 @@
             try {
                 const response = await fetch(page);
                 if (!response.ok) continue;
-                
+
                 const htmlText = await response.text();
                 const doc = parser.parseFromString(htmlText, 'text/html');
-                
+
                 const toolsOnPage = doc.querySelectorAll('.tool');
-                
+
                 toolsOnPage.forEach(toolElement => {
-                    const name = toolElement.querySelector('.tool-name')?.innerText || 
+                    const name = toolElement.querySelector('.tool-name')?.innerText ||
                                  toolElement.querySelector('div')?.innerText || "";
-                    const desc = toolElement.querySelector('.tool-desc')?.innerText || 
+                    const desc = toolElement.querySelector('.tool-desc')?.innerText ||
                                  toolElement.querySelector('p')?.innerText || "";
+
+                    const toolId = toolElement.getAttribute('id') || "";
 
                     if (name.trim() !== "") {
                         dynamicTools.push({
                             name: name.trim(),
                             desc: desc.trim(),
-                            page: page
+                            page: page,
+                            id: toolId
                         });
                     }
                 });
@@ -279,21 +281,21 @@
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
         resultsBox.innerHTML = '';
-        
+
         if (query.length < 2) {
             resultsBox.style.display = 'none';
             return;
         }
 
-        const filtered = dynamicTools.filter(tool => 
-            tool.name.toLowerCase().includes(query) || 
+        const filtered = dynamicTools.filter(tool =>
+            tool.name.toLowerCase().includes(query) ||
             tool.desc.toLowerCase().includes(query)
         );
 
         if (filtered.length > 0) {
             filtered.forEach(tool => {
                 const a = document.createElement('a');
-                a.href = tool.page;
+                a.href = tool.id ? `${tool.page}#${tool.id}` : tool.page;
                 a.className = 'search-item';
                 a.innerHTML = `
                     <span class="name">${tool.name}</span>

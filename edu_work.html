@@ -16,6 +16,20 @@
         .tool a { text-decoration: none; color: inherit; display: block; }
         .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.7); border-color: #6a5acd; }
+            70% { box-shadow: 0 0 0 15px rgba(106, 90, 205, 0); border-color: #6a5acd; }
+            100% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); border-color: #6a5acd; }
+        }
+
+        .highlight-active {
+            border: 3px solid #6a5acd !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -24,28 +38,28 @@
 
     <h2 class="section-title">Презентації та Робота</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="GammaAI">
             <a href="https://gamma.app/" target="_blank">
                 <img src="https://cdn.mos.cms.futurecdn.net/cfo9wrPuw9H2NXugivFUJh-1200-80.jpg">
                 <div class="tool-name">Gamma AI</div>
                 <div class="tool-desc">Автоматичне створення презентацій та веб-сторінок з тексту.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Canva">
             <a href="https://www.canva.com/" target="_blank">
                 <img src="https://play-lh.googleusercontent.com/JC3HW-ps59VAEU3vuJoi3I5XB_IQ9ISuILLudUY9uLSW7eKfqtXitrB-fF865rV4TQ">
                 <div class="tool-name">Canva</div>
                 <div class="tool-desc">Дизайн усього: від постів у соцмережах до складних звітів.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="KimiAISlides">
             <a href="https://www.kimi.com/kimiplus/cvvm7bkheutnihqi2100" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT48-xVEGFDXQORy1gdLzWzVCIR8GHZlYV2Hw&s" alt="Kimi AI">
                 <div class="tool-name">Kimi AI Slides 💃</div>
                 <div class="tool-desc">Генерує презентації на очах. Безкоштовно, але текст краще давати свій, бо галюцинує.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Grafiati">
             <a href="https://www.grafiati.com/uk/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu8MxV3qIzFR-TO5AOlwZeQP6YBUjuvwy9Vw&s">
                 <div class="tool-name">Grafiati</div>
@@ -56,14 +70,14 @@
 
     <h2 class="section-title">Перевірка на ШІ</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Copyleaks">
             <a href="https://copyleaks.com/ai-content-detector" target="_blank">
                 <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGlthndYDFCBA/company-logo_200_200/company-logo_200_200/0/1675267589945/copyleaks_logo?e=2147483647&v=beta&t=NJK07vaV1uEUW69-WeA4YRPWqRfyd7fWvqWR7RQF0Fs">
                 <div class="tool-name">Copyleaks</div>
                 <div class="tool-desc">Виявлення плагіату та контенту, написаного нейромережами.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="SymbolDetector">
             <a href="https://www.soscisurvey.de/tools/view-chars.php" target="_blank">
                 <img src="https://i.ytimg.com/vi/erqbfZVyfxs/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAL5rzy70C3YtOoaXlvWfufs7Mn6g">
                 <div class="tool-name">Детектор символів</div>
@@ -74,14 +88,14 @@
 
     <h2 class="section-title">Рукописний текст</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Tamali">
             <a href="https://tamali.net/instrument/text/rukopisnyiy-tekst/" target="_blank">
                 <img src="https://sun1-57.userapi.com/s/v1/if1/NQbg7k_h3nwTiut-RRKYq_mD0aDUvn_dWfpAthV8D-A_BwKeEX4vxOh-wkNNlcQ5m15NuQ.jpg?quality=96&crop=61,45,892,892&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&cs=240x240">
                 <div class="tool-name">Tamali</div>
                 <div class="tool-desc">Перетворення друкованого тексту на реалістичний рукописний.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="HandWritter">
             <a href="https://handwritter.ru/" target="_blank">
                 <img src="https://cdn.handwrytten.com/www/2020/02/home-hero-photo2%402x.png">
                 <div class="tool-name">HandWritter</div>
@@ -89,5 +103,18 @@
             </a>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetTool = document.querySelector(hash);
+                if (targetTool) {
+                    targetTool.classList.add('highlight-active');
+                    targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

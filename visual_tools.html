@@ -16,6 +16,20 @@
         .tool a { text-decoration: none; color: inherit; display: block; }
         .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.7); border-color: #6a5acd; }
+            70% { box-shadow: 0 0 0 15px rgba(106, 90, 205, 0); border-color: #6a5acd; }
+            100% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); border-color: #6a5acd; }
+        }
+
+        .highlight-active {
+            border: 3px solid #6a5acd !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -25,53 +39,53 @@
 
 <h2 class="section-title">Створення зображень</h2>
 <div class="container">
-    <div class="tool">
+    <div class="tool" id="Leonardo">
         <a href="https://app.leonardo.ai/" target="_blank">
             <img src="https://yt3.googleusercontent.com/a04AUXisIIWkI-Pj5zORQTiDNS9tALLmPc8pxuRT_aEHrCOUDsPQoLuh4QRbfgICortk7tBhyg=s900-c-k-c0x00ffffff-no-rj" alt="Leonardo">
             <div class="tool-name">Leonardo</div>
             <div class="tool-desc">Генерація художнього арту, текстур та ігрових об'єктів.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Midjourney">
         <a href="https://www.midjourney.com/" target="_blank">
             <img src="https://avatars.githubusercontent.com/u/61396273?s=200&v=4" alt="Midjourney">
             <div class="tool-name">Midjourney</div>
             <div class="tool-desc">Лідер на ринку фотореалістичних та креативних зображень.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="KreaAI">
         <a href="https://www.krea.ai" target="_blank">
             <img src="https://www.fahimai.com/wp-content/uploads/2024/04/CTA-4.png" alt="Krea">
             <div class="tool-name">Krea AI</div>
             <div class="tool-desc">Генерація та покращення зображень у реальному часі з неймовірною швидкістю.</div>
         </a>
     </div>
-    <div class="tool">
-    <a href="https://www.vectors.fun/swipe" target="_blank">
-        <img src="https://www.vectors.fun/favicon.ico">
-        <div class="tool-name">Vectors Swipe</div>
-        <div class="tool-desc">"Тіндер" для промтів: свайпай генерації вліво/вправо, поки не знайдеш ідеальну.</div>
-    </a>
-</div>
+    <div class="tool" id="VectorsSwipe">
+        <a href="https://www.vectors.fun/swipe" target="_blank">
+            <img src="https://www.vectors.fun/favicon.ico">
+            <div class="tool-name">Vectors Swipe</div>
+            <div class="tool-desc">"Тіндер" для промтів: свайпай генерації вліво/вправо, поки не знайдеш ідеальну.</div>
+        </a>
+    </div>
 </div>
 
 <h2 class="section-title">Логотипи та Брендинг</h2>
 <div class="container">
-    <div class="tool">
+    <div class="tool" id="Looka">
         <a href="https://looka.com/" target="_blank">
             <img src="https://mma.prnewswire.com/media/844612/Looka_After_helping_5M__entrepreneurs__Logojoy_rebrands_to_Looka.jpg?p=facebook" alt="Looka">
             <div class="tool-name">Looka</div>
             <div class="tool-desc">Швидке створення логотипів та фірмового стилю на основі ШІ.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Brandmark">
         <a href="https://brandmark.io/" target="_blank">
             <img src="https://cdn-1.webcatalog.io/catalog/brandmark/brandmark-icon-filled-256.png?v=1714773457547" alt="Brandmark">
             <div class="tool-name">Brandmark</div>
             <div class="tool-desc">Створення мінімалістичних логотипів за кілька секунд.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="BloomAI">
         <a href="https://www.trybloom.ai" target="_blank">
             <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/wletdjytbfbtnhvfpjwo?ik-sanitizeSvg=true" alt="Bloom">
             <div class="tool-name">Bloom AI</div>
@@ -82,72 +96,71 @@
 
 <h2 class="section-title">Професійний Дизайн та Прототипи</h2>
 <div class="container">
-    <div class="tool">
+    <div class="tool" id="FigmaMake">
         <a href="https://www.figma.com/make/" target="_blank">
             <img src="https://miro.medium.com/1*2Bj92jnqdnsux33ejyrzXQ.png" alt="Figma Make">
             <div class="tool-name">Figma Make</div>
             <div class="tool-desc">Генерація UI-інтерфейсів та макетів безпосередньо у Figma.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="DesignArena">
         <a href="https://www.designarena.ai/" target="_blank">
             <img src="https://www.designarena.ai/favicon.ico" alt="Design Arena">
             <div class="tool-name">Design Arena</div>
             <div class="tool-desc">Битва AI-дизайнерів: порівнюйте результати UI/UX та голосуйте за найкращу естетику.</div>
-         </a>
+        </a>
     </div>
 </div>
 
 <h2 class="section-title">3D Моделювання та Простори</h2>
 <div class="container">
-    <div class="tool">
+    <div class="tool" id="Marble">
         <a href="https://marble.worldlabs.ai/" target="_blank">
             <img src="https://marble.worldlabs.ai/favicon.ico" alt="Marble">
             <div class="tool-name">Marble</div>
             <div class="tool-desc">Просторова нейромережа для створення складних 3D-сцен.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Tripo3D">
         <a href="https://studio.tripo3d.ai/" target="_blank">
             <img src="https://cdn-1.webcatalog.io/catalog/tripo/tripo-icon-filled-256.png?v=1720785958130" alt="Tripo">
             <div class="tool-name">Tripo 3D</div>
             <div class="tool-desc">Генерація деталізованих 3D-моделей з тексту або фото.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Hunyuan3D">
         <a href="https://3d.hunyuan.tencent.com/" target="_blank">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7X9W9qW7a_iI5VhLJtBMqCBDxhwAHR24BLw&s" alt="Hunyuan 3D">
             <div class="tool-name">Hunyuan 3D v3</div>
             <div class="tool-desc">Новий стандарт чіткості: дрібні деталі та обличчя більше не милить. Якість х3.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Genie3">
         <a href="https://deepmind.google/discover/blog/genie-3-a-new-frontier-for-world-models" target="_blank">
             <img src="https://www.gstatic.com/lamda/images/gemini_thumbnail_v2_55a4e3be7b83404a620e5.jpg" alt="Genie 3">
             <div class="tool-name">Genie 3 (DeepMind)</div>
-            <div class="tool-desc">Генерація цілих інтерактивних світів. Можна керувати персонажем стрілочками, як у грі..</div>
+            <div class="tool-desc">Генерація цілих інтерактивних світів. Можна керувати персонажем стрілочками, як у грі.</div>
         </a>
     </div>
-    
 </div>
 
 <h2 class="section-title">Обробка, Ефекти та Редагування</h2>
 <div class="container">
-    <div class="tool">
+    <div class="tool" id="RemoveBg">
         <a href="https://www.remove.bg/" target="_blank">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC698bq65dz3P9UGxKAUdL_RO_UI5Ia1CVnQ&s" alt="Remove.bg">
             <div class="tool-name">Remove.bg</div>
             <div class="tool-desc">Найкращий сервіс для миттєвого видалення фону з будь-яких фото.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="Shots">
         <a href="https://shots.so/" target="_blank">
             <img src="https://shots.so/image/apple-touch-icon.png" alt="Shots">
             <div class="tool-name">Shots</div>
             <div class="tool-desc">Оформлення скріншотів у професійні мокапи та рамки.</div>
         </a>
     </div>
-    <div class="tool">
+    <div class="tool" id="QwenImageLayered">
         <a href="https://huggingface.co/spaces/Qwen/Qwen-Image-Layered" target="_blank">
             <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Qwen Layered">
             <div class="tool-name">Qwen Image Layered</div>
@@ -155,6 +168,19 @@
         </a>
     </div>
 </div>
+
+<script>
+    window.addEventListener('load', () => {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetTool = document.querySelector(hash);
+            if (targetTool) {
+                targetTool.classList.add('highlight-active');
+                targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    });
+</script>
 
 </body>
 </html>

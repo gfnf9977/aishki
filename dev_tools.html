@@ -16,6 +16,20 @@
         .tool a { text-decoration: none; color: inherit; display: block; }
         .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
+
+        /* Анімація пульсуючого обведення */
+        @keyframes highlight-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0.7); border-color: #6a5acd; }
+            70% { box-shadow: 0 0 0 15px rgba(106, 90, 205, 0); border-color: #6a5acd; }
+            100% { box-shadow: 0 0 0 0 rgba(106, 90, 205, 0); border-color: #6a5acd; }
+        }
+
+        .highlight-active {
+            border: 3px solid #6a5acd !important;
+            animation: highlight-pulse 2s infinite;
+            transform: scale(1.05);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
@@ -24,35 +38,35 @@
 
     <h2 class="section-title">Створення сайтів</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Lovable">
             <a href="https://lovable.dev/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7huCfzuRMXWijcRCrp3F8iQvrRfQakxugNw&s">
                 <div class="tool-name">Lovable</div>
                 <div class="tool-desc">Швидка розробка повноцінних веб-застосунків за допомогою ШІ.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Devin">
             <a href="https://Devin.ai" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWzTt1qoovi_NjVmWY4PdzGGz4HgLbOcpu2g&s">
                 <div class="tool-name">Devin</div>
                 <div class="tool-desc">Перший у світі автономний ШІ-інженер для написання коду.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="FramerAI">
             <a href="https://www.framer.com/features/ai/" target="_blank">
                 <img src="https://res.cloudinary.com/apideck/image/upload/w_196,f_auto/v1557455842/catalog/framer/icon128x128.jpg">
                 <div class="tool-name">Framer AI</div>
                 <div class="tool-desc">Створення професійних лендінгів та сайтів з тексту.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Durable">
             <a href="https://durable.co/" target="_blank">
                 <img src="https://storage.googleapis.com/aiagents_1/agent-logos/1738775230735-dfqbIXSp400x400.png">
                 <div class="tool-name">Durable</div>
                 <div class="tool-desc">Конструктор сайтів, що створює готовий проєкт за 30 секунд.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Weblium">
             <a href="https://ua.weblium.com/" target="_blank">
                 <img src="https://www.toolpilot.ai/cdn/shop/files/webliumlogo.jpg?v=1685516163">
                 <div class="tool-name">Weblium</div>
@@ -63,60 +77,60 @@
 
     <h2 class="section-title">Код та Автоматизація</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Codepal">
             <a href="https://codepal.ai/code-fixer" target="_blank">
                 <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGvQ08IjkQ9_Q/company-logo_200_200/company-logo_200_200/0/1676074453364?e=2147483647&v=beta&t=a2w7whDQTX4lzz4l6bgGbSTt9-AtEoaX3xv6I09UkVI">
                 <div class="tool-name">Codepal</div>
                 <div class="tool-desc">Виправлення помилок у коді та генерація нових функцій.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="Zapier">
             <a href="https://zapier.com/app/home" target="_blank">
                 <img src="https://appstore.superoffice.com/Image/GetDetailPageAppIcon?applicationId=197">
                 <div class="tool-name">Zapier</div>
                 <div class="tool-desc">Автоматизація робочих процесів шляхом з'єднання різних сервісів.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="MakeAI">
             <a href="https://eu2.make.com/" target="_blank">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT48-xVEGFDXQORy1gdLzWzVCIR8GHZlYV2Hw&s">
                 <div class="tool-name">Make AI</div>
                 <div class="tool-desc">Візуальна платформа для створення складних автоматизацій.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="GitHubCopilot">
             <a href="https://github.com/features/copilot" target="_blank">
                 <img src="https://rewind.com/wp-content/uploads/2022/03/github-copilot-logo.jpeg">
                 <div class="tool-name">GitHub Copilot</div>
                 <div class="tool-desc">Найпопулярніший ШІ-автодоповнювач коду, що працює прямо у вашому IDE.</div>
             </a>
         </div>
-        <div class="tool"> 
+        <div class="tool" id="GoogleAIStudio">
             <a href="https://aistudio.google.com/" target="_blank">
                 <img src="https://www.gstatic.com/lamda/images/gemini_thumbnail_v2_55a4e3be7b83404a620e5.jpg" alt="AI Studio">
                 <div class="tool-name">Google AI Studio 🛠️</div>
                 <div class="tool-desc">Професійна пісочниця для розробників: тестуйте моделі Gemini, керуйте токенами та API.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="N8n">
             <a href="https://n8n.io/" target="_blank">
                 <img src="https://blog.n8n.io/content/images/size/w800/2024/10/ai-workflow-automationA--1-.png">
                 <div class="tool-name">n8n AI Workflow</div>
                 <div class="tool-desc">Побудова робочих ланцюжків (nodes) через чат з ШІ-агентом. Працює без коду.</div>
             </a>
-        </div>        
+        </div>
     </div>
 
     <h2 class="section-title">Корисні дрібниці</h2>
     <div class="container">
-        <div class="tool">
+        <div class="tool" id="Surli">
             <a href="https://surl.li/uk" target="_blank">
                 <img src="https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoibGlmZXRpbW8uY29tIiwidiI6Mjk1ODgxMTI4NSwiciI6MX0/wp-content/uploads/2024/07/Surli-Free-URL-Shortener-by-HyperHost-Logo.jpg">
                 <div class="tool-name">Surli</div>
                 <div class="tool-desc">Надійний сервіс для швидкого скорочення довгих посилань.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="MEQR">
             <a href="https://me-qr.com/uk/" target="_blank">
                 <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/6086a505b7542b00017dc44b/0x0.png">
                 <div class="tool-name">ME-QR</div>
@@ -127,14 +141,14 @@
 
     <h2 class="section-title">Репозиторії та Ідеї проєктів</h2>
     <div class="container">
-       <div class="tool">
+       <div class="tool" id="AIAgentsProjects">
             <a href="https://github.com/ashishpatel26/500-AI-Agents-Projects" target="_blank">
                 <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub Projects">
                 <div class="tool-name">500+ AI Agents Projects ☕️</div>
                 <div class="tool-desc">Гігантський список ідей для ШІ-проєктів з посиланнями на GitHub. Від трейдингу до HR-автоматизації.</div>
             </a>
         </div>
-        <div class="tool">
+        <div class="tool" id="GPTCodingExamples">
             <a href="https://gpt5-coding-examples.vercel.app/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png" alt="OpenAI Coding">
                 <div class="tool-name">GPT-5 Coding Examples</div>
@@ -142,5 +156,20 @@
             </a>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            // Перевіряємо, чи є в URL якір (напр. #Lovable)
+            const hash = window.location.hash;
+            if (hash) {
+                const targetTool = document.querySelector(hash);
+                if (targetTool) {
+                    targetTool.classList.add('highlight-active');
+
+                    targetTool.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
