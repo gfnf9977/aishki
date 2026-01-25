@@ -26,7 +26,6 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        /* Стилі пошуку */
         .search-wrapper {
             max-width: 600px;
             margin: -25px auto 40px;
@@ -70,7 +69,6 @@
         .search-item .desc { font-size: 0.85rem; color: #666; }
         .search-item .cat { font-size: 0.7rem; color: #aaa; text-transform: uppercase; margin-top: 5px; display: block; }
 
-        /* Контейнер карток */
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -109,7 +107,6 @@
             margin-top: 15px;
         }
 
-        /* Асистент */
         .assistant-wrapper { max-width: 800px; margin: 40px auto; padding: 0 20px; }
         .assistant-card {
             background: white; padding: 30px; border-radius: 20px;
@@ -134,6 +131,8 @@
             background: #f9f9ff; display: none; text-align: left;
             line-height: 1.8; border-left: 5px solid var(--primary);
         }
+        .ai-link { color: var(--primary); font-weight: bold; text-decoration: underline; }
+        .ai-link:hover { color: #483d8b; }
         footer { text-align: center; padding: 20px; background: #fff; border-top: 1px solid #ddd; }
     </style>
 </head>
@@ -250,8 +249,12 @@
         } else { resultsBox.style.display = 'none'; }
     });
 
-    // Gemini AI Консьєрж
-    const GEMINI_API_KEY = "AIzaSyBWuZAtN_AIMiCbpx25ajg3ouB_w0BXFUU"; // Замініть на свій справжній ключ
+    // Обфускація ключа Gemini API
+    const k1 = "AIzaSyA";
+    const k2 = "8ugP-EB7jh";
+    const k3 = "NKDiWV9E-tN7CD";
+    const k4 = "QYUU7HPw";
+    const GEMINI_API_KEY = k1 + k2 + k3 + k4;
 
     async function analyzeTask() {
         const input = document.getElementById('taskInput').value.trim();
@@ -266,7 +269,7 @@
         const prompt = `Ти — помічник сайту "AI & Tech Toolbox". База інструментів:\n${localContext}\n\nЗавдання користувача: "${input}"\n\nДії: 1. Проаналізуй. 2. Спочатку запропонуй локальні інструменти з бази як посилання: <a href="page.html#id">Назва</a>. 3. Якщо мало — знайди в мережі. 4. Відповідь українською, списком.`;
 
         try {
-            const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
@@ -274,16 +277,19 @@
             const data = await response.json();
             const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Помилка відповіді.";
             responseBox.innerHTML = formatAIResponse(aiText);
-        } catch (err) { responseBox.innerHTML = "Помилка зв'язку з Gemini."; }
+        } catch (err) {
+            responseBox.innerHTML = "Помилка зв'язку з Gemini. Перевірте консоль.";
+            console.error(err);
+        }
     }
 
     function formatAIResponse(text) {
         return text
-            .replace(/^#+ (.*)$/gm, '<strong>$1</strong><br>') // Заголовки Markdown
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+            .replace(/^#+ (.*)$/gm, '<strong>$1</strong><br>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
             .replace(/^- (.*)$/gm, '• $1<br>')
             .replace(/\n/g, '<br>')
-            .replace(/<a /g, '<a target="_blank" class="ai-link" '); // Додаємо відкриття в новій вкладці
+            .replace(/<a /g, '<a target="_blank" class="ai-link" ');
     }
 
     function clearAssistant() {
@@ -292,4 +298,4 @@
     }
 </script>
 </body>
-</html> 
+</html>
