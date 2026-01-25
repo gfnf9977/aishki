@@ -26,6 +26,57 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+
+        /* Стилі для пошуку */
+        .search-wrapper {
+            max-width: 600px;
+            margin: -25px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 100;
+        }
+        .search-box {
+            position: relative;
+        }
+        #toolSearch {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 10px 25px rgba(106, 90, 205, 0.3);
+            outline: none;
+            box-sizing: border-box;
+        }
+        .search-results {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            border: 1px solid #eee;
+        }
+        .search-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: block;
+            text-decoration: none;
+            color: #333;
+            text-align: left;
+        }
+        .search-item:last-child { border-bottom: none; }
+        .search-item:hover { background: #f4f4f9; }
+        .search-item .name { font-weight: bold; color: var(--primary); display: block; }
+        .search-item .desc { font-size: 0.85rem; color: #666; }
+        .search-item .cat { font-size: 0.7rem; color: #aaa; text-transform: uppercase; margin-top: 5px; display: block; }
+
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -80,11 +131,18 @@
     </style>
 </head>
 <body>
+
 <header>
     <h1>AI & Tech Toolbox</h1>
     <p>Найкращі ШІ-сервіси та перевірені цифрові інструменти в одному місці</p>
 </header>
-</header>
+
+<div class="search-wrapper">
+    <div class="search-box">
+        <input type="text" id="toolSearch" placeholder="Введіть назву інструменту (напр. 'Sora')..." autocomplete="off">
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
 
 <div class="container">
     <a href="text_tools.html" class="main-card">
@@ -92,7 +150,7 @@
             <h2>🤖 Текст та Асистенти</h2>
             <p>Чат-боти, написання текстів, перефразування та Claude Connect.</p>
         </div>
-        <span class="badge">ChatGPT, Claude, Jasper...</span>
+        <span class="badge">ChatGPT, Claude, Gemini...</span>
     </a>
 
     <a href="visual_tools.html" class="main-card">
@@ -100,7 +158,7 @@
             <h2>🎨 Дизайн та Фото</h2>
             <p>Генерація зображень, логотипів, 3D-моделей та видалення фону.</p>
         </div>
-        <span class="badge">Midjourney, Leonardo, LogoMaker...</span>
+        <span class="badge">Midjourney, Leonardo, Figma...</span>
     </a>
 
     <a href="video_audio.html" class="main-card">
@@ -108,39 +166,37 @@
             <h2>🎥 Відео та Аудіо</h2>
             <p>Створення відео, музики, озвучення тексту та переклад роликів.</p>
         </div>
-        <span class="badge">Sora, Heygen, Suno, ElevenLabs...</span>
+        <span class="badge">Sora, ElevenLabs, Suno...</span>
     </a>
 
     <a href="dev_tools.html" class="main-card">
         <div>
             <h2>💻 Програмування та Веб</h2>
-            <p>Створення сайтів, робота з кодом, автоматизація та QR-коди.</p>
+            <p>Створення сайтів, робота з кодом, автоматизація та ідеї проектів.</p>
         </div>
-        <span class="badge">Devin, Framer, Zapier...</span>
+        <span class="badge">Devin, n8n, Copilot...</span>
     </a>
 
     <a href="frontend_dev.html" class="main-card">
         <div>
             <h2>✨ Frontend та Ресурси</h2>
-            <p>Бібліотеки анімацій, іконки, CSS-ефекти та найкращі сайти для візуального натхнення.</p>
+            <p>Бібліотеки анімацій, іконки, CSS-ефекти та джерела натхнення.</p>
         </div>
-        <div class="footer-info">
-            <span class="badge">Lottie, CodePen, SVG Repo...</span>
-        </div>
+        <span class="badge">Lottie, CodePen, SVG Repo...</span>
     </a>
 
     <a href="edu_work.html" class="main-card">
         <div>
             <h2>🎓 Навчання та Робота</h2>
-            <p>Презентації, оформлення джерел (ДСТУ), детектори ШІ та рукописний текст.</p>
+            <p>Презентації, оформлення джерел (ДСТУ), детектори ШІ та рукопис.</p>
         </div>
-        <span class="badge">Gamma, Canva, Grafiati...</span>
+        <span class="badge">Kimi, Gamma, Grafiati...</span>
     </a>
 
     <a href="media_extract.html" class="main-card">
         <div>
             <h2>📥 Робота з контентом</h2>
-            <p>Завантаження відео, резюме з YouTube, аудіо в текст та видалення водяних знаків.</p>
+            <p>Завантаження відео, резюме з YouTube та аудіо в текст.</p>
         </div>
         <span class="badge">SaveFrom, Eightify, Whisper...</span>
     </a>
@@ -148,11 +204,9 @@
     <a href="security.html" class="main-card">
         <div>
             <h2>🛡️ Безпека та OSINT</h2>
-            <p>Перевірка витоків паролів, детектори дипфейків та інструменти для цифрової розвідки.</p>
-         </div>
-        <div class="footer-info">
-            <span class="badge">Have I Been Pwned, Deepware...</span>
+            <p>Перевірка витоків паролів, детектори дипфейків та розвідка.</p>
         </div>
+        <span class="badge">Have I Been Pwned, Deepware...</span>
     </a>
     
     <a href="lifestyle.html" class="main-card">
@@ -167,5 +221,99 @@
 <footer>
     <p>© 2026 AI & Tech Toolbox. Зібрано для ефективної роботи та навчання.</p>
 </footer>
+
+<script>
+    const pages = [
+        'text_tools.html', 
+        'visual_tools.html', 
+        'video_audio.html', 
+        'dev_tools.html', 
+        'frontend_dev.html',
+        'edu_work.html', 
+        'media_extract.html', 
+        'security.html',
+        'lifestyle.html'
+    ];
+
+    let dynamicTools = [];
+
+    // Функція збору даних
+    async function buildSearchIndex() {
+        const parser = new DOMParser();
+
+        for (const page of pages) {
+            try {
+                const response = await fetch(page);
+                if (!response.ok) continue;
+                
+                const htmlText = await response.text();
+                const doc = parser.parseFromString(htmlText, 'text/html');
+                
+                const toolsOnPage = doc.querySelectorAll('.tool');
+                
+                toolsOnPage.forEach(toolElement => {
+                    const name = toolElement.querySelector('.tool-name')?.innerText || 
+                                 toolElement.querySelector('div')?.innerText || "";
+                    const desc = toolElement.querySelector('.tool-desc')?.innerText || 
+                                 toolElement.querySelector('p')?.innerText || "";
+
+                    if (name.trim() !== "") {
+                        dynamicTools.push({
+                            name: name.trim(),
+                            desc: desc.trim(),
+                            page: page
+                        });
+                    }
+                });
+            } catch (err) {
+                console.warn(`Неможливо просканувати ${page}. Переконайтеся, що сайт запущено через сервер.`);
+            }
+        }
+    }
+
+    buildSearchIndex();
+
+    const searchInput = document.getElementById('toolSearch');
+    const resultsBox = document.getElementById('searchResults');
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        resultsBox.innerHTML = '';
+        
+        if (query.length < 2) {
+            resultsBox.style.display = 'none';
+            return;
+        }
+
+        const filtered = dynamicTools.filter(tool => 
+            tool.name.toLowerCase().includes(query) || 
+            tool.desc.toLowerCase().includes(query)
+        );
+
+        if (filtered.length > 0) {
+            filtered.forEach(tool => {
+                const a = document.createElement('a');
+                a.href = tool.page;
+                a.className = 'search-item';
+                a.innerHTML = `
+                    <span class="name">${tool.name}</span>
+                    <span class="desc">${tool.desc.substring(0, 80)}...</span>
+                    <span class="cat">Розділ: ${tool.page.replace('.html', '').replace('_', ' ')}</span>
+                `;
+                resultsBox.appendChild(a);
+            });
+            resultsBox.style.display = 'block';
+        } else {
+            resultsBox.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-box')) {
+            resultsBox.style.display = 'none';
+        }
+    });
+</script>
+
 </body>
 </html>
