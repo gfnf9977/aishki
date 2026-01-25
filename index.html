@@ -26,17 +26,13 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
-        /* Стилі для пошуку */
+        /* Стилі пошуку */
         .search-wrapper {
             max-width: 600px;
             margin: -25px auto 40px;
             padding: 0 20px;
             position: relative;
             z-index: 100;
-        }
-        .search-box {
-            position: relative;
         }
         #toolSearch {
             width: 100%;
@@ -64,19 +60,17 @@
         .search-item {
             padding: 15px 20px;
             border-bottom: 1px solid #eee;
-            cursor: pointer;
-            transition: background 0.2s;
             display: block;
             text-decoration: none;
             color: #333;
             text-align: left;
         }
-        .search-item:last-child { border-bottom: none; }
         .search-item:hover { background: #f4f4f9; }
         .search-item .name { font-weight: bold; color: var(--primary); display: block; }
         .search-item .desc { font-size: 0.85rem; color: #666; }
         .search-item .cat { font-size: 0.7rem; color: #aaa; text-transform: uppercase; margin-top: 5px; display: block; }
 
+        /* Контейнер карток */
         .container {
             max-width: 1200px;
             margin: 40px auto;
@@ -103,15 +97,7 @@
             box-shadow: 0 15px 30px rgba(106, 90, 205, 0.2);
             border-color: var(--primary);
         }
-        .main-card h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .main-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
+        .main-card h2 { color: var(--primary); margin-top: 0; font-size: 1.5rem; }
         .badge {
             display: inline-block;
             background: #eef;
@@ -122,12 +108,33 @@
             font-weight: bold;
             margin-top: 15px;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            border-top: 1px solid #ddd;
+
+        /* Асистент */
+        .assistant-wrapper { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .assistant-card {
+            background: white; padding: 30px; border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(106, 90, 205, 0.15); border: 2px solid #eef;
         }
+        #taskInput {
+            width: 100%; height: 100px; padding: 15px; border-radius: 12px;
+            border: 1px solid #ddd; margin: 15px 0; font-family: inherit; resize: none;
+            box-sizing: border-box;
+        }
+        .button-group { display: flex; gap: 10px; margin-top: 15px; }
+        .analyze-btn {
+            background: var(--primary); color: white; border: none; padding: 12px 25px;
+            border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s;
+        }
+        .clear-btn {
+            background: #f4f4f9; color: #666; border: 1px solid #ddd; padding: 12px 25px;
+            border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s;
+        }
+        .ai-response-box {
+            margin-top: 20px; padding: 20px; border-radius: 12px;
+            background: #f9f9ff; display: none; text-align: left;
+            line-height: 1.8; border-left: 5px solid var(--primary);
+        }
+        footer { text-align: center; padding: 20px; background: #fff; border-top: 1px solid #ddd; }
     </style>
 </head>
 <body>
@@ -144,178 +151,145 @@
     </div>
 </div>
 
+<div class="assistant-wrapper">
+    <div class="assistant-card">
+        <h3>🤖 Твій ШІ-Консьєрж</h3>
+        <p>Опишіть вашу задачу (напр. "Хочу зробити міні-гру на js"):</p>
+        <textarea id="taskInput" placeholder="Напишіть тут ваші цілі..."></textarea>
+        <div class="button-group">
+            <button onclick="analyzeTask()" class="analyze-btn">Проаналізувати задачу</button>
+            <button onclick="clearAssistant()" class="clear-btn">Очистити</button>
+        </div>
+        <div id="aiResponse" class="ai-response-box"></div>
+    </div>
+</div>
+
 <div class="container">
     <a href="text_tools.html" class="main-card">
-        <div>
-            <h2>🤖 Текст та Асистенти</h2>
-            <p>Чат-боти, написання текстів, перефразування та Claude Connect.</p>
-        </div>
+        <div><h2>🤖 Текст та Асистенти</h2><p>Чат-боти, написання текстів, перефразування та Claude Connect.</p></div>
         <span class="badge">ChatGPT, Claude, Gemini...</span>
     </a>
-
     <a href="visual_tools.html" class="main-card">
-        <div>
-            <h2>🎨 Дизайн та Фото</h2>
-            <p>Генерація зображень, логотипів, 3D-моделей та видалення фону.</p>
-        </div>
+        <div><h2>🎨 Дизайн та Фото</h2><p>Генерація зображень, логотипів, 3D-моделей та видалення фону.</p></div>
         <span class="badge">Midjourney, Leonardo, Figma...</span>
     </a>
-
     <a href="video_audio.html" class="main-card">
-        <div>
-            <h2>🎥 Відео та Аудіо</h2>
-            <p>Створення відео, музики, озвучення тексту та переклад роликів.</p>
-        </div>
+        <div><h2>🎥 Відео та Аудіо</h2><p>Створення відео, музики, озвучення тексту та переклад роликів.</p></div>
         <span class="badge">Sora, ElevenLabs, Suno...</span>
     </a>
-
     <a href="dev_tools.html" class="main-card">
-        <div>
-            <h2>💻 Програмування та Веб</h2>
-            <p>Створення сайтів, робота з кодом, автоматизація та ідеї проектів.</p>
-        </div>
+        <div><h2>💻 Програмування та Веб</h2><p>Створення сайтів, робота з кодом, автоматизація та ідеї проектів.</p></div>
         <span class="badge">Devin, n8n, Copilot...</span>
     </a>
-
     <a href="frontend_dev.html" class="main-card">
-        <div>
-            <h2>✨ Frontend та Ресурси</h2>
-            <p>Бібліотеки анімацій, іконки, CSS-ефекти та джерела натхнення.</p>
-        </div>
+        <div><h2>✨ Frontend та Ресурси</h2><p>Бібліотеки анімацій, іконки, CSS-ефекти та джерела натхнення.</p></div>
         <span class="badge">Lottie, CodePen, SVG Repo...</span>
     </a>
-
     <a href="edu_work.html" class="main-card">
-        <div>
-            <h2>🎓 Навчання та Робота</h2>
-            <p>Презентації, оформлення джерел (ДСТУ), детектори ШІ та рукопис.</p>
-        </div>
+        <div><h2>🎓 Навчання та Робота</h2><p>Презентації, оформлення джерел (ДСТУ), детектори ШІ та рукопис.</p></div>
         <span class="badge">Kimi, Gamma, Grafiati...</span>
     </a>
-
     <a href="media_extract.html" class="main-card">
-        <div>
-            <h2>📥 Робота з контентом</h2>
-            <p>Завантаження відео, резюме з YouTube та аудіо в текст.</p>
-        </div>
+        <div><h2>📥 Робота з контентом</h2><p>Завантаження відео, резюме з YouTube та аудіо в текст.</p></div>
         <span class="badge">SaveFrom, Eightify, Whisper...</span>
     </a>
-
     <a href="security.html" class="main-card">
-        <div>
-            <h2>🛡️ Безпека та OSINT</h2>
-            <p>Перевірка витоків паролів, детектори дипфейків та розвідка.</p>
-        </div>
+        <div><h2>🛡️ Безпека та OSINT</h2><p>Перевірка витоків паролів, детектори дипфейків та розвідка.</p></div>
         <span class="badge">Have I Been Pwned, Deepware...</span>
     </a>
-
     <a href="lifestyle.html" class="main-card">
-        <div>
-            <h2>💡 Лайфстайл та Хобі</h2>
-            <p>Рецепти страв, ремонт авто, ідеї для контенту та малювання.</p>
-        </div>
+        <div><h2>💡 Лайфстайл та Хобі</h2><p>Рецепти страв, ремонт авто, ідеї для контенту та малювання.</p></div>
         <span class="badge">ChefGPT, Carcare, AutoDraw...</span>
     </a>
 </div>
 
-<footer>
-    <p>© 2026 AI & Tech Toolbox. Зібрано для ефективної роботи та навчання.</p>
-</footer>
+<footer><p>© 2026 AI & Tech Toolbox. Зібрано для ефективної роботи та навчання.</p></footer>
 
 <script>
-    const pages = [
-        'text_tools.html',
-        'visual_tools.html',
-        'video_audio.html',
-        'dev_tools.html',
-        'frontend_dev.html',
-        'edu_work.html',
-        'media_extract.html',
-        'security.html',
-        'lifestyle.html'
-    ];
-
+    const pages = ['text_tools.html', 'visual_tools.html', 'video_audio.html', 'dev_tools.html', 'frontend_dev.html', 'edu_work.html', 'media_extract.html', 'security.html', 'lifestyle.html'];
     let dynamicTools = [];
 
     async function buildSearchIndex() {
         const parser = new DOMParser();
-
         for (const page of pages) {
             try {
                 const response = await fetch(page);
                 if (!response.ok) continue;
-
                 const htmlText = await response.text();
                 const doc = parser.parseFromString(htmlText, 'text/html');
-
-                const toolsOnPage = doc.querySelectorAll('.tool');
-
-                toolsOnPage.forEach(toolElement => {
-                    const name = toolElement.querySelector('.tool-name')?.innerText ||
-                                 toolElement.querySelector('div')?.innerText || "";
-                    const desc = toolElement.querySelector('.tool-desc')?.innerText ||
-                                 toolElement.querySelector('p')?.innerText || "";
-
-                    const toolId = toolElement.getAttribute('id') || "";
-
+                doc.querySelectorAll('.tool').forEach(el => {
+                    const name = el.querySelector('.tool-name')?.innerText || el.querySelector('div')?.innerText || "";
+                    const desc = el.querySelector('.tool-desc')?.innerText || el.querySelector('p')?.innerText || "";
+                    const toolId = el.getAttribute('id') || "";
                     if (name.trim() !== "") {
-                        dynamicTools.push({
-                            name: name.trim(),
-                            desc: desc.trim(),
-                            page: page,
-                            id: toolId
-                        });
+                        dynamicTools.push({ name: name.trim(), desc: desc.trim(), page: page, id: toolId });
                     }
                 });
-            } catch (err) {
-                console.warn(`Неможливо просканувати ${page}. Переконайтеся, що сайт запущено через сервер.`);
-            }
+            } catch (err) { console.warn(`Error scanning ${page}`); }
         }
     }
-
     buildSearchIndex();
 
-    const searchInput = document.getElementById('toolSearch');
-    const resultsBox = document.getElementById('searchResults');
-
-    searchInput.addEventListener('input', (e) => {
+    // Пошук
+    document.getElementById('toolSearch').addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase();
+        const resultsBox = document.getElementById('searchResults');
         resultsBox.innerHTML = '';
+        if (query.length < 2) { resultsBox.style.display = 'none'; return; }
 
-        if (query.length < 2) {
-            resultsBox.style.display = 'none';
-            return;
-        }
-
-        const filtered = dynamicTools.filter(tool =>
-            tool.name.toLowerCase().includes(query) ||
-            tool.desc.toLowerCase().includes(query)
-        );
-
+        const filtered = dynamicTools.filter(t => t.name.toLowerCase().includes(query) || t.desc.toLowerCase().includes(query));
         if (filtered.length > 0) {
-            filtered.forEach(tool => {
+            filtered.forEach(t => {
                 const a = document.createElement('a');
-                a.href = tool.id ? `${tool.page}#${tool.id}` : tool.page;
+                a.href = t.id ? `${t.page}#${t.id}` : t.page;
                 a.className = 'search-item';
-                a.innerHTML = `
-                    <span class="name">${tool.name}</span>
-                    <span class="desc">${tool.desc.substring(0, 80)}...</span>
-                    <span class="cat">Розділ: ${tool.page.replace('.html', '').replace('_', ' ')}</span>
-                `;
+                a.innerHTML = `<span class="name">${t.name}</span><span class="desc">${t.desc.substring(0, 80)}...</span><span class="cat">Розділ: ${t.page.replace('.html', '')}</span>`;
                 resultsBox.appendChild(a);
             });
             resultsBox.style.display = 'block';
-        } else {
-            resultsBox.style.display = 'none';
-        }
+        } else { resultsBox.style.display = 'none'; }
     });
 
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.search-box')) {
-            resultsBox.style.display = 'none';
-        }
-    });
+    // Gemini AI Консьєрж
+    const GEMINI_API_KEY = "AIzaSyAi18tbZj_cKKUz4PeGJnJ08RIh0lMMcjI"; // Замініть на свій справжній ключ
+
+    async function analyzeTask() {
+        const input = document.getElementById('taskInput').value.trim();
+        const responseBox = document.getElementById('aiResponse');
+        if (input.length < 5) { alert("Опишіть задачу детальніше."); return; }
+        if (dynamicTools.length === 0) { alert("База даних ще завантажується, зачекайте секунду."); return; }
+
+        responseBox.innerHTML = "<em>ШІ-Консьєрж роздумує...</em>";
+        responseBox.style.display = 'block';
+
+        const localContext = dynamicTools.map(t => `- ${t.name}: ${t.desc} (посилання: ${t.page}${t.id ? '#' + t.id : ''})`).join('\n');
+        const prompt = `Ти — помічник сайту "AI & Tech Toolbox". База інструментів:\n${localContext}\n\nЗавдання користувача: "${input}"\n\nДії: 1. Проаналізуй. 2. Спочатку запропонуй локальні інструменти з бази як посилання: <a href="page.html#id">Назва</a>. 3. Якщо мало — знайди в мережі. 4. Відповідь українською, списком.`;
+
+        try {
+            const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            });
+            const data = await response.json();
+            const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Помилка відповіді.";
+            responseBox.innerHTML = formatAIResponse(aiText);
+        } catch (err) { responseBox.innerHTML = "Помилка зв'язку з Gemini."; }
+    }
+
+    function formatAIResponse(text) {
+        return text
+            .replace(/^#+ (.*)$/gm, '<strong>$1</strong><br>') // Заголовки Markdown
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+            .replace(/^- (.*)$/gm, '• $1<br>')
+            .replace(/\n/g, '<br>')
+            .replace(/<a /g, '<a target="_blank" class="ai-link" '); // Додаємо відкриття в новій вкладці
+    }
+
+    function clearAssistant() {
+        document.getElementById('taskInput').value = '';
+        document.getElementById('aiResponse').style.display = 'none';
+    }
 </script>
-
 </body>
-</html>
+</html> 

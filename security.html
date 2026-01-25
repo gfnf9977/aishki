@@ -6,27 +6,26 @@
     <title>Security — AI Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <style>
-        :root { --primary: #e74c3c; --bg: #f4f4f9; }
+        :root { --primary: #6a5acd; --bg: #f4f4f9; --security: #e74c3c; }
         body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--primary); font-weight: bold; }
-        .section-title { margin-top: 40px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .section-title { margin-top: 40px; border-left: 4px solid var(--security); padding-left: 15px; }
         .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
         .tool { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
-        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(231, 76, 60, 0.1); }
-        .tool i { font-size: 2.5rem; color: var(--primary); margin-bottom: 12px; }
-        .tool-name { font-weight: bold; color: #333; margin-bottom: 8px; }
+        .tool:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(106, 90, 205, 0.1); }
+        .tool i { font-size: 2.5rem; color: var(--security); margin-bottom: 12px; }
+        .tool-name { font-weight: bold; color: var(--primary); margin-bottom: 8px; }
         .tool-desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
         a { text-decoration: none; }
 
-        /* Анімація пульсуючого обведення */
         @keyframes highlight-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); border-color: #e74c3c; }
-            70% { box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); border-color: #e74c3c; }
-            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); border-color: #e74c3c; }
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); border-color: var(--security); }
+            70% { box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); border-color: var(--security); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); border-color: var(--security); }
         }
 
         .highlight-active {
-            border: 3px solid #e74c3c !important;
+            border: 3px solid var(--security) !important;
             animation: highlight-pulse 2s infinite;
             transform: scale(1.05);
             z-index: 10;
