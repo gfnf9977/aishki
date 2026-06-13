@@ -1,0 +1,1462 @@
+[
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "url": "https://lovable.dev/",
+    "image": "https://play-lh.googleusercontent.com/75PwQQWLgx6THbzPYDaOppqaNqZhU931T2VXv64dXQ5PXZYbGu82ubhdbtwTPYB248dieuiQkDNIGDamaJQ1_w=w240-h480-rw",
+    "icon": "🌐",
+    "desc": "Швидка розробка повноцінних веб-застосунків за допомогою ШІ.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "url": "https://devin.ai",
+    "image": "https://storage.googleapis.com/dena-com-official-prod-gcp.appspot.com/upload/dNOH337QBYuiF02VysGBF.jpg",
+    "icon": "🤖",
+    "desc": "Перший у світі автономний ШІ-інженер для написання коду.",
+    "monetization": "🔴 Paid",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "framer-ai",
+    "name": "Framer AI",
+    "url": "https://www.framer.com/ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw65n5g_6qyQRqDIykBQ0hVfoQjemhe1I4eQ&s",
+    "icon": "🎨",
+    "desc": "Створення професійних лендінгів та сайтів з тексту.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "durable",
+    "name": "Durable",
+    "url": "https://durable.co/",
+    "image": "https://fahimai.com/wp-content/uploads/2024/06/7-6.png",
+    "icon": "🏗️",
+    "desc": "Конструктор сайтів, що створює готовий проєкт за 30 секунд.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "weblium",
+    "name": "Weblium",
+    "url": "https://weblium.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHBXBe1-O25tLKgGtFhhLKL40qF01VctrA4A&s",
+    "icon": "💻",
+    "desc": "Розумний конструктор сайтів з великою кількістю шаблонів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "codepal",
+    "name": "Codepal",
+    "url": "https://codepal.ai/",
+    "image": "https://cdn-1.webcatalog.io/catalog/codepal/codepal-icon-filled-256.png?v=1716619334554",
+    "icon": "🛠️",
+    "desc": "Виправлення помилок у коді та генерація нових функцій.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "url": "https://zapier.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRro3fRi4EfcWsXEC67c4aY_7T0xrjKQTvXRQ&s",
+    "icon": "⚡",
+    "desc": "Автоматизація робочих процесів шляхом з'єднання різних сервісів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "make-ai",
+    "name": "Make AI",
+    "url": "https://www.make.com/",
+    "image": "https://images.ctfassets.net/un655fb9wln6/11sTQC2LhhAtJyb7ptQvEl/6c2dbec03b3a2830a24e09e913ad46cc/Make-app-icon.png",
+    "icon": "🔄",
+    "desc": "Візуальна платформа для створення складних автоматизацій.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxr8FZFatuzi4X2TGb3DAR1W__F115Zk7OQ&s",
+    "icon": "⌨️",
+    "desc": "ШІ-автодоповнювач коду, що працює прямо у вашому IDE.",
+    "monetization": "🔴 Paid",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "google-ai-studio",
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com/",
+    "image": "https://www.appcreator24.com/srv/imgs/gen/3613411_ico.png?v=1",
+    "icon": "🧪",
+    "desc": "Професійна пісочниця для тестування моделей Gemini та керування API.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "groqcloud",
+    "name": "GroqCloud",
+    "url": "https://console.groq.com/",
+    "image": "https://cdn-1.webcatalog.io/catalog/groqcloud/groqcloud-icon-filled-256.webp?v=1725768091422",
+    "icon": "⚡",
+    "desc": "Найшвидший API для запуску LLM (Llama 3, Mixtral).",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "n8n",
+    "name": "n8n AI Workflow",
+    "url": "https://n8n.io/",
+    "image": "https://logo.clearbit.com/n8n.io",
+    "icon": "⚙️",
+    "desc": "Побудова робочих ланцюжків через чат з ШІ-агентом без коду.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "surli",
+    "name": "Surli",
+    "url": "https://surl.li/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNwetIT8-ulIBIEkqRjnj7kulSfDRunJ9-Yw&s",
+    "icon": "🔗",
+    "desc": "Надійний сервіс для швидкого скорочення довгих посилань.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "me-qr",
+    "name": "ME-QR",
+    "url": "https://me-qr.com/",
+    "image": "https://s3-eu-west-1.amazonaws.com/tpd/logos/6086a505b7542b00017dc44b/0x0.png",
+    "icon": "📱",
+    "desc": "Генерація QR-кодів для посилань, текстів або Wi-Fi.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "url": "https://github.com/",
+    "image": "https://softlist.com.ua/attachments/1c947b7d-2024-435a-85b6-64978189ab34_Github.webp",
+    "icon": "🐙",
+    "desc": "Головна платформа для зберігання коду та спільної роботи.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "netlify",
+    "name": "Netlify",
+    "url": "https://www.netlify.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrvwgpiqc9FrNeVcW-NQekpPIwIcktyys_nw&s",
+    "icon": "🌐",
+    "desc": "Миттєвий хостинг для сайтів. Просто перетягніть папку з файлами.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "url": "https://vercel.com/",
+    "image": "https://mms.businesswire.com/media/20230511005662/en/1791281/22/vercel-logotype-dark.jpg",
+    "icon": "▲",
+    "desc": "Потужна платформа для деплою frontend-додатків у кілька кліків.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "500-ai-agents",
+    "name": "500+ AI Agents Projects",
+    "url": "https://github.com/ashishpatel26/500-AI-Agents-Projects",
+    "image": "https://logo.clearbit.com/github.com",
+    "icon": "📚",
+    "desc": "Гігантський список ідей для ШІ-проєктів з посиланнями на GitHub.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "gpt5-coding",
+    "name": "GPT-5 Coding Examples",
+    "url": "https://gpt5-coding-examples.vercel.app/",
+    "image": "https://via.placeholder.com/150?text=GPT-5",
+    "icon": "💡",
+    "desc": "Приклади згенерованих сайтів та застосунків з готовими промтами.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "claude-cowork",
+    "name": "Claude Cowork",
+    "url": "https://claude.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELK3CwuH8aWim2y-fQK8aqfE5MVbVa0d62DyU3TLM_Q&s=10",
+    "icon": "👔",
+    "desc": "Автономний менеджер: редагує документи та інтегрується з Notion/Paypal.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "moltbot",
+    "name": "Moltbot",
+    "url": "https://github.com/moltbot/moltbot",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmYKQwvSumV6ig1YyI2qLnlLTX-N-rlL_ZkiScgd3GDGOOLaC2UEm8Dd8&s=10",
+    "icon": "🛠️",
+    "desc": "Локальний ШІ-агент у терміналі для керування файлами та командами.",
+    "monetization": "💻 Open Source",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.sh/",
+    "image": "https://cdn.shopaccino.com/igmguru/products/cursor-ai-training-3991020873394911m-67851979223893_l.webp?v=548",
+    "icon": "💻",
+    "desc": "Абсолютний 'вбивця' VS Code та Copilot. Розуміє весь контекст проєкту.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "windsurf",
+    "name": "Verdent (Windsurf / v0)",
+    "url": "https://codeium.com/windsurf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQVtmvwI788EizXmMKrVks_FuJ8FWk1lgALlK-img5axOT-DZSq1e89oI&s=10",
+    "icon": "⚡",
+    "desc": "Режим 'План' (Cascade/Planner) для генерації архітектури та коду.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "codex",
+    "name": "Codex",
+    "url": "#",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIqNHTkvfZEcmLPztdUma8lysIVG_62fL5NEHMJbSW9bHGlGPbltPSdo4r&s=10",
+    "icon": "⚠️",
+    "desc": "Стара модель від OpenAI, на якій колись працював перший Copilot.",
+    "monetization": "⚠️ Застаріло",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face",
+    "url": "https://huggingface.co/",
+    "image": "https://logo.clearbit.com/huggingface.co",
+    "icon": "🤗",
+    "desc": "Мекка для розробників. Тестування найновіших open-source моделей (Spaces).",
+    "monetization": "💻 Open Source",
+    "categories": ["dev_tools", "edu_work"]
+  },
+  {
+    "id": "chat-place",
+    "name": "Chat-place",
+    "url": "https://chat-place.io/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXlxai4maFN86OIxKPghq9SZ2KeNDGtbuSm8TXCq8u9itnYK4FM9nIr9r&s=10",
+    "icon": "💬",
+    "desc": "Платформа для створення візуальних автоворонок та чат-ботів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "copycoder",
+    "name": "Copycoder.ai",
+    "url": "https://copycoder.ai/",
+    "image": "https://framerusercontent.com/images/OQGd7Rp4LTl8oKBQHO5vwTOxM.png?width=2400&height=1284",
+    "icon": "🎨",
+    "desc": "Генерує ідеальний промпт або код для відтворення інтерфейсу зі скріншоту.",
+    "monetization": "🔴 Paid",
+    "categories": ["dev_tools", "frontend"]
+  },
+  {
+    "id": "nvidia-nim",
+    "name": "NVIDIA NIM",
+    "url": "https://build.nvidia.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJmNRGlsMUu2X3cX3YgKFWAd64Fwu2rSZDiWpQ2cBC-LBggzV5FacWSbo&s=10",
+    "icon": "🧠",
+    "desc": "Безкоштовні API-кредити для доступу до найновіших моделей (Llama 3, Mistral).",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "gamma-ai",
+    "name": "Gamma AI",
+    "url": "https://gamma.app/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCU2go7Bxt9XNBz3vEudkcwl4MkzUDznPhL6ujYiwzYhXrCATJesrwYq4&s=10",
+    "icon": "📊",
+    "desc": "Автоматичне створення презентацій та веб-сторінок з тексту.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "url": "https://www.canva.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5awUW_c7LJDnQhyMyXXf5IWUh5A-2Pp7B4qOb3gZhgyDYIuW9Nf4cGetp&s=10",
+    "icon": "🖌️",
+    "desc": "Дизайн усього: від постів у соцмережах до складних звітів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "frontend", "visual_tools"]
+  },
+  {
+    "id": "kimi-slides",
+    "name": "Kimi AI Slides",
+    "url": "https://kimi.moonshot.cn/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe8dm4auR73W_Hg0I5PN9Crjfhlcr44RNXLtMywMHuSw&s=10",
+    "icon": "💃",
+    "desc": "Генерує презентації. Краще давати свій текст, бо схильний до галюцинацій.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "grafiati",
+    "name": "Grafiati",
+    "url": "https://www.grafiati.com/uk/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQByVl1hxgs3gRJVmBX6_BPoHEQXW2jvunr5QvxOd9-6IBOoOc7bmTIQ4S_&s=10",
+    "icon": "📚",
+    "desc": "Автоматичне оформлення бібліографії за стандартами ДСТУ, APA, MLA.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "prezi",
+    "name": "Prezi",
+    "url": "https://prezi.com/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Prezi_logo_transparent_2012.svg",
+    "icon": "🔄",
+    "desc": "Створення динамічних нелінійних презентацій з ефектом масштабування.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "copyleaks",
+    "name": "Copyleaks",
+    "url": "https://copyleaks.com/",
+    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQGlthndYDFCBA/company-logo_200_200/company-logo_200_200/0/1675267589945/copyleaks_logo?e=2147483647&v=beta&t=NJK07vaV1uEUW69-WeA4YRPWqRfyd7fWvqWR7RQF0Fs",
+    "icon": "🕵️",
+    "desc": "Виявлення плагіату та контенту, написаного нейромережами.",
+    "monetization": "🔴 Paid",
+    "categories": ["edu_work", "security"]
+  },
+  {
+    "id": "symbol-detector",
+    "name": "Детектор символів",
+    "url": "https://www.soscisurvey.de/tools/view-chars.php",
+    "image": "https://i.ytimg.com/vi/erqbfZVyfxs/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAL5rzy70C3YtOoaXlvWfufs7Mn6g",
+    "icon": "🔎",
+    "desc": "Пошук невидимих символів, за якими детектори впізнають ШІ-текст.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work", "security"]
+  },
+  {
+    "id": "handtext",
+    "name": "HandText",
+    "url": "https://handtextai.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGrrrwV3rhpKQQP4Srb5hOT2XzbV3J41DUGjlV_wxwbg&s",
+    "icon": "✍️",
+    "desc": "Створення зображень 'від руки' з різними почерками.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "openai-prism",
+    "name": "OpenAI Prism",
+    "url": "https://prism.openai.com/",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/1X6DTcM0Jj8sTu2vCVFCYM/cb381e08f366fa0569b61ef0ae3742e3/Prism_LandingPage_SEO.png?w=1600&h=900&fit=fill",
+    "icon": "🔬",
+    "desc": "Робочий простір для науковців: структура статей, arXiv та конвертація в LaTeX.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9jJIpln5dE_X5pmflgpG_Z_Z3IBJDvvaQnRUKstsWCA&s=10",
+    "icon": "📓",
+    "desc": "Обробка великих масивів тексту та генерація аудіоподкаст-обговорень.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "chatpdf",
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com/",
+    "image": "https://dlsdc.com/wp-content/uploads/2024/02/1685538597643.jpeg",
+    "icon": "📄",
+    "desc": "Швидкий діалог з PDF-файлами (договори, статті).",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "astra-ai",
+    "name": "Astra AI",
+    "url": "https://www.astra.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQYvXfGANQQIiA2sqZgu7G3kgAJAtUzvQ0IvtWQ1S8Qg&s=10",
+    "icon": "🎓",
+    "desc": "Помічник для студентів: розв'язує математику, аналізує графіки по фото.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "granola",
+    "name": "Granola",
+    "url": "https://granola.so/",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQH7eP8zXWIpFg/company-logo_200_200/B4EZwdrxTHGkAM-/0/1770024539802/meetgranola_logo?e=2147483647&v=beta&t=BL2zMl90eg33Dns_On8QxY4FQSz4_gBpwf8vEKVtP1U",
+    "icon": "📝",
+    "desc": "ШІ-блокнот, що працює у фоні під час дзвінків і створює структуровані нотатки.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "url": "https://www.notion.so/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStOdYkooc5-ZhycEjXwW2NPkm4XEU5k_sl0jIS8967h2cfQZSnF8W_dkk&s=10",
+    "icon": "📋",
+    "desc": "Ультимативний простір: бази даних, контент-плани, канбан-дошки.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work", "lifestyle"]
+  },
+  {
+    "id": "ouidevcss",
+    "name": "Ouidevcss",
+    "url": "https://github.com/ML78-AI/ouidevcss",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ62uuHxjpHKjUy4YOkj2tqf4TCOlyeNhRKe7t3KBk2_3vMsuIDqhotxSk&s=10",
+    "icon": "🖌️",
+    "desc": "Колекція чистих CSS-скриптів: лоадери, бордери, градієнти.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "neat",
+    "name": "Neat",
+    "url": "https://neat.firecms.co/",
+    "image": "https://logo.clearbit.com/firecms.co",
+    "icon": "💧",
+    "desc": "Генератор анімованих 3D-градієнтів для фону сайту.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "css-loaders",
+    "name": "CSS Loaders",
+    "url": "https://css-loaders.com/",
+    "image": "https://logo.clearbit.com/css-loaders.com",
+    "icon": "⏳",
+    "desc": "Понад 600 лоадерів на чистому CSS. Копіювання коду в клік.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "animista",
+    "name": "Animista",
+    "url": "https://animista.net/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBC9xE4rXQ6_5vTtRLIReCFGSs6EiZB0Lf7GEnivKgg&s",
+    "icon": "▶️",
+    "desc": "Конструктор базових CSS анімацій з налаштуванням easing та delay.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "svg-repo",
+    "name": "SVG Repo",
+    "url": "https://www.svgrepo.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN_rcPG96QclGETLjJKZsHaDSCO5Vku4qiL-kmunMvgtplzpfNj-IUbnsN&s=10",
+    "icon": "🔣",
+    "desc": "500,000+ безкоштовних SVG-векторів та іконок.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "lottiefiles",
+    "name": "LottieFiles",
+    "url": "https://lottiefiles.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpQLRh_bG0z1d0DxQq2yps9uJvSzpBDQV_I-_KpydS-g&s=10",
+    "icon": "🎬",
+    "desc": "Найбільша бібліотека легких анімованих іконок (JSON).",
+    "monetization": "🎁 Freemium",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "css-gg",
+    "name": "CSS.gg",
+    "url": "https://css.gg/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrZmt-ldsSTNglqIetoF3LtD97fWgJan-ZpTlJ36m-OwUVKW4I9wIz7CTs&s=10",
+    "icon": "🗂️",
+    "desc": "700+ іконок у форматі чистого CSS.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "faker-api",
+    "name": "Faker API",
+    "url": "https://fakerapi.it/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHpLsxYSF-AQmrPSb5L_3NYK4PDxnAk1rrdVWe3jJV3PM3g_C_B1jDK_n8&s=10",
+    "icon": "🗄️",
+    "desc": "Генерація мок-даних для тестування фронтенду.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "dev_tools"]
+  },
+  {
+    "id": "cssbuttons",
+    "name": "CSSButtons",
+    "url": "https://cssbuttons.io/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsgWeroYwA8MdBNnThHNZOWkghcHk_0-eE9ZC-p7NIaxlREAIL3RDUBA&s=10",
+    "icon": "🔳",
+    "desc": "Колекція стильних анімованих кнопок.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "a1-gallery",
+    "name": "A1 Gallery",
+    "url": "https://www.a1.gallery/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfJQvHsf6ZoXzlTGBjMi5ncWz8DWXsAGj8v-dACjMkGQ&s=10",
+    "icon": "👁️",
+    "desc": "Галерея найкращих сайтів світу з фільтрами.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "dark-design",
+    "name": "Dark Design",
+    "url": "https://www.dark.design/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZLYRZiV73AM38Ykx019yGpgRdXdiAvDMhRM3JTG38Pg&s=10",
+    "icon": "🌙",
+    "desc": "Найкращі зразки веб-дизайну у темній темі.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "land-book",
+    "name": "Land-book",
+    "url": "https://land-book.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEEonZQIBSA0SjvcWV3oa6xhnX63Kh59Ss75Ths6BXcA&s=10",
+    "icon": "📖",
+    "desc": "Добірка лендінгів, відсортована за типом та кольором.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "shadertoy",
+    "name": "Shadertoy",
+    "url": "https://www.shadertoy.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrZT3_2HUpHTpvcf9YdZ8PIJ51yMPC_wzKDDoNBJtV0gR49Z-effOR6ms&s=10",
+    "icon": "🔮",
+    "desc": "Спільнота шейдерів на чистому GLSL коді.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "threejs",
+    "name": "Three.js Demos",
+    "url": "https://threejs.org/examples/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGJT3lMe94kncPHi89-kkujkcm-FUCG34uyerPuTKzog&s=10",
+    "icon": "🧊",
+    "desc": "Галерея можливостей 3D у браузері.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "claude-design",
+    "name": "Claude.design",
+    "url": "https://claude.design/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZzNcYkwZhZtpsKC0cliJZU4AOzgc2z5qXbjNzaBiSQhZN0PQC1M34l0Cr&s=10",
+    "icon": "✨",
+    "desc": "Каталог UI-компонентів, згенерованих через Claude.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend"]
+  },
+  {
+    "id": "chefgpt",
+    "name": "ChefGPT",
+    "url": "https://www.chefgpt.xyz/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46EIgQofBepH4lUZvMVrZbGhzy3e3Qv83fDBniZcrCFYS6W0j0-EK6lqL&s=10",
+    "icon": "👨‍🍳",
+    "desc": "Складання рецептів на основі продуктів з холодильника.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "carcare",
+    "name": "Carcare",
+    "url": "https://www.carcarekiosk.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOXcYPP11QCNinjl-UzPI3W4wmPA11SHP_inlc4TQDg&s=10",
+    "icon": "🔧",
+    "desc": "База відеоінструкцій з ремонту та обслуговування авто.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "autodraw",
+    "name": "AutoDraw",
+    "url": "https://www.autodraw.com/",
+    "image": "https://www.autodraw.com/assets/images/autodraw-shareimage.png",
+    "icon": "✏️",
+    "desc": "Перетворення простих ескізів на іконки та малюнки.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle", "visual_tools"]
+  },
+  {
+    "id": "gemini-restoration",
+    "name": "Gemini: Реставрація",
+    "url": "https://gemini.google.com/",
+    "image": "https://lh3.googleusercontent.com/gj-iIi5Yunc6de3XNEXxZt8lJs6CAkQpC50fHsKEeY3zRRjSFg7oHSiFBTIOw1qKmpHjEXUIA2_B58lwc-EJCDNKDAoIYaR9s1Y=e365-pa-nu-s0",
+    "icon": "🏛️",
+    "desc": "Генерація історичних сцен за координатами та часом.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle", "visual_tools"]
+  },
+  {
+    "id": "vidiq",
+    "name": "vidiq",
+    "url": "https://vidiq.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySA2fxBx5kcFvdLmPS1Qx8p-3eQdWb_9zTIOBr1vZYA&s=10",
+    "icon": "📈",
+    "desc": "Аналітика для YouTube та ШІ-генератор заставок/хуків.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "media"]
+  },
+  {
+    "id": "character-ai",
+    "name": "Character AI",
+    "url": "https://character.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZEgQ-fL-qwIAwTYVqSCwh2G3UVUaKxyNkOicZW4kMQ&s=10",
+    "icon": "🎭",
+    "desc": "Спілкування з віртуальними персонажами та асистентами.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle", "text_bots"]
+  },
+  {
+    "id": "lucy",
+    "name": "Lucy 2.0",
+    "url": "https://lucy.decart.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLN8OiZEHY-StnwYnwgKhJGmdOI0pZOB4bx4B2RLuNA&s=10",
+    "icon": "👩‍🎤",
+    "desc": "Стань VTuber-ом за секунду. Захоплення рухів на 3D-персонажа.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "video_audio"]
+  },
+  {
+    "id": "radaar",
+    "name": "Radaar",
+    "url": "https://www.radaar.io/",
+    "image": "https://media.licdn.com/dms/image/v2/C4D0BAQFOo6EcgpRjIA/company-logo_200_200/company-logo_200_200/0/1676877019600/radaario_logo?e=2147483647&v=beta&t=9vAdfl9rMk5vkXkM0sph9_CegqigLfSuQEK72uA7lqE",
+    "icon": "📱",
+    "desc": "Універсальна платформа для управління контентом.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "media"]
+  },
+  {
+    "id": "sora-marker",
+    "name": "Sora Marker",
+    "url": "https://soramarker.t3.gg/",
+    "image": "https://static.reelive.ai/static/blog/blog-4.webp",
+    "icon": "🤪",
+    "desc": "Додайте вотермарку Sora на будь-яке відео для тролінгу.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle", "media"]
+  },
+  {
+    "id": "kuskus",
+    "name": "KusKus",
+    "url": "https://kuskus.app/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkb36fAjYCIQvBsVO-6kSDJnP3KtUL-zmcs_R9D6lig&s",
+    "icon": "🍲",
+    "desc": "Українська платформа з рецептами та вбудованим списком покупок.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "paprika",
+    "name": "Paprika Recipe Manager",
+    "url": "https://www.paprikaapp.com/",
+    "image": "https://play-lh.googleusercontent.com/MkDnKW9N2bNK-fC8oVypYZugmD0NaXjX0mr1KEYWSCUvHHk5Q4QU9lI5BIsKVqijv-qLoIMbOUmqbuSV8Be51A",
+    "icon": "🌶️",
+    "desc": "Парсер, що витягує чисті рецепти з сайтів.",
+    "monetization": "🔴 Paid",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "supercook",
+    "name": "SuperCook",
+    "url": "https://www.supercook.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVfCX6CcDpGw2BLSH6iEcmeSfjOvFab7QZMR8_eMP2zSbL57LCor4qfuP&s=10",
+    "icon": "🥗",
+    "desc": "Генератор страв на основі наявних вдома продуктів.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "cookpad",
+    "name": "Cookpad",
+    "url": "https://cookpad.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwbSyQxW4xLWlcvI9kIhiddDH-vM349zrMcF3a6KxKw&s=10",
+    "icon": "🍳",
+    "desc": "Велика соціальна мережа для кулінарів із домашніми рецептами.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "myfitnesspal",
+    "name": "MyFitnessPal",
+    "url": "https://www.myfitnesspal.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0gVPBg9GgLMPXDQTpm0zhPp_fAl4nwahgfBR_5mYQAmz-_5XPQFfspJo&s=10",
+    "icon": "💪",
+    "desc": "Трекер калорій і макронутрієнтів із базою штрихкодів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "virale",
+    "name": "Virale",
+    "url": "https://virale.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrIWfTkgP7NlYpsHQ7ewUQLDa4HRIYephK_2ryMyEhENso50F1iW1em34&s=10",
+    "icon": "🚀",
+    "desc": "ШІ для створення вірусних відео та сценаріїв.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "media"]
+  },
+  {
+    "id": "trakt",
+    "name": "Trakt.tv",
+    "url": "https://trakt.tv/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkokJ-12y_4qa1nBLCjEEtd7jQteEwBu_-DWgDG2YkUA&s=10",
+    "icon": "🍿",
+    "desc": "Трекер (scrobbling) переглянутих серіалів та кіно.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "rewish",
+    "name": "Rewish",
+    "url": "https://rewish.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHUGORih79SoIh60SHL6uUKdRZJgl8dSEiT_tYrR-P5a-47Vkn0XivUrz3&s=10",
+    "icon": "🎁",
+    "desc": "Сервіс для створення списків бажань (вішлістів).",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "komoot",
+    "name": "Komoot",
+    "url": "https://www.komoot.com/",
+    "image": "https://services.garmin.com/appsLibraryExternalServices/api/icons/81e874cd-9548-4431-b1c9-2338abc6c5fb",
+    "icon": "🚵",
+    "desc": "Прокладання деталізованих веломаршрутів та хайкінгу.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "strava",
+    "name": "Strava",
+    "url": "https://www.strava.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw0uYItjjzw-GNHttlI_ZKADE0QNb0YTeI67fUxMwKNQ&s=10",
+    "icon": "🏃",
+    "desc": "Головна соцмережа для трекінгу спортивних досягнень.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "savefrom",
+    "name": "SaveFrom",
+    "url": "https://en.savefrom.net/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrXf_eHkSR-m3HFZS4GrvffTcZ8k4H1ALeMXWu8OjLppnbe5t_Sf3z6pdW&s=10",
+    "icon": "📥",
+    "desc": "Завантаження відео з YouTube та інших платформ.",
+    "monetization": "🆓 Free",
+    "categories": ["media"]
+  },
+  {
+    "id": "eightify",
+    "name": "Eightify",
+    "url": "https://eightify.app/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5aBdygB6_RoditPuuHHCJyM-spJNvBGBFPxPNSop_8A&s",
+    "icon": "⏱️",
+    "desc": "Створення тез та резюме будь-якого YouTube-відео.",
+    "monetization": "🎁 Freemium",
+    "categories": ["media", "text_bots"]
+  },
+  {
+    "id": "sider",
+    "name": "Sider",
+    "url": "https://sider.ai/",
+    "image": "https://play-lh.googleusercontent.com/VghuZRn0-oLvbaGqptsM-9Qr6Ka7Pmw7lfmu6_UQ56mZS6bsXbET9Uf0wF0FECP8lEM",
+    "icon": "🤖",
+    "desc": "ШІ-помічник у браузері для аналізу контенту та перекладу.",
+    "monetization": "🎁 Freemium",
+    "categories": ["media", "text_bots"]
+  },
+  {
+    "id": "aurisai",
+    "name": "Aurisai",
+    "url": "https://aurisai.io/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlW3ooeY-cgV4brm6ERXjBA7fX2lDrT0OqFLDYiS4UTBL0-wRD6k1xkQ8&s=10",
+    "icon": "🎙️",
+    "desc": "Транскрибація аудіо в текст та створення субтитрів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["media", "video_audio"]
+  },
+  {
+    "id": "clipto",
+    "name": "Clipto",
+    "url": "https://www.clipto.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxa7N0jwzaDT04bsxJgtBUrr3JLbuTSnbswTalEaQS6T-lZmIJwPFoYgW&s=10",
+    "icon": "📝",
+    "desc": "Перетворення аудіо та відео файлів на текстові документи.",
+    "monetization": "🎁 Freemium",
+    "categories": ["media", "text_bots"]
+  },
+  {
+    "id": "haveibeenpwned",
+    "name": "Have I Been Pwned",
+    "url": "https://haveibeenpwned.com/",
+    "image": "https://haveibeenpwned.com/Images/OpenGraphPreview.jpg",
+    "icon": "🛡️",
+    "desc": "Перевірка витоку паролів та пошт у глобальних базах.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "deepware",
+    "name": "Deepware Scanner",
+    "url": "https://deepware.ai/",
+    "image": "https://media.licdn.com/dms/image/v2/D4D0BAQH24b_NjGq-1Q/company-logo_200_200/company-logo_200_200/0/1699283632815/deepwareai_logo?e=2147483647&v=beta&t=rKIUPJBQWJ9PUZ-ru0WTlzk4MTi5cDYb-DzM5XpTXpM",
+    "icon": "🕵️",
+    "desc": "Детектор дипфейків на відео.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "media"]
+  },
+  {
+    "id": "ddg-email",
+    "name": "DDG Email Protection",
+    "url": "https://duckduckgo.com/email/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVFGX1KhsbNlZT2lbanmL3hOjUBmIDKwYqXw&s",
+    "icon": "🦆",
+    "desc": "Створення анонімних адрес для захисту пошти.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "osint-framework",
+    "name": "OSINT Framework",
+    "url": "https://osintframework.com/",
+    "image": "https://logo.clearbit.com/osintframework.com",
+    "icon": "🕸️",
+    "desc": "Карта інструментів для збору інформації з відкритих джерел.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "geospy",
+    "name": "GeoSpy",
+    "url": "https://geospy.ai/",
+    "image": "https://framerusercontent.com/images/iRqk7MQPvyAy2xeKsX798nePUWo.png",
+    "icon": "🛰️",
+    "desc": "Видає точні GPS-координати за аналізом фото.",
+    "monetization": "🎁 Freemium",
+    "categories": ["security"]
+  },
+  {
+    "id": "cat-lives",
+    "name": "I know where your cat lives",
+    "url": "https://iknowwhereyourcatlives.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiAq_ECQjlI7VhhrtzLK5zkphmDpsR-unhg&s",
+    "icon": "🐈",
+    "desc": "OSINT-проєкт, що витягує EXIF-дані геолокації з фото.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "pastvu",
+    "name": "PastVu",
+    "url": "https://pastvu.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUZjGTOa4uCNTainJ0lO8Xo-j1zMRoljLpA&s",
+    "icon": "🏛️",
+    "desc": "Архівні фотографії та старі карти.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "lifestyle"]
+  },
+  {
+    "id": "retromap",
+    "name": "Retromap",
+    "url": "http://retromap.ru/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWV1WYnnV2UUoC94vEzoAr75MPvLuMMlibQ&s",
+    "icon": "🗺️",
+    "desc": "Старі карти з прив'язкою до координат.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "timeportal",
+    "name": "Timeportal",
+    "url": "https://www.timeportal.app/",
+    "image": "https://play-lh.googleusercontent.com/uxm5TWCmwqD0UhKmnQ7VjDlw6k4L56AJ2jCuDJ-4BwX0UGqHCcp6Ae9nNZpKpOW1GA",
+    "icon": "⏳",
+    "desc": "Сервіс для 'мандрівок' вулицями через історичні знімки.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "wikimapia",
+    "name": "Wikimapia",
+    "url": "https://wikimapia.org/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4N8ynjux-fEAjOvPzYYRKPMF5A41uZifN3w&s",
+    "icon": "📍",
+    "desc": "Краудсорсингова карта об'єктів (заводи, бази).",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "setam",
+    "name": "Open Market (СЕТАМ)",
+    "url": "https://setam.net.ua/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6xzXoMUEdHD8jXaM-ecVrGSvXYVIVg9fXUA&s",
+    "icon": "⚖️",
+    "desc": "Аукціони арештованого майна та конфіскату.",
+    "monetization": "🆓 Free",
+    "categories": ["security"]
+  },
+  {
+    "id": "carvertical",
+    "name": "CarVertical",
+    "url": "https://www.carvertical.com/",
+    "image": "https://cdn.sanity.io/images/v2r3zeun/production/8dfe3b2fcc0db29c19ae33dde9578f3a43ade961-1024x576.jpg?w=2048&q=75&fit=clip&auto=format",
+    "icon": "🚙",
+    "desc": "Перевірка історії авто за VIN-кодом.",
+    "monetization": "🔴 Paid",
+    "categories": ["security", "lifestyle"]
+  },
+  {
+    "id": "driving-simulator",
+    "name": "Frame Synthesis Driving Simulator",
+    "url": "https://framesynthesis.com/drivingsimulator/maps/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuSyEKCxwGapQp8IK17mCZOAt46-DdT9518w&s",
+    "icon": "🏎️",
+    "desc": "2D-симулятор керування авто поверх Google Maps.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "lifestyle"]
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com/",
+    "image": "https://cdn-1.webcatalog.io/catalog/chatgpt/chatgpt-icon-filled-256.png?v=1779064505670",
+    "icon": "💬",
+    "desc": "Найвідоміший ШІ для текстів, коду та планування.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREWKDD4mTWVyCLvqZwuCkOMkzydSeKaMj_JCTTQLDC5A&s",
+    "icon": "🧠",
+    "desc": "Лідер у роботі з документами та програмуванні.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots", "dev_tools"]
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "url": "https://gemini.google.com/",
+    "image": "https://lh3.googleusercontent.com/gj-iIi5Yunc6de3XNEXxZt8lJs6CAkQpC50fHsKEeY3zRRjSFg7oHSiFBTIOw1qKmpHjEXUIA2_B58lwc-EJCDNKDAoIYaR9s1Y=e365-pa-nu-s0",
+    "icon": "✨",
+    "desc": "Потужний ШІ від Google з екосистемною інтеграцією.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "deepseek",
+    "name": "Deepseek",
+    "url": "https://chat.deepseek.com/",
+    "image": "https://miro.medium.com/1*4d4kJxoGrYFfEyx2TYxK5g.png",
+    "icon": "🐋",
+    "desc": "Високоточна модель для програмування та аналітики.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots", "dev_tools"]
+  },
+  {
+    "id": "grok",
+    "name": "Grok",
+    "url": "https://grok.com/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Grok-feb-2025-logo.svg/3840px-Grok-feb-2025-logo.svg.png",
+    "icon": "✖️",
+    "desc": "ШІ від X (Twitter) з доступом до новин у реальному часі.",
+    "monetization": "🔴 Paid",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral",
+    "url": "https://chat.mistral.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE4PV89nyYh1KwP3kMxL7TPHiUhorCwJZz1w&s",
+    "icon": "🌪️",
+    "desc": "Європейська альтернатива з відкритим кодом.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen",
+    "url": "https://chat.qwen.ai/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/1280px-Qwen_logo.svg.png",
+    "icon": "🐼",
+    "desc": "Чат-бот від Alibaba, що розуміє складні логічні запити.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "url": "https://writesonic.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL3fNes08e_hA7sfGZvAHGFSKNglDcy-3Sk5PDV9BGDQXrjVwgehuYh08&s=10",
+    "icon": "✍️",
+    "desc": "Інструмент для SEO-статей та маркетингових текстів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "rytr",
+    "name": "RYTR",
+    "url": "https://rytr.me/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLDxU3zwXFOExLlus_-QqkWUYG9OqTz9zdeCv5F7jvHnAfwfHMVaWWizsW&s=10",
+    "icon": "📝",
+    "desc": "Швидкий помічник для листів та постів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "neuralwriter",
+    "name": "NeuralWriter",
+    "url": "https://neuralwriter.com/",
+    "image": "https://cdn-1.webcatalog.io/catalog/neural-writer/neural-writer-icon-filled-256.webp?v=1719997516418",
+    "icon": "🧠",
+    "desc": "Багатомовний інструмент для якісного рерайту тексту.",
+    "monetization": "🆓 Free",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "retext",
+    "name": "ReText",
+    "url": "https://retext.ai/",
+    "image": "https://crmindex.ru/uploads/service/64edc2685e271.png",
+    "icon": "🔄",
+    "desc": "Сервіс для зміни тональності тексту.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL",
+    "url": "https://www.deepl.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDJn--gngcmTIQcfaPvl89FDenXKGfag6q9C7z4B3Rfw&s=10",
+    "icon": "🌍",
+    "desc": "Найточніший перекладач, що зберігає контекст.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "claude-directory",
+    "name": "Claude Directory",
+    "url": "https://claude.ai/directory",
+    "image": "https://media.licdn.com/dms/image/v2/D4E0BAQFko-zWIZk_pw/company-logo_200_200/B4EZhiRWKvHgAI-/0/1753995371543/claude_logo?e=2147483647&v=beta&t=CVNmFKyWig0Uo78oAr3II6KVLu_o0aXPtnt4S6XgOr8",
+    "icon": "📂",
+    "desc": "Каталог офіційних інтеграцій для Claude.",
+    "monetization": "🆓 Free",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LQ2AIj50o4IdUIu5TnSQR_ZHG0tRzjS9Wt3kwCCQY8XApi-BFma-AVwP&s=10",
+    "icon": "🔎",
+    "desc": "Найкращий ШІ-пошуковик з виносками на джерела.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots", "edu_work"]
+  },
+  {
+    "id": "bing-copilot",
+    "name": "Bing (Copilot)",
+    "url": "https://copilot.microsoft.com/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Bing_Fluent_Logo_Text.svg",
+    "icon": "🔍",
+    "desc": "Безкоштовний доступ до GPT-4 з виходом в інтернет.",
+    "monetization": "🆓 Free",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "genspark",
+    "name": "Genspark",
+    "url": "https://www.genspark.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy9XTNMuAmUVmZ8TLThebQgt7zR88FEOy6yovCvy510g&s=10",
+    "icon": "✨",
+    "desc": "Створює кастомні міні-вікіпедії під твій запит.",
+    "monetization": "🆓 Free",
+    "categories": ["text_bots"]
+  },
+  {
+    "id": "sora",
+    "name": "Sora AI",
+    "url": "https://openai.com/sora/",
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/29/OpenAI_Sora_icon.png",
+    "icon": "🎥",
+    "desc": "Генерація реалістичних відео за текстовим описом.",
+    "monetization": "🔴 Paid",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "luma-ray-3",
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/dream-machine",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXp_Ijr5xvnfP5lMiVynD2y_qYDfsLSbKKULOjQXF7rKrHHkREixQPAZM&s=10",
+    "icon": "✨",
+    "desc": "Генерація з HDR та Control Motion.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "kling-o1",
+    "name": "Kling O1",
+    "url": "https://app.klingai.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyOA3a97W8bmUeFC7GNE5BfR4FIl-h7fReKmhfIkNItg&s=10",
+    "icon": "🎬",
+    "desc": "Розумне редагування відео та складні промти.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "url": "https://pika.art/",
+    "image": "https://cdn-1.webcatalog.io/catalog/pika-art/pika-art-icon-filled-256.png?v=1723176279979",
+    "icon": "🎭",
+    "desc": "Анімація зображень та створення коротких відеокліпів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGtzgEJOD-XwH5FQEBGDkc3U63b_egVL4FrNNSy3ekng&s=10",
+    "icon": "🎞️",
+    "desc": "Професійний набір інструментів для монтажу та ефектів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "kaiber",
+    "name": "Kaiber",
+    "url": "https://kaiber.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6wfRePxqXCyH_jcWlPkUJOmrNL5fHWdKUSpoR4U9lWeRDm2WsGBS1NQE&s=10",
+    "icon": "🎨",
+    "desc": "Створення стилізованих художніх відео та кліпів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "heygen",
+    "name": "Heygen",
+    "url": "https://www.heygen.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_TfONvrSFZ_bm4xHgBIkYGRDNKNVOJI2jTo13DR6eNPVctISNe9LV34&s=10",
+    "icon": "🧑‍💼",
+    "desc": "Генерація цифрових аватарів з вашим голосом.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "url": "https://suno.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrrPcSL3UoyktOVl4Rn5PcKLd0BHJn7dTJyQ5tK11K7A&s=10",
+    "icon": "🎵",
+    "desc": "Генерація повноцінних пісень з вокалом.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "riffusion",
+    "name": "Riffusion (Producer)",
+    "url": "https://www.riffusion.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzpqzBfu-9OjturPe-_JPxgYTS44snqN2dojrHIFkujg&s=10",
+    "icon": "🎹",
+    "desc": "Музичний ШІ-агент для створення музики з редагуванням.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "sounddraw",
+    "name": "SoundDraw",
+    "url": "https://soundraw.io/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKs4xuA6Ys9BZD5Tnlfvq2vZ4Al_W6qkjXafRc1L6V6MSmBnxMrOMkPZpp&s=10",
+    "icon": "🎼",
+    "desc": "Створення фонової музики без авторських прав.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "vocalremover",
+    "name": "VocalRemover",
+    "url": "https://vocalremover.org/",
+    "image": "https://play-lh.googleusercontent.com/b3iP5M-056d9GvASJB18-25DMY0FzueD70_oKg76qkWM51PpxjDRatJAPaWbDWXX5ao",
+    "icon": "🎤",
+    "desc": "Якісне відділення вокалу від інструменталу.",
+    "monetization": "🆓 Free",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "moneyprinter",
+    "name": "MoneyPrinterTurbo",
+    "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "image": "https://logo.clearbit.com/github.com",
+    "icon": "💸",
+    "desc": "Авто-генератор відео для TikTok/Shorts.",
+    "monetization": "💻 Open Source",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "elevenlabs-studio",
+    "name": "ElevenLabs Studio 3.0",
+    "url": "https://elevenlabs.io/app/studio",
+    "image": "https://storage.ghost.io/c/08/a3/08a3cb77-16f2-4623-b90a-2936db90af0a/content/images/size/w1200/2025/11/elevnlabs.webp",
+    "icon": "🎧",
+    "desc": "Монтаж відео, чистка шуму та перегенерація голосу.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "genny-lovo",
+    "name": "Genny Lovo",
+    "url": "https://lovo.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR2NmEMbau2LosZi0Xqbh4Kzf8379-ZtBAbnN7h4WZpw&s",
+    "icon": "🎙️",
+    "desc": "Професійна озвучка для відео з емоціями.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm8n0PX8wO6-ZoW7yf0HTFi9X1YnNzpvruuZmIddZPJfjdVCyk1I7GAXaG&s=10",
+    "icon": "📖",
+    "desc": "Перетворення тексту чи PDF на аудіокнигу.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio", "edu_work"]
+  },
+  {
+    "id": "act-two",
+    "name": "Act-Two",
+    "url": "https://runwayml.com/product/act-two",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThcRM_tW7QF2w-SDUrtvpCORzOH2zFBD5SMzQwqms1UA&s=10",
+    "icon": "🎭",
+    "desc": "Анімація обличчя та тіла нового рівня.",
+    "monetization": "🔴 Paid",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "vlipsy",
+    "name": "Vlipsy",
+    "url": "https://vlipsy.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUTFuLsA5wVwJx7GmHnaQIokCPKSFP-zH2uS4rTzR8l38a-ftwWI-p_okh&s=10",
+    "icon": "🎞️",
+    "desc": "Пошук мемних вирізок з фільмів та серіалів.",
+    "monetization": "🆓 Free",
+    "categories": ["video_audio", "media"]
+  },
+  {
+    "id": "leonardo",
+    "name": "Leonardo",
+    "url": "https://leonardo.ai/",
+    "image": "https://learnkosh.tech/wp-content/uploads/2025/08/Leonardo-WEBP.webp",
+    "icon": "🎨",
+    "desc": "Генерація художнього арту та текстур.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com/",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Midjourney_Emblem.png",
+    "icon": "🌌",
+    "desc": "Лідер фотореалістичних та креативних зображень.",
+    "monetization": "🔴 Paid",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "krea-ai",
+    "name": "Krea AI",
+    "url": "https://www.krea.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlymkyNCfAiikT9dyiVA_EH6jfvfQIMWEufaFZ1Esvbf5X3cWZhhRai8t&s=10",
+    "icon": "⚡",
+    "desc": "Генерація та покращення зображень у реальному часі.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "vectors-swipe",
+    "name": "Vectors Swipe",
+    "url": "https://www.vectors.fun/swipe",
+    "image": "https://logo.clearbit.com/vectors.fun",
+    "icon": "👉",
+    "desc": "Тіндер для промтів: свайпай генерації вліво/вправо.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "looka",
+    "name": "Looka",
+    "url": "https://looka.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvtD-SsJ3eXgDbXRcKphUGOsmBY4v1EIb936MoqLdA80px5d98rPe-BpiT&s=10",
+    "icon": "✨",
+    "desc": "Швидке створення логотипів та фірмового стилю.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "brandmark",
+    "name": "Brandmark",
+    "url": "https://brandmark.io/",
+    "image": "https://cdn-1.webcatalog.io/catalog/brandmark/brandmark-icon-filled-256.png?v=1714773457547",
+    "icon": "🏷️",
+    "desc": "Створення мінімалістичних логотипів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "bloom-ai",
+    "name": "Bloom AI",
+    "url": "https://www.trybloom.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb1l8BoEWlP10gRBUPaKKmGUzqaPZohtGsQRXwLon6ig&s",
+    "icon": "🌸",
+    "desc": "Бренд-бук, мерч та ідеї дизайну з посилання на сайт.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "figma-make",
+    "name": "Figma Make",
+    "url": "https://www.figma.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4r8lASpHn4SmFURBKQZHUCJIjxkjORTngjqzOZU5AoE8pI704-is8qI&s=10",
+    "icon": "🖌️",
+    "desc": "Генерація UI-інтерфейсів безпосередньо у Figma.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools", "frontend"]
+  },
+  {
+    "id": "design-arena",
+    "name": "Design Arena",
+    "url": "https://www.designarena.ai/",
+    "image": "https://www.designarena.ai/design-arena.png",
+    "icon": "⚔️",
+    "desc": "Битва AI-дизайнерів: порівнюйте результати UI/UX.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "marble",
+    "name": "Marble",
+    "url": "https://marble.worldlabs.ai/",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQGU-18Bdm-XsA/company-logo_200_200/company-logo_200_200/0/1729139965783/mrblbio_logo?e=2147483647&v=beta&t=s5ykyQOJ0XFBCpKx8c9fnfpe0cfY544Oj2xASbzlISM",
+    "icon": "🧊",
+    "desc": "Просторова нейромережа для 3D-сцен.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "tripo3d",
+    "name": "Tripo 3D",
+    "url": "https://www.tripo3d.ai/",
+    "image": "https://yt3.googleusercontent.com/2_K1L5x0xt7tJrK-MdgoAyh8ArbLgow8jKC-pTBp4HF4RrD1szxycCsgpNDEw5LBq3guIQN6fg=s900-c-k-c0x00ffffff-no-rj",
+    "icon": "🗿",
+    "desc": "Генерація 3D-моделей з тексту або фото.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "hunyuan",
+    "name": "Hunyuan 3D v3",
+    "url": "https://3d.hunyuan.tencent.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNR8fIGoh_yCqEf-LupSeFjDCL9GLHaVmAVfS27GseRnjmONPxXCCmkt81&s=10",
+    "icon": "🐉",
+    "desc": "Новий стандарт чіткості для 3D моделей.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "genie3",
+    "name": "Genie 3",
+    "url": "https://deepmind.google/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpChjlNj5cRwqyEDhenhrClGL-6lEu0qJ_1o9ZoTzY5-Bw1RkB1umz7Cxg&s=10",
+    "icon": "🧞",
+    "desc": "Генерація інтерактивних світів (Research).",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "remove-bg",
+    "name": "Remove.bg",
+    "url": "https://www.remove.bg/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwBk1fl96cjL0qxd72SmJwiaBKhzdGlregUptoEzRfDoqiqhl9odSvTdiZ&s=10",
+    "icon": "✂️",
+    "desc": "Миттєве видалення фону з будь-яких фото.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "shots",
+    "name": "Shots",
+    "url": "https://shots.so/",
+    "image": "https://pbs.twimg.com/profile_images/1517996453146378245/RTP0-Jy3_400x400.jpg",
+    "icon": "🖼️",
+    "desc": "Оформлення скріншотів у професійні мокапи.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "qwen-image",
+    "name": "Qwen Image Layered",
+    "url": "https://huggingface.co/spaces/Qwen/Qwen-Image-Layered",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYcw9f70SDk7NlKaiPMwrKAapc02fq0UyG5-jdEBrQMayr-4xvKNzKww&s=10",
+    "icon": "🥞",
+    "desc": "Розбирає зображення на шари для редагування.",
+    "monetization": "🆓 Free",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "upscayl",
+    "name": "Upscayl",
+    "url": "https://www.upscayl.org/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NH14nC6aq72SNA4esZHAqanuLalVVzhiWEi67E4IzA&s=10",
+    "icon": "🔍",
+    "desc": "Десктопний інструмент для безкоштовного апскейлу фото.",
+    "monetization": "💻 Open Source",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "pacdora",
+    "name": "Pacdora",
+    "url": "https://www.pacdora.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfCeaCXuFkpyUCIJROxwUeCCWS6dZ9lfqFd4aFIYx9Lg&s",
+    "icon": "📦",
+    "desc": "3D-дизайн пакування та створення мокапів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools", "frontend"]
+  },
+  {
+    "id": "bellingcat-toolkit",
+    "name": "Bellingcat Toolkit",
+    "url": "https://bellingcat.gitbook.io/toolkit",
+    "image": "https://logo.clearbit.com/bellingcat.com",
+    "icon": "🕵️",
+    "desc": "Офіційна методичка та збірка інструментів від дослідників Bellingcat. Абсолютна база для OSINT, геолокації та цифрових розслідувань.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "edu_work"]
+  }
+]
