@@ -95,7 +95,7 @@
     "url": "https://aistudio.google.com/",
     "image": "https://www.appcreator24.com/srv/imgs/gen/3613411_ico.png?v=1",
     "icon": "🧪",
-    "desc": "Професійна пісочниця для тестування моделей Gemini та керування API.",
+    "desc": "Офіційне середовище розробки для моделей Gemini. Відтепер підтримує генерацію та тестування готових застосунків під Android прямо в інтерфейсі, а також нову модель Gemini 3.1 Flash TTS із підтримкою аудіотегів (напр. [cough] для кашлю в тексті).",
     "monetization": "🆓 Free",
     "categories": ["dev_tools"]
   },
@@ -1117,7 +1117,7 @@
     "icon": "✨",
     "desc": "Генерація з HDR та Control Motion.",
     "monetization": "🎁 Freemium",
-    "categories": ["video_audio"]
+    "categories": ["video_audio", "visual_tools"]
   },
   {
     "id": "kling-o1",
@@ -1458,5 +1458,475 @@
     "desc": "Офіційна методичка та збірка інструментів від дослідників Bellingcat. Абсолютна база для OSINT, геолокації та цифрових розслідувань.",
     "monetization": "🆓 Free",
     "categories": ["security", "edu_work"]
+  },
+  {
+    "id": "omnivoice",
+    "name": "OmniVoice",
+    "url": "https://huggingface.co/k2-fsa/OmniVoice",
+    "image": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "icon": "🗣️",
+    "desc": "Надшвидкий text-to-speech генератор. Підтримує 600+ мов, клонування голосу без цензури та гнучке налаштування параметрів аудіо (стать, вік, шепіт). Невибагливий до заліза.",
+    "monetization": "💻 Open Source",
+    "categories": ["text_bots", "video_audio"]
+  },
+  {
+    "id": "shademap",
+    "name": "ShadeMap",
+    "url": "https://shademap.app/",
+    "image": "https://shademap.app/apple-touch-icon.png",
+    "icon": "🌘",
+    "desc": "Інтерактивна 3D-мапа тіней від будівель і ландшафту в будь-який час доби та року. Відмінний інструмент для OSINT, вибору нерухомості та планування міської інфраструктури.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "lifestyle"]
+  },
+  {
+    "id": "captions",
+    "name": "Captions",
+    "url": "https://desktop.captions.ai/",
+    "image": "https://www.captions.ai/favicon.ico",
+    "icon": "🎬",
+    "desc": "ШІ-відеоредактор: автоматичні субтитри, переклад, виправлення погляду в камеру, автомонтаж довгих відео в короткі, генерація музики та видалення шумів.",
+    "monetization": "🔴 Paid",
+    "categories": ["video_audio", "media"]
+  },
+  {
+    "id": "gifs-com",
+    "name": "Gifs.com",
+    "url": "https://gifs.com/",
+    "image": "https://gifs.com/favicon.ico",
+    "icon": "🔁",
+    "desc": "Швидке створення GIF-анімацій з онлайн-відео (YouTube, Instagram, Vimeo). Дозволяє додавати ефекти, стікери та кастомні тексти.",
+    "monetization": "🎁 Freemium",
+    "categories": ["media", "visual_tools"]
+  },
+  {
+    "id": "revup",
+    "name": "RevUp",
+    "url": "https://revupua.com/",
+    "image": "https://revupua.com/favicon.ico",
+    "icon": "🚙",
+    "desc": "Український застосунок для обліку обслуговування авто. Аналітика витрат пального, нагадування про ТО, ШІ-асистент та зручне сканування чеків з СТО.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "simple-video-tools",
+    "name": "Simple Video Tools",
+    "url": "https://videobolt.net/browse-all-simple-video-tools",
+    "image": "https://videobolt.net/favicon.ico",
+    "icon": "✂️",
+    "desc": "Комплексний набір вебінструментів для обробки відео: об’єднання, обрізання, зміна розміру та швидкості, напрям програвання, конвертування в MP4/GIF.",
+    "monetization": "🆓 Free",
+    "categories": ["video_audio", "media"]
+  },
+  {
+    "id": "vidbee",
+    "name": "VidBee",
+    "url": "https://vidbee.org/",
+    "image": "https://vidbee.org/favicon.ico",
+    "icon": "🐝",
+    "desc": "Відкрита програма для завантаження відео з 1000+ платформ (плейлисти, субтитри, до 8К). Також містить набір онлайн-інструментів для конвертації, обрізання та склеювання відео.",
+    "monetization": "💻 Open Source",
+    "categories": ["media", "video_audio"]
+  },
+  {
+    "id": "10015-product-finder",
+    "name": "10015 Product Finder",
+    "url": "https://10015.io/product-finder",
+    "image": "https://10015.io/assets/images/logo.png",
+    "icon": "🛠️",
+    "desc": "Величезний каталог вебсервісів та інструментів для підвищення продуктивності, розробки та дизайну. Сам сайт також пропонує безліч мікро-тулів для розробників та роботи з текстом.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work", "dev_tools", "frontend"]
+  },
+  {
+    "id": "url-to-any",
+    "name": "URL to Any",
+    "url": "https://www.urltoany.com/",
+    "image": "https://www.urltoany.com/favicon.ico",
+    "icon": "🔗",
+    "desc": "Конвертація вмісту вебсторінок у Markdown, PDF, HTML, зображення, JSON, XML з одного посилання. Вміє витягувати метатеги та має ШІ-узагальнювач тексту. Без реєстрації.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools", "edu_work"]
+  },
+  {
+    "id": "password-pusher",
+    "name": "Password Pusher",
+    "url": "https://eu.pwpush.com/?locale=uk",
+    "image": "https://eu.pwpush.com/favicon.ico",
+    "icon": "🔓",
+    "desc": "Безпечна передача паролів, ключів та файлів через одноразові посилання з обмеженим терміном дії (AES-GCM шифрування). Open Source, можна розгорнути на власному сервері.",
+    "monetization": "🎁 Freemium",
+    "categories": ["security"]
+  },
+  {
+    "id": "lazyweb",
+    "name": "MCP+ Lazyweb",
+    "url": "https://www.lazyweb.com/",
+    "image": "https://www.lazyweb.com/favicon.ico",
+    "icon": "🎨",
+    "desc": "MCP-сервер для вашого ШІ-агента, що містить 257 тисяч референсів UI/UX дизайну. Дозволяє ШІ «побачити», як люди роблять реальні інтерфейси для кращої генерації коду.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "dev_tools"]
+  },
+  {
+    "id": "ai-graveyard",
+    "name": "AI Graveyard",
+    "url": "https://tooldirectory.ai/ai-graveyard",
+    "image": "https://tooldirectory.ai/favicon.ico",
+    "icon": "🪦",
+    "desc": "Кладовище ШІ-стартапів. Збірка інструментів, які втратили актуальність або були вбиті оновленнями ChatGPT. Ідеальне місце для аналізу помилок конкурентів та пошуку ідей для SaaS.",
+    "monetization": "🆓 Free",
+    "categories": ["edu_work", "dev_tools"]
+  },
+  {
+    "id": "scrappi",
+    "name": "Scrappi",
+    "url": "https://www.scrappi.com/",
+    "image": "https://www.scrappi.com/favicon.ico",
+    "icon": "🐿️",
+    "desc": "Просунутий менеджер закладок. Дозволяє зберігати не лише лінки, а й скриншоти, відео та тексти з тегами. Колекціями можна ділитися. Дають 5 Гб безкоштовно.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "lifestyle"]
+  },
+  {
+    "id": "wen-ware",
+    "name": "Wen-ware",
+    "url": "https://wen-ware.com/",
+    "image": "https://wen-ware.com/favicon.ico",
+    "icon": "🌍",
+    "desc": "Браузерна гра у стилі GeoGuessr на базі GPT-Image-2. За 60 секунд потрібно вгадати не лише локацію на панорамі, а й точний рік, який зображено на фото.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "visual_tools"]
+  },
+  {
+    "id": "napkin-ai",
+    "name": "Napkin AI",
+    "url": "https://www.napkin.ai/",
+    "image": "https://www.napkin.ai/favicon.ico",
+    "icon": "📊",
+    "desc": "ШІ-асистент для створення графіків та діаграм. Перетворює текст на прості, мінімалістичні та дуже стильні візуалізації.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "visual_tools"]
+  },
+  {
+    "id": "blacksea",
+    "name": "BlackSea",
+    "url": "https://blacksea.click/",
+    "image": "https://blacksea.click/favicon.ico",
+    "icon": "🌊",
+    "desc": "Українська платформа електронної комерції для продажу інфопродуктів та ПЗ з DRM-захистом. Автоматичне відправлення файлів та вбудовані лендінги.",
+    "monetization": "🔴 Paid",
+    "categories": ["dev_tools", "media"]
+  },
+  {
+    "id": "mingcute",
+    "name": "Mingcute Icons",
+    "url": "https://www.mingcute.com/",
+    "image": "https://www.mingcute.com/favicon.ico",
+    "icon": "🎨",
+    "desc": "Бібліотека з 3000+ безкоштовних монохромних іконок (статичні та анімовані Lottie). Є зручний плагін для Figma та експорт у SVG/PNG.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "phosphor-icons",
+    "name": "Phosphor Icons",
+    "url": "https://phosphoricons.com/",
+    "image": "https://phosphoricons.com/favicon.ico",
+    "icon": "✏️",
+    "desc": "9000+ гнучких значків для розробки та дизайну. Можна налаштовувати товщину ліній та стиль заповнення, легко інтегрується в код.",
+    "monetization": "🆓 Free",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "hugeicons",
+    "name": "Hugeicons",
+    "url": "https://hugeicons.com/",
+    "image": "https://hugeicons.com/favicon.ico",
+    "icon": "🚀",
+    "desc": "База з 4600+ безкоштовних SVG-іконок. Дуже зручний пошук та наявність загального Figma-файлу з усією колекцією.",
+    "monetization": "🎁 Freemium",
+    "categories": ["frontend", "visual_tools"]
+  },
+  {
+    "id": "unity-ai",
+    "name": "Unity AI",
+    "url": "https://unity.com/features/ai",
+    "image": "https://unity.com/favicon.ico",
+    "icon": "🎮",
+    "desc": "Вбудований ШІ-агент у рушій Unity. Розуміє команди, має генератор 2D/3D асетів та MCP-сервер для підключення сторонніх мовних моделей.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools", "visual_tools", "games"]
+  },
+  {
+    "id": "roomtodo",
+    "name": "RoomTODO",
+    "url": "https://roomtodo.com/",
+    "image": "https://roomtodo.com/favicon.ico",
+    "icon": "🛋️",
+    "desc": "Український 3D-планувальник інтер'єрів. Дозволяє малювати план за кресленням, додавати меблі та матеріали, а також робити рендер кімнат.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "visual_tools"]
+  },
+  {
+    "id": "fluentcleaner",
+    "name": "FluentCleaner",
+    "url": "https://github.com/builtbybel/FluentCleaner",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🧹",
+    "desc": "Утиліта з відкритим кодом для очищення Windows від тимчасових файлів та сміття. Працює на базі правил, які 15 років збирала спільнота.",
+    "monetization": "💻 Open Source",
+    "categories": ["dev_tools", "security"]
+  },
+  {
+    "id": "milanote",
+    "name": "Milanote",
+    "url": "https://milanote.com/",
+    "image": "https://milanote.com/favicon.ico",
+    "icon": "📝",
+    "desc": "Онлайн-простір для візуальної організації ідей. Нотатки, мудборди, збір референсів та спільна робота над креативними проєктами.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "visual_tools"]
+  },
+  {
+    "id": "dojoit",
+    "name": "Dojoit",
+    "url": "https://www.dojoit.com/",
+    "image": "https://www.dojoit.com/favicon.ico",
+    "icon": "🖍️",
+    "desc": "Надшвидка онлайн-дошка для малювання, побудови схем та командних мозкових штурмів у реальному часі.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "visual_tools"]
+  },
+  {
+    "id": "edit-banana",
+    "name": "Edit Banana",
+    "url": "https://editbanana.anxin6.cn/app",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🍌",
+    "desc": "Фреймворк на базі Meta SAM 3 для складного редагування зображень. Вміє розпізнавати та редагувати вшитий текст, таблиці, графіки та LaTeX-формули.",
+    "monetization": "💻 Open Source",
+    "categories": ["edu_work", "visual_tools"]
+  },
+  {
+    "id": "cardholder",
+    "name": "Cardholder",
+    "url": "https://cardholder.app/",
+    "image": "https://cardholder.app/favicon.ico",
+    "icon": "💳",
+    "desc": "Український сервіс для оцифрування програм лояльності бізнесів. Накопичення балів, персональний QR-код замість пластикових карток та пошук закладів на мапі.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "cutout-pro",
+    "name": "Cutout.Pro Enhancer",
+    "url": "https://www.cutout.pro/photo-enhancer-sharpener-upscaler/upload",
+    "image": "https://www.cutout.pro/favicon.ico",
+    "icon": "🖼️",
+    "desc": "Браузерний інструмент для різкого покращення якості розмитих фото та апскейлу за допомогою ШІ. Чудово зберігає текст на зображеннях.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools"]
+  },
+  {
+    "id": "magicam",
+    "name": "Magicam",
+    "url": "https://magicam.ai/",
+    "image": "https://magicam.ai/favicon.ico",
+    "icon": "🎭",
+    "desc": "ШІ для заміни обличчя та голосу прямо під час відеодзвінків у реальному часі. Працює як віртуальна веб-камера для будь-яких програм.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio", "media"]
+  },
+  {
+    "id": "hedra-character3",
+    "name": "Hedra Character-3",
+    "url": "https://www.hedra.com/",
+    "image": "https://www.hedra.com/favicon.ico",
+    "icon": "🧑‍🎤",
+    "desc": "Нейромережа для створення віртуальних аватарів. Генерує реалістичну міміку, рухи тіла та синхронізує губи з аудіо. Дає 200 кредитів щомісяця.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio", "visual_tools"]
+  },
+  {
+    "id": "kombai",
+    "name": "Kombai",
+    "url": "https://kombai.com/",
+    "image": "https://kombai.com/favicon.ico",
+    "icon": "💻",
+    "desc": "ШІ для фронтендерів. Автоматично конвертує дизайн-макети з Figma у готовий та чистий код (HTML, CSS, React).",
+    "monetization": "🎁 Freemium",
+    "categories": ["frontend", "dev_tools"]
+  },
+  {
+    "id": "higgsfield",
+    "name": "Higgsfield",
+    "url": "https://higgsfield.ai/",
+    "image": "https://higgsfield.ai/favicon.ico",
+    "icon": "🎥",
+    "desc": "Потужний відео-генератор повного циклу. Від написання сценарію до фінального рендеру, тренування LoRA та доопрацювання конкретних кадрів.",
+    "monetization": "🔴 Paid",
+    "categories": ["video_audio", "visual_tools"]
+  },
+  {
+    "id": "auphonic",
+    "name": "Auphonic",
+    "url": "https://auphonic.com/",
+    "image": "https://auphonic.com/favicon.ico",
+    "icon": "🎙️",
+    "desc": "ШІ для оптимізації звуку: чистить шуми, балансує музику/голос, генерує транскрипції та нормалізує гучність. Безкоштовно 2 години аудіо щомісяця.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
+    "id": "lessonx",
+    "name": "LessonX",
+    "url": "https://lessonx.org/",
+    "image": "https://lessonx.org/favicon.ico",
+    "icon": "👩‍🏫",
+    "desc": "Український сервіс для репетиторів та викладачів. Автоматизує запис учнів, контроль оплат, створення груп, розкладу та поширення матеріалів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work"]
+  },
+  {
+    "id": "todoist",
+    "name": "Todoist",
+    "url": "https://www.todoist.com/",
+    "image": "https://www.todoist.com/favicon.ico",
+    "icon": "✅",
+    "desc": "Популярний менеджер завдань. Розуміє введення справ природною мовою, автоматично розпізнає дати, має систему пріоритетів та проектів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle", "edu_work"]
+  },
+  {
+    "id": "joplin",
+    "name": "Joplin",
+    "url": "https://joplinapp.org/",
+    "image": "https://joplinapp.org/favicon.ico",
+    "icon": "📝",
+    "desc": "Open-source записник з наскрізним шифруванням. Підтримує Markdown, мультимедіа, математичні формули та синхронізацію через власні хмари (Dropbox, Nextcloud).",
+    "monetization": "💻 Open Source",
+    "categories": ["edu_work", "lifestyle"]
+  },
+  {
+    "id": "rewish",
+    "name": "Rewish",
+    "url": "https://rewish.io/welcome",
+    "image": "https://rewish.io/favicon.ico",
+    "icon": "🎁",
+    "desc": "Український застосунок для створення вішлистів та колекцій. Дозволяє друзям бронювати подарунки. Експерти можуть монетизувати свої тематичні добірки.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "bazhay",
+    "name": "Bazhay!",
+    "url": "https://bazhay.mssg.me/",
+    "image": "https://bazhay.mssg.me/favicon.ico",
+    "icon": "💝",
+    "desc": "Простий український застосунок для обміну вішлистами з друзями через посилання на бажані товари. Має преміум-функції за підпискою.",
+    "monetization": "🎁 Freemium",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "billka-ai",
+    "name": "Billka AI",
+    "url": "https://billka.sytoss.com/uk/",
+    "image": "https://billka.sytoss.com/favicon.ico",
+    "icon": "🐿️",
+    "desc": "Український застосунок для обліку витрат. ШІ автоматично сканує чеки (з фото чи PDF), розпізнає позиції та допомагає розподіляти суми між друзями.",
+    "monetization": "🆓 Free",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "localguessr",
+    "name": "LocalGuessr",
+    "url": "https://project-47tn5.vercel.app/",
+    "image": "https://project-47tn5.vercel.app/favicon.ico",
+    "icon": "📍",
+    "desc": "Власний аналог GeoGuessr. Інтерактивна гра на вгадування локацій, можна створити власну карту для гри.",
+    "monetization": "🚀 Власна розробка (Free)",
+    "categories": ["games", "visual_tools"]
+  },
+  {
+    "id": "money-calculator",
+    "name": "Balance Calculator",
+    "url": "https://gfnf9977.github.io/ready_templates/money_calculator/index.html",
+    "image": "https://gfnf9977.github.io/favicon.ico",
+    "icon": "💵",
+    "desc": "Зручний інструмент для швидкого зведення та обрахунку наявного балансу: готівки та коштів на банківських рахунках.",
+    "monetization": "🚀 Власна розробка (Free)",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "gym-tracker",
+    "name": "Gym Progress Tracker",
+    "url": "https://admirable-tanuki-41fbc2.netlify.app/",
+    "image": "https://admirable-tanuki-41fbc2.netlify.app/favicon.ico",
+    "icon": "🏋️",
+    "desc": "Комплексний дашборд для моніторингу прогресу в тренажерному залі: відстеження силових тренувань, кардіо та харчування в одному місці.",
+    "monetization": "🚀 Власна розробка (Free)",
+    "categories": ["lifestyle"]
+  },
+  {
+    "id": "block-game-crossy",
+    "name": "Block Game",
+    "url": "https://gfnf9977.github.io/ready_templates/block_game/index.html",
+    "image": "https://gfnf9977.github.io/favicon.ico",
+    "icon": "🐸",
+    "desc": "Власна реалізація класичної аркади в стилі Crossy Road, повністю розроблена з використанням бібліотеки Three.js.",
+    "monetization": "🚀 Власна розробка (Free)",
+    "categories": ["games", "frontend", "dev_tools"]
+  },
+  {
+    "id": "whisperify",
+    "name": "Whisperify",
+    "url": "https://whisperify.net/",
+    "image": "https://whisperify.net/favicon.ico",
+    "icon": "🎧",
+    "desc": "Музична вікторина на основі вашого акаунту Spotify. Створює персоналізовані тести на знання треків з ваших улюблених плейлистів та історії прослуховувань.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "video_audio"]
+  },
+  {
+    "id": "linkedin-or-interpol",
+    "name": "LinkedIn or Interpol?",
+    "url": "https://linkedinorinterpol.com/",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🕵️‍♂️",
+    "desc": "Кумедна гра на інтуїцію. Вам показують фотографію людини, а ви маєте вгадати: це успішний професіонал з бази LinkedIn чи розшукуваний злочинець з Інтерполу.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "security"]
+  },
+  {
+    "id": "muzify",
+    "name": "Muzify",
+    "url": "https://muzify.com/",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🎵",
+    "desc": "Музична гра-таймкіллер для фанатів. Оберіть свого улюбленого виконавця і спробуйте вгадати 10 його треків за короткими звуковими уривками.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "video_audio"]
+  },
+  {
+    "id": "toon-tone",
+    "name": "Toon Tone",
+    "url": "https://toontone.com/",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🎨",
+    "desc": "Справжній виклик для вашої візуальної пам'яті. У цій грі потрібно згадати та максимально точно підібрати відтінки кольорів для відомих мультиплікаційних персонажів.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "visual_tools"]
+  },
+  {
+    "id": "wordly-ua",
+    "name": "Wordly (Українською)",
+    "url": "https://wordly.org/ua",
+    "image": "https://wordly.org/favicon.ico",
+    "icon": "🔤",
+    "desc": "Україномовна версія надпопулярної гри в слова. У вас є 6 спроб, щоб вгадати загадане слово з 5 літер. Ідеальна щоденна розминка для мозку.",
+    "monetization": "🆓 Free",
+    "categories": ["games", "edu_work"]
   }
 ]
