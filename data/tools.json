@@ -1850,6 +1850,16 @@
     "categories": ["games", "visual_tools"]
   },
   {
+    "id": "ukraine-cities-quiz",
+    "name": "Ukraine-cities-quiz",
+    "url": "https://ukraine-cities-quiz.vercel.app/",
+    "image": "https://media.proprofs.com/images/QM/user_images/2486187/1558700606.jpg",
+    "icon": "📍",
+    "desc": "Перелічити усі міста країни, дивлячись н розташування вгаданих по мапі",
+    "monetization": "🎁 Freemium",
+    "categories": ["games"]
+  },
+  {
     "id": "money-calculator",
     "name": "Balance Calculator",
     "url": "https://gfnf9977.github.io/ready_templates/money_calculator/index.html",
