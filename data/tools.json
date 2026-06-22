@@ -1842,8 +1842,8 @@
   {
     "id": "localguessr",
     "name": "LocalGuessr",
-    "url": "https://project-47tn5.vercel.app/",
-    "image": "https://project-47tn5.vercel.app/favicon.ico",
+    "url": "https://geogame-brown.vercel.app/",
+    "image": "https://geogame-brown.vercel.app/icon.png",
     "icon": "📍",
     "desc": "Власний аналог GeoGuessr. Інтерактивна гра на вгадування локацій, можна створити власну карту для гри.",
     "monetization": "🚀 Власна розробка (Free)",
@@ -1856,7 +1856,7 @@
     "image": "https://media.proprofs.com/images/QM/user_images/2486187/1558700606.jpg",
     "icon": "📍",
     "desc": "Перелічити усі міста країни, дивлячись н розташування вгаданих по мапі",
-    "monetization": "Free",
+    "monetization": "🆓 Free",
     "categories": ["games"]
   },
   {
@@ -1902,7 +1902,7 @@
   {
     "id": "linkedin-or-interpol",
     "name": "LinkedIn or Interpol?",
-    "url": "https://linkedinorinterpol.com/",
+    "url": "https://linkedin-or-interpol.com/",
     "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/coajvj.webp",
     "icon": "🕵️‍♂️",
     "desc": "Кумедна гра на інтуїцію. Вам показують фотографію людини, а ви маєте вгадати: це успішний професіонал з бази LinkedIn чи розшукуваний злочинець з Інтерполу.",
