@@ -1942,7 +1942,7 @@
   {
     "id": "google-cloud-platform",
     "name": "Google Cloud Platform",
-    "url": "https://cloud.google.com/",
+    "url": "https://console.cloud.google.com/welcome?project=lab4-cloud-491021&supportedpurview=project",
     "image": "https://cloud.google.com/favicon.ico",
     "icon": "☁️",
     "desc": "Глобальна хмарна екосистема. Незамінна для деплою застосунків, управління базами даних та отримання доступу до різноманітних API (зокрема картографічних сервісів). Має потужний Always Free ліміт.",
