@@ -1938,5 +1938,15 @@
     "desc": "Україномовна версія надпопулярної гри в слова. У вас є 6 спроб, щоб вгадати загадане слово з 5 літер. Ідеальна щоденна розминка для мозку.",
     "monetization": "🆓 Free",
     "categories": ["games", "edu_work"]
+  },
+  {
+    "id": "google-cloud-platform",
+    "name": "Google Cloud Platform",
+    "url": "https://cloud.google.com/",
+    "image": "https://cloud.google.com/favicon.ico",
+    "icon": "☁️",
+    "desc": "Глобальна хмарна екосистема. Незамінна для деплою застосунків, управління базами даних та отримання доступу до різноманітних API (зокрема картографічних сервісів). Має потужний Always Free ліміт.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
   }
 ]
