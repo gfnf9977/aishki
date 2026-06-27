@@ -86,7 +86,7 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxr8FZFatuzi4X2TGb3DAR1W__F115Zk7OQ&s",
     "icon": "⌨️",
     "desc": "ШІ-автодоповнювач коду, що працює прямо у вашому IDE.",
-    "monetization": "🔴 Paid",
+    "monetization": "🎁 Freemium",
     "categories": ["dev_tools"]
   },
   {
@@ -227,16 +227,6 @@
     "icon": "⚡",
     "desc": "Режим 'План' (Cascade/Planner) для генерації архітектури та коду.",
     "monetization": "🎁 Freemium",
-    "categories": ["dev_tools"]
-  },
-  {
-    "id": "codex",
-    "name": "Codex",
-    "url": "#",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIqNHTkvfZEcmLPztdUma8lysIVG_62fL5NEHMJbSW9bHGlGPbltPSdo4r&s=10",
-    "icon": "⚠️",
-    "desc": "Стара модель від OpenAI, на якій колись працював перший Copilot.",
-    "monetization": "⚠️ Застаріло",
     "categories": ["dev_tools"]
   },
   {
@@ -880,26 +870,6 @@
     "categories": ["security", "lifestyle"]
   },
   {
-    "id": "retromap",
-    "name": "Retromap",
-    "url": "http://retromap.ru/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMWV1WYnnV2UUoC94vEzoAr75MPvLuMMlibQ&s",
-    "icon": "🗺️",
-    "desc": "Старі карти з прив'язкою до координат.",
-    "monetization": "🆓 Free",
-    "categories": ["security"]
-  },
-  {
-    "id": "timeportal",
-    "name": "Timeportal",
-    "url": "https://www.timeportal.app/",
-    "image": "https://play-lh.googleusercontent.com/uxm5TWCmwqD0UhKmnQ7VjDlw6k4L56AJ2jCuDJ-4BwX0UGqHCcp6Ae9nNZpKpOW1GA",
-    "icon": "⏳",
-    "desc": "Сервіс для 'мандрівок' вулицями через історичні знімки.",
-    "monetization": "🆓 Free",
-    "categories": ["security"]
-  },
-  {
     "id": "wikimapia",
     "name": "Wikimapia",
     "url": "https://wikimapia.org/",
@@ -1140,6 +1110,16 @@
     "categories": ["video_audio"]
   },
   {
+    "id": "pixverse",
+    "name": "PixVerse",
+    "url": "https://app.pixverse.ai/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtzgyE5M0F-_3ecTxmSWxD1uAntFsBcZkwI-nFEzvUkN39CD3WNVuC6mtJ&s=10",
+    "icon": "🎞️",
+    "desc": "Професійний набір інструментів для монтажу та ефектів.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio"]
+  },
+  {
     "id": "runway",
     "name": "Runway",
     "url": "https://runwayml.com/",
@@ -1297,16 +1277,6 @@
     "icon": "⚡",
     "desc": "Генерація та покращення зображень у реальному часі.",
     "monetization": "🎁 Freemium",
-    "categories": ["visual_tools"]
-  },
-  {
-    "id": "vectors-swipe",
-    "name": "Vectors Swipe",
-    "url": "https://www.vectors.fun/swipe",
-    "image": "https://logo.clearbit.com/vectors.fun",
-    "icon": "👉",
-    "desc": "Тіндер для промтів: свайпай генерації вліво/вправо.",
-    "monetization": "🆓 Free",
     "categories": ["visual_tools"]
   },
   {
