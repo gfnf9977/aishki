@@ -20,11 +20,11 @@
 
     <div class="controls-wrapper">
         <input type="text" id="toolSearch" placeholder="Знайти інструмент (напр. 'Figma', 'OSINT')..." autocomplete="off">
-        <select id="filterMonetization" class="filter-select">
-            <option value="all">💳 Усі тарифи</option>
-            <option value="free">🟢 Безкоштовні / Open Source</option>
-            <option value="paid">🔴 Платні / Freemium</option>
-        </select>
+        <div class="filter-checkbox-group" id="filterMonetization">
+            <label><input type="checkbox" value="free" checked> 🟢 Free / OS</label>
+            <label><input type="checkbox" value="freemium" checked> 🎁 Freemium</label>
+            <label><input type="checkbox" value="paid" checked> 🔴 Paid</label>
+        </div>
         <select id="filterUsed" class="filter-select">
             <option value="all">🛠️ Усі статуси</option>
             <option value="tested">✓ Протестовані</option>

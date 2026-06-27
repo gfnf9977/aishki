@@ -41,6 +41,19 @@ let toolsData = [];
 let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('toolbox_favorites')) || [];
 let usedTools = JSON.parse(localStorage.getItem('toolbox_used_tools')) || [];
+let ratings = JSON.parse(localStorage.getItem('toolbox_ratings')) || {};
+
+function updateRating(id, value, event) {
+    // Зупиняємо перехід за посиланням під час руху повзунка
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    ratings[id] = parseInt(value);
+    localStorage.setItem('toolbox_ratings', JSON.stringify(ratings));
+    document.getElementById(`rating-val-${id}`).textContent = value;
+}
 
 async function loadTools() {
     try {
@@ -50,7 +63,7 @@ async function loadTools() {
         buildNavigation();
         filterAndRender();
     } catch (error) {
-        document.getElementById('toolsContainer').innerHTML = 
+        document.getElementById('toolsContainer').innerHTML =
             `<p style="color:red; text-align:center; width:100%; font-weight:bold;">Помилка: ${error.message}</p>`;
     }
 }
@@ -66,7 +79,7 @@ function buildNavigation() {
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentCategory = key;
-            document.getElementById('toolSearch').value = ''; 
+            document.getElementById('toolSearch').value = '';
             filterAndRender();
         };
         nav.appendChild(btn);
@@ -116,12 +129,12 @@ function renderTools(toolsToRender) {
         card.className = 'tool-card';
         card.style.animationDelay = `${index * 0.04}s`;
 
-        let visualElement = (tool.image && tool.image.trim() !== '') ? `
-            <div class="tool-img-wrapper">
+        let visualElement = (tool.image && tool.image.trim() !== '') ?
+            `<div class="tool-img-wrapper">
                 <img src="${tool.image}" alt="${tool.name}" class="tool-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                 <div class="tool-icon" style="display:none;">${tool.icon || '🚀'}</div>
-            </div>` : `
-            <div class="tool-img-wrapper" style="background: var(--bg); border: none;">
+            </div>` :
+            `<div class="tool-img-wrapper" style="background: var(--bg); border: none;">
                 <div class="tool-icon">${tool.icon || '🚀'}</div>
             </div>`;
 
@@ -132,6 +145,17 @@ function renderTools(toolsToRender) {
                 tagsHTML += `<span class="category-tag">#${catKey}</span>`;
             });
             tagsHTML += '</div>';
+        }
+
+        let ratingHTML = '';
+        if (isUsed) {
+            const currentRating = ratings[tool.id] || 5;
+            ratingHTML = `
+                <div class="rating-wrapper" onclick="event.preventDefault(); event.stopPropagation();" onmousedown="event.stopPropagation();">
+                    <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Оцінка:</span>
+                    <input type="range" min="1" max="10" value="${currentRating}" class="rating-slider" oninput="updateRating('${tool.id}', this.value, event)">
+                    <span class="rating-value" id="rating-val-${tool.id}">${currentRating}</span>
+                </div>`;
         }
 
         card.innerHTML = `
@@ -146,6 +170,7 @@ function renderTools(toolsToRender) {
                 <div class="badge ${badgeClass}">${tool.monetization || 'Інфо'}</div>
                 <button class="used-btn ${isUsed ? 'active' : ''}" onclick="toggleUsed('${tool.id}', event)">${isUsed ? '✓ Протестовано' : '○ Не тестовано'}</button>
             </div>
+            ${ratingHTML}
         `;
 
         container.appendChild(card);
@@ -154,7 +179,6 @@ function renderTools(toolsToRender) {
 
 function filterAndRender() {
     const query = document.getElementById('toolSearch').value.toLowerCase();
-    const monFilter = document.getElementById('filterMonetization').value;
     const usedFilter = document.getElementById('filterUsed').value;
 
     let filtered = toolsData;
@@ -164,22 +188,29 @@ function filterAndRender() {
     }
 
     if (query.trim() !== '') {
-        filtered = filtered.filter(t => 
-            t.name.toLowerCase().includes(query) || 
+        filtered = filtered.filter(t =>
+            t.name.toLowerCase().includes(query) ||
             (t.desc && t.desc.toLowerCase().includes(query))
         );
     }
 
-    if (monFilter === 'free') {
-        filtered = filtered.filter(t => 
-            (t.monetization.toLowerCase().includes('free') && !t.monetization.toLowerCase().includes('freemium')) || 
-            t.monetization.toLowerCase().includes('open source')
-        );
-    } else if (monFilter === 'paid') {
-        filtered = filtered.filter(t => 
-            t.monetization.toLowerCase().includes('paid') || 
-            t.monetization.toLowerCase().includes('freemium')
-        );
+    // Читаємо, які чекбокси натиснуті
+    const checkedMonetizations = Array.from(document.querySelectorAll('#filterMonetization input:checked')).map(cb => cb.value);
+
+    if (checkedMonetizations.length === 0) {
+        filtered = [];
+    } else {
+        filtered = filtered.filter(t => {
+            const mon = t.monetization.toLowerCase();
+            const isFreeOS = (mon.includes('free') && !mon.includes('freemium')) || mon.includes('open source');
+            const isFreemium = mon.includes('freemium');
+            const isPaid = mon.includes('paid');
+
+            if (checkedMonetizations.includes('free') && isFreeOS) return true;
+            if (checkedMonetizations.includes('freemium') && isFreemium) return true;
+            if (checkedMonetizations.includes('paid') && isPaid) return true;
+            return false;
+        });
     }
 
     if (usedFilter === 'tested') filtered = filtered.filter(t => usedTools.includes(t.id));
@@ -192,7 +223,9 @@ function filterAndRender() {
 
 // Event listeners
 document.getElementById('toolSearch').addEventListener('input', filterAndRender);
-document.getElementById('filterMonetization').addEventListener('change', filterAndRender);
+document.querySelectorAll('#filterMonetization input').forEach(checkbox => {
+    checkbox.addEventListener('change', filterAndRender);
+});
 document.getElementById('filterUsed').addEventListener('change', filterAndRender);
 
 // AI Widget functions
@@ -225,13 +258,13 @@ async function analyzeTask() {
     const mode = document.querySelector('input[name="aiMode"]:checked').value;
     const responseBox = document.getElementById('aiResponse');
 
-    if (input.length < 5) { 
-        alert("Опишіть задачу детальніше."); 
-        return; 
+    if (input.length < 5) {
+        alert("Опишіть задачу детальніше.");
+        return;
     }
-    if (toolsData.length === 0) { 
-        alert("База ще завантажується..."); 
-        return; 
+    if (toolsData.length === 0) {
+        alert("База ще завантажується...");
+        return;
     }
 
     const apiKey = getApiKey();
@@ -257,16 +290,16 @@ async function analyzeTask() {
 
     try {
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-            method: "POST", 
-            headers: { 
-                "Content-Type": "application/json", 
-                "Authorization": `Bearer ${apiKey}` 
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
             },
-            body: JSON.stringify({ 
-                model: "llama-3.3-70b-versatile", 
-                messages: [{ role: "system", content: systemPrompt }, { role: "user", content: input }], 
-                temperature: 0.6, 
-                max_tokens: 800 
+            body: JSON.stringify({
+                model: "llama-3.3-70b-versatile",
+                messages: [{ role: "system", content: systemPrompt }, { role: "user", content: input }],
+                temperature: 0.6,
+                max_tokens: 800
             })
         });
 

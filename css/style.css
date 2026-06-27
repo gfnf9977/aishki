@@ -629,3 +629,29 @@ header p {
     .ai-chat-window { width: calc(100% - 30px); right: 15px; bottom: 100px; max-height: calc(100vh - 120px); }
     .fab-container { right: 15px; bottom: 20px; flex-direction: column; align-items: flex-end; gap: 10px; }
 }
+/* Стилі для повзунка оцінки */
+.rating-wrapper {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--used-bg);
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px dashed var(--border);
+    animation: fadeIn 0.3s ease;
+}
+
+.rating-slider {
+    flex-grow: 1;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.rating-value {
+    font-weight: 800;
+    color: var(--primary);
+    min-width: 24px;
+    text-align: right;
+    font-size: 1.1rem;
+}

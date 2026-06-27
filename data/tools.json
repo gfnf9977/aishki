@@ -590,16 +590,6 @@
     "categories": ["lifestyle", "visual_tools"]
   },
   {
-    "id": "gemini-restoration",
-    "name": "Gemini: Реставрація",
-    "url": "https://gemini.google.com/",
-    "image": "https://lh3.googleusercontent.com/gj-iIi5Yunc6de3XNEXxZt8lJs6CAkQpC50fHsKEeY3zRRjSFg7oHSiFBTIOw1qKmpHjEXUIA2_B58lwc-EJCDNKDAoIYaR9s1Y=e365-pa-nu-s0",
-    "icon": "🏛️",
-    "desc": "Генерація історичних сцен за координатами та часом.",
-    "monetization": "🆓 Free",
-    "categories": ["lifestyle", "visual_tools"]
-  },
-  {
     "id": "vidiq",
     "name": "vidiq",
     "url": "https://vidiq.com/",
