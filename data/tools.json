@@ -220,16 +220,6 @@
     "categories": ["dev_tools"]
   },
   {
-    "id": "windsurf",
-    "name": "Verdent (Windsurf / v0)",
-    "url": "https://codeium.com/windsurf",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQVtmvwI788EizXmMKrVks_FuJ8FWk1lgALlK-img5axOT-DZSq1e89oI&s=10",
-    "icon": "⚡",
-    "desc": "Режим 'План' (Cascade/Planner) для генерації архітектури та коду.",
-    "monetization": "🎁 Freemium",
-    "categories": ["dev_tools"]
-  },
-  {
     "id": "huggingface",
     "name": "Hugging Face",
     "url": "https://huggingface.co/",
