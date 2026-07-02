@@ -216,7 +216,7 @@
     "image": "https://cdn.shopaccino.com/igmguru/products/cursor-ai-training-3991020873394911m-67851979223893_l.webp?v=548",
     "icon": "💻",
     "desc": "Абсолютний 'вбивця' VS Code та Copilot. Розуміє весь контекст проєкту.",
-    "monetization": "🎁 Freemium",
+    "monetization": "🔴 Paid",
     "categories": ["dev_tools"]
   },
   {
@@ -1748,16 +1748,6 @@
     "desc": "Український сервіс для репетиторів та викладачів. Автоматизує запис учнів, контроль оплат, створення груп, розкладу та поширення матеріалів.",
     "monetization": "🎁 Freemium",
     "categories": ["edu_work"]
-  },
-  {
-    "id": "todoist",
-    "name": "Todoist",
-    "url": "https://www.todoist.com/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx79J9D-zp_4o7hXsa2YJkZCqxsNBSL3PKAg&s",
-    "icon": "✅",
-    "desc": "Популярний менеджер завдань. Розуміє введення справ природною мовою, автоматично розпізнає дати, має систему пріоритетів та проектів.",
-    "monetization": "🎁 Freemium",
-    "categories": ["lifestyle", "edu_work"]
   },
   {
     "id": "joplin",
