@@ -630,16 +630,6 @@
     "categories": ["lifestyle", "media"]
   },
   {
-    "id": "kuskus",
-    "name": "KusKus",
-    "url": "https://kuskus.app/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkb36fAjYCIQvBsVO-6kSDJnP3KtUL-zmcs_R9D6lig&s",
-    "icon": "🍲",
-    "desc": "Українська платформа з рецептами та вбудованим списком покупок.",
-    "monetization": "🆓 Free",
-    "categories": ["lifestyle"]
-  },
-  {
     "id": "paprika",
     "name": "Paprika Recipe Manager",
     "url": "https://www.paprikaapp.com/",
