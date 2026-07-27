@@ -1868,5 +1868,55 @@
     "desc": "Глобальна хмарна екосистема. Незамінна для деплою застосунків, управління базами даних та отримання доступу до різноманітних API (зокрема картографічних сервісів). Має потужний Always Free ліміт.",
     "monetization": "🎁 Freemium",
     "categories": ["dev_tools"]
+  },
+  {
+    "id": "superlist",
+    "name": "Superlist",
+    "url": "https://www.superlist.com/",
+    "image": "https://www.superlist.com/favicon.ico",
+    "icon": "📝",
+    "desc": "Сучасний додаток для нотаток і завдань. Чудово поєднує особисті та робочі списки справ у єдиному стильному та мінімалістичному інтерфейсі.",
+    "monetization": "🎁 Freemium",
+    "categories": ["edu_work", "lifestyle"]
+  },
+  {
+    "id": "reve",
+    "name": "Reve",
+    "url": "https://app.reve.com/home",
+    "image": "https://app.reve.com/favicon.ico",
+    "icon": "📸",
+    "desc": "ШІ-платформа для швидкого створення та редагування високоякісних фото і відео.",
+    "monetization": "🎁 Freemium",
+    "categories": ["visual_tools", "video_audio"]
+  },
+  {
+    "id": "google-earth",
+    "name": "Google Earth",
+    "url": "https://earth.google.com/",
+    "image": "https://earth.google.com/favicon.ico",
+    "icon": "🌍",
+    "desc": "Детальний віртуальний глобус. Окрім стандартного 3D-огляду планети, має надзвичайно корисну функцію перегляду історії супутникових знімків хронологічно.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "visual_tools", "edu_work"]
+  },
+  {
+    "id": "viewfinder",
+    "name": "Viewfinder",
+    "url": "https://store.steampowered.com/app/1382070/Viewfinder/",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🎞️",
+    "desc": "Унікальна гра-головоломка, де можна змінювати реальність. Розміщуйте фотографії, картини чи скетчі у просторі, і вони оживатимуть, перетворюючись на частину світу.",
+    "monetization": "🔴 Paid",
+    "categories": ["games"]
+  },
+  {
+    "id": "meccha-chameleon",
+    "name": "Meccha Chameleon",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🦎",
+    "desc": "Яскрава гра-таймкіллер. Ідеально підходить, щоб відволіктися від коду та дати мозку трохи відпочити.",
+    "monetization": "🆓 Free",
+    "categories": ["games"]
   }
 ]
