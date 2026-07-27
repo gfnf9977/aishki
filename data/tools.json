@@ -630,16 +630,6 @@
     "categories": ["lifestyle", "media"]
   },
   {
-    "id": "paprika",
-    "name": "Paprika Recipe Manager",
-    "url": "https://www.paprikaapp.com/",
-    "image": "https://play-lh.googleusercontent.com/MkDnKW9N2bNK-fC8oVypYZugmD0NaXjX0mr1KEYWSCUvHHk5Q4QU9lI5BIsKVqijv-qLoIMbOUmqbuSV8Be51A",
-    "icon": "🌶️",
-    "desc": "Парсер, що витягує чисті рецепти з сайтів.",
-    "monetization": "🔴 Paid",
-    "categories": ["lifestyle"]
-  },
-  {
     "id": "supercook",
     "name": "SuperCook",
     "url": "https://www.supercook.com/",
