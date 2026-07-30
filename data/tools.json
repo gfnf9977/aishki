@@ -1941,9 +1941,9 @@
   },
   {
     "id": "recipe-api-custom",
-    "name": "Recipe API",
+    "name": "Cook.io",
     "url": "https://recipeapi-hm5q.onrender.com/",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "image": "https://recipeapi-hm5q.onrender.com/icon.png",
     "icon": "🍳",
     "desc": "Власний C# бекенд із PostgreSQL для зручного трекінгу рецептів. Вміє витягувати прев'ю з TikTok і YouTube та має функціонал відмітки статусу приготування страви.",
     "monetization": "🚀 Власна розробка (Free)",
