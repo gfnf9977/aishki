@@ -550,16 +550,6 @@
     "categories": ["frontend"]
   },
   {
-    "id": "chefgpt",
-    "name": "ChefGPT",
-    "url": "https://www.chefgpt.xyz/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46EIgQofBepH4lUZvMVrZbGhzy3e3Qv83fDBniZcrCFYS6W0j0-EK6lqL&s=10",
-    "icon": "👨‍🍳",
-    "desc": "Складання рецептів на основі продуктів з холодильника.",
-    "monetization": "🎁 Freemium",
-    "categories": ["lifestyle"]
-  },
-  {
     "id": "carcare",
     "name": "Carcare",
     "url": "https://www.carcarekiosk.com/",
@@ -1903,7 +1893,7 @@
     "id": "viewfinder",
     "name": "Viewfinder",
     "url": "https://store.steampowered.com/app/1382070/Viewfinder/",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiPmiV0yQLgWIqfqMDDTN3zBiiiZJIm2iLpPQ-QVO_QSemeJKgXZC4XR8t&s=10",
     "icon": "🎞️",
     "desc": "Унікальна гра-головоломка, де можна змінювати реальність. Розміщуйте фотографії, картини чи скетчі у просторі, і вони оживатимуть, перетворюючись на частину світу.",
     "monetization": "🔴 Paid",
@@ -1913,10 +1903,50 @@
     "id": "meccha-chameleon",
     "name": "Meccha Chameleon",
     "url": "#",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjdznOGYcoEyU5Dn99GJtUhSSMa6qie6q8SbYxHM0jCIrnxsbWQpcJBp0&s=10",
     "icon": "🦎",
     "desc": "Яскрава гра-таймкіллер. Ідеально підходить, щоб відволіктися від коду та дати мозку трохи відпочити.",
     "monetization": "🆓 Free",
     "categories": ["games"]
+  },
+  {
+    "id": "neon-tech",
+    "name": "Neon",
+    "url": "https://neon.tech/",
+    "image": "https://neon.tech/favicon.ico",
+    "icon": "🐘",
+    "desc": "Serverless PostgreSQL база даних нового покоління. Ідеально підходить для сучасних веб-застосунків завдяки миттєвому масштабуванню та розгалуженню (branching) баз даних.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "render",
+    "name": "Render",
+    "url": "https://render.com/",
+    "image": "https://render.com/favicon.ico",
+    "icon": "☁️",
+    "desc": "Потужний хмарний хостинг (PaaS) для швидкого розгортання бекенду, фронтенду, API та баз даних. Відмінна альтернатива Heroku з хорошим безкоштовним тарифом.",
+    "monetization": "🎁 Freemium",
+    "categories": ["dev_tools"]
+  },
+  {
+    "id": "imgbb-api",
+    "name": "ImgBB API",
+    "url": "https://api.imgbb.com/",
+    "image": "https://simgbb.com/images/logo.png",
+    "icon": "🖼️",
+    "desc": "Простий та швидкий API для анонімного завантаження та хостингу зображень. Чудово підходить для інтеграції у власні застосунки, коли треба зберігати картинки без складного бекенду.",
+    "monetization": "🆓 Free",
+    "categories": ["dev_tools", "media"]
+  },
+  {
+    "id": "recipe-api-custom",
+    "name": "Recipe API",
+    "url": "https://recipeapi-hm5q.onrender.com/",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🍳",
+    "desc": "Власний C# бекенд із PostgreSQL для зручного трекінгу рецептів. Вміє витягувати прев'ю з TikTok і YouTube та має функціонал відмітки статусу приготування страви.",
+    "monetization": "🚀 Власна розробка (Free)",
+    "categories": ["dev_tools", "lifestyle"]
   }
 ]
