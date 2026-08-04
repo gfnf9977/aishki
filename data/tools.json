@@ -906,7 +906,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Grok-feb-2025-logo.svg/3840px-Grok-feb-2025-logo.svg.png",
     "icon": "✖️",
     "desc": "ШІ від X (Twitter) з доступом до новин у реальному часі.",
-    "monetization": "🔴 Paid",
+    "monetization": "🎁 Freemium",
     "categories": ["text_bots"]
   },
   {
@@ -1948,5 +1948,55 @@
     "desc": "Власний C# бекенд із PostgreSQL для зручного трекінгу рецептів. Вміє витягувати прев'ю з TikTok і YouTube та має функціонал відмітки статусу приготування страви.",
     "monetization": "🚀 Власна розробка (Free)",
     "categories": ["dev_tools", "lifestyle"]
+  },
+  {
+    "id": "scribe-youtube",
+    "name": "Scribe",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "📹",
+    "desc": "ШІ-сервіс для створення вижимки з YouTube-відео (до 120 хв). Робить короткий підсумок, чудово розуміє українську та автоматично розписує детальні таймкоди.",
+    "monetization": "🎁 Freemium",
+    "categories": ["text_bots", "edu_work", "media"]
+  },
+  {
+    "id": "temp-email-generator",
+    "name": "Temporary Email Generator",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "📧",
+    "desc": "Генератор тимчасових поштових скриньок. Головна фішка — створення адрес із трастовими доменами (Gmail, Outlook), які не блокуються під час реєстрацій на сайтах.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "dev_tools"]
+  },
+  {
+    "id": "pano-date",
+    "name": "Pano Date",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🕒",
+    "desc": "Розраховує точний час зйомки панорам у Google Maps (до 2 секунд). Чудовий OSINT-інструмент, який витягує дату там, де Google показує лише місяць і рік.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "visual_tools", "edu_work"]
+  },
+  {
+    "id": "cliptrace",
+    "name": "ClipTrace",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🔍",
+    "desc": "Зворотний пошук відео (Google, Yandex, Bing, TinEye). Знаходить точні співпадіння, визначає мову спікера, ймовірну локацію та витягує метадані.",
+    "monetization": "🆓 Free",
+    "categories": ["security", "video_audio", "media"]
+  },
+  {
+    "id": "find-moments",
+    "name": "Find Moments",
+    "url": "#",
+    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "icon": "🎞️",
+    "desc": "ШІ-пошук конкретних моментів у відео (за URL) за допомогою текстового опису. Знаходить об'єкти, емоції чи звуки та видає фрагменти з точними таймкодами.",
+    "monetization": "🎁 Freemium",
+    "categories": ["video_audio", "text_bots", "security"]
   }
 ]
