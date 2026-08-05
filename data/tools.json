@@ -1962,8 +1962,8 @@
   {
     "id": "temp-email-generator",
     "name": "Temporary Email Generator",
-    "url": "#",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "url": "https://smailpro.com/temporary-email",
+    "image": "https://play-lh.googleusercontent.com/k6FkfI2kYbzEQDklImQUF1ONNC1ZUqaPZkHnCffQDQTWN_uO6rQsdoxRVXxa8kAXnbC_830tgaiGLjdbtT_4xbQ",
     "icon": "📧",
     "desc": "Генератор тимчасових поштових скриньок. Головна фішка — створення адрес із трастовими доменами (Gmail, Outlook), які не блокуються під час реєстрацій на сайтах.",
     "monetization": "🆓 Free",
@@ -1972,8 +1972,8 @@
   {
     "id": "pano-date",
     "name": "Pano Date",
-    "url": "#",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "url": "https://pano-date.emily.bz/",
+    "image": "https://cdn1.link-assistant.com/thumbs/w500-c1/upload/news/posts/381/Google-Maps-Marketing.png",
     "icon": "🕒",
     "desc": "Розраховує точний час зйомки панорам у Google Maps (до 2 секунд). Чудовий OSINT-інструмент, який витягує дату там, де Google показує лише місяць і рік.",
     "monetization": "🆓 Free",
@@ -1982,8 +1982,8 @@
   {
     "id": "cliptrace",
     "name": "ClipTrace",
-    "url": "#",
-    "image": "https://github.githubassets.com/favicons/favicon.png",
+    "url": "https://www.tracemyclip.com/",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfxcqW98VUwX7VcXAz0SmCCkrmfEs_uzV6kzvvGI442wpR1D9Y3KWDwn8&s=10",
     "icon": "🔍",
     "desc": "Зворотний пошук відео (Google, Yandex, Bing, TinEye). Знаходить точні співпадіння, визначає мову спікера, ймовірну локацію та витягує метадані.",
     "monetization": "🆓 Free",
@@ -1991,8 +1991,8 @@
   },
   {
     "id": "find-moments",
-    "name": "Find Moments",
-    "url": "#",
+    "name": "Wayin-video",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREu-57A1kJgmRBCvf0eTUy9wiyrpCgzeTMhRDctCst2A&s=10",
     "image": "https://github.githubassets.com/favicons/favicon.png",
     "icon": "🎞️",
     "desc": "ШІ-пошук конкретних моментів у відео (за URL) за допомогою текстового опису. Знаходить об'єкти, емоції чи звуки та видає фрагменти з точними таймкодами.",
