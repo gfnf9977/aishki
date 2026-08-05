@@ -74,10 +74,18 @@ async function loadTools() {
 function buildNavigation() {
     const nav = document.getElementById('categoriesNav');
     nav.innerHTML = '';
+    
     for (const [key, name] of Object.entries(categoryConfig)) {
         const btn = document.createElement('button');
-        btn.className = `cat-btn ${key === currentCategory ? 'active' : ''}`;
+        
+        let specialClass = '';
+        if (key === 'own_dev') specialClass = 'cat-btn-own';
+        if (key === 'tg_bots') specialClass = 'cat-btn-tg';
+        if (key === 'trash') specialClass = 'cat-btn-trash';
+
+        btn.className = `cat-btn ${specialClass} ${key === currentCategory ? 'active' : ''}`;
         btn.textContent = name;
+        
         btn.onclick = () => {
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
