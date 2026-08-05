@@ -36,6 +36,7 @@ const categoryConfig = {
     "lifestyle": "💡 Лайфстайл та Трекінг",
     "security": "🛡️ OSINT & Безпека",
     "games": "🎮 Ігри-таймкіллери",
+    "tg_bots": "📱 Телеграм-боти",
     "trash": "🗑️ Смітник"
 };
 
@@ -205,8 +206,11 @@ function filterAndRender() {
 
     if (currentCategory === 'trash') {
         filtered = filtered.filter(t => trashedTools.includes(t.id));
+    } else if (currentCategory === 'tg_bots') {
+        filtered = filtered.filter(t => t.categories && t.categories.includes('tg_bots') && !trashedTools.includes(t.id));
     } else {
         filtered = filtered.filter(t => !trashedTools.includes(t.id));
+        filtered = filtered.filter(t => !t.categories || !t.categories.includes('tg_bots'));
         
         if (currentCategory === 'own_dev') {
             filtered = filtered.filter(t => t.monetization && t.monetization.includes('Власна розробка'));

@@ -1998,5 +1998,145 @@
     "desc": "ШІ-пошук конкретних моментів у відео (за URL) за допомогою текстового опису. Знаходить об'єкти, емоції чи звуки та видає фрагменти з точними таймкодами.",
     "monetization": "🎁 Freemium",
     "categories": ["video_audio", "text_bots", "security"]
+  },
+  {
+    "id": "tg-perfect-words",
+    "name": "Perfect Words",
+    "url": "https://t.me/PerfectWordsBot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🇬🇧",
+    "desc": "Бот для зручного вивчення 5000 англійських слів з озвучуванням та тестами.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-random-game",
+    "name": "Random",
+    "url": "https://t.me/RandomUA3bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎲",
+    "desc": "Мемний ігровий бот для розваг.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-fav-stickers",
+    "name": "Улюблений Бот Наліпок",
+    "url": "https://t.me/fStikBot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "⭐️",
+    "desc": "Створює пакунки стікерів та емоджі. Автоматично конвертує графіку та відео, копіює чужі стікери і вміє вирізати фон із зображень.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-mandragora",
+    "name": "Мандрагора",
+    "url": "https://t.me/screamingroot_bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🔥",
+    "desc": "Розпізнає текст із голосових та відеоповідомлень, кидає карту тривог, має адмін-функціонал та кастомні медіа-реакції для груп.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-epic-notifier",
+    "name": "Epic Games Notifier",
+    "url": "https://t.me/egsnotifier_bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎮",
+    "desc": "Сповіщає про щотижневі безплатні роздачі ігор в Epic Games Store.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-usaver",
+    "name": "USaver",
+    "url": "https://t.me/uasaverbot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "⬇️",
+    "desc": "Завантажує фото, відео та музику з TikTok, X/Twitter, YT Shorts тощо. Може працювати прямо в групах.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-wishlist",
+    "name": "Лист бажань",
+    "url": "https://t.me/wishlist_ua_bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "📄",
+    "desc": "Допомагає створити власний вішліст, щоб полегшити близьким вибір подарунка.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-youtube-bot",
+    "name": "YouTube Bot",
+    "url": "https://t.me/ConvertYTtoMP3Bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎞️",
+    "desc": "Бот для швидкого завантаження відео з YouTube у форматах відео та аудіо.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-kvantyk",
+    "name": "Квантик",
+    "url": "https://t.me/quantum_hero_bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "⛵️",
+    "desc": "Генератор зображень на базі Midjourney прямо в Telegram (має ліміт 10 безкоштовних генерацій на день).",
+    "monetization": "🎁 Freemium",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-giforob",
+    "name": "Гіфороб",
+    "url": "https://t.me/make_gifbot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🍉",
+    "desc": "Комбайн для медіа: створює гіфки, накладає текст, змінює швидкість відео, качає контент із TikTok, Spotify, Reddit, X та інших.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-sticker-bot",
+    "name": "Sticker Bot",
+    "url": "https://t.me/UAStickerbot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎨",
+    "desc": "Зручний конструктор стікерпаків. Самостійно підганяє розмір та формат медіа, дозволяє клонувати чужі пакунки та конвертувати їх в емодзі.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-topix",
+    "name": "Topix",
+    "url": "https://t.me/TopixSupportBot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "💬",
+    "desc": "Бот для організації зворотного зв’язку або техпідтримки. Створює зручні окремі гілки в адмін-групі для кожного клієнта.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-umusic",
+    "name": "UMusic",
+    "url": "https://t.me/UMusic_bot",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎧",
+    "desc": "Пошук та завантаження музики. Вміє розпізнавати треки з голосових, шукати за уривками тексту та формувати плейлисти.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
+  },
+  {
+    "id": "tg-slovu",
+    "name": "Slovu Bot",
+    "url": "https://t.me/SlovuBot?start=KdG",
+    "image": "https://telegram.org/img/favicon.ico",
+    "icon": "🎤",
+    "desc": "Якісний бот-транскрибатор. Розпізнає голосові, відео та аудіофайли. Може працювати автоматично в групах або через згадку.",
+    "monetization": "🆓 Free",
+    "categories": ["tg_bots"]
   }
 ]
