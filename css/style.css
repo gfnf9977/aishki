@@ -127,7 +127,6 @@ header p {
     transform: rotate(15deg) scale(1.1);
 }
 
-/* Controls, Navigation, Cards та решта стилів */
 .controls-wrapper {
     max-width: 950px;
     margin: -40px auto 40px;
@@ -260,32 +259,51 @@ header p {
     to { opacity: 1; }
 }
 
-.fav-btn {
+.card-actions {
     position: absolute;
-    top: 25px;
-    right: 25px;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #cbd5e1;
-    transition: 0.2s;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
     z-index: 10;
-    padding: 0;
 }
 
-[data-theme="dark"] .fav-btn {
-    color: #475569;
+.icon-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.fav-btn:hover {
-    transform: scale(1.15);
-    color: #94a3b8;
+.icon-btn:hover {
+    transform: scale(1.1);
+    color: var(--text-main);
 }
 
 .fav-btn.active {
     color: var(--star-color);
-    text-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
+    border-color: rgba(251, 191, 36, 0.5);
+    background: rgba(251, 191, 36, 0.1);
+}
+
+.trash-btn:hover {
+    color: #ef4444;
+    border-color: #fca5a5;
+}
+
+.trash-btn.active {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
 }
 
 .card-top {
@@ -408,7 +426,6 @@ header p {
     box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
 }
 
-/* FAB та AI Chat */
 .fab-container {
     position: fixed;
     bottom: 40px;
@@ -613,7 +630,6 @@ header p {
     line-height: 1.6;
 }
 
-/* Анімації та Media Queries */
 @keyframes pulseGlow {
     0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.6); }
     70% { box-shadow: 0 0 0 15px rgba(236, 72, 153, 0); }
@@ -629,7 +645,7 @@ header p {
     .ai-chat-window { width: calc(100% - 30px); right: 15px; bottom: 100px; max-height: calc(100vh - 120px); }
     .fab-container { right: 15px; bottom: 20px; flex-direction: column; align-items: flex-end; gap: 10px; }
 }
-/* Стилі для повзунка оцінки */
+
 .rating-wrapper {
     margin-top: 15px;
     display: flex;

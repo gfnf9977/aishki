@@ -25,6 +25,7 @@ initTheme();
 
 const categoryConfig = {
     "all": "Усі інструменти",
+    "own_dev": "🚀 Власна розробка",
     "dev_tools": "💻 Розробка та Код",
     "frontend": "✨ Frontend та Дизайн",
     "visual_tools": "🎨 Дизайн, Фото та 3D",
@@ -34,7 +35,8 @@ const categoryConfig = {
     "edu_work": "🎓 Навчання та Документи",
     "lifestyle": "💡 Лайфстайл та Трекінг",
     "security": "🛡️ OSINT & Безпека",
-    "games": "🎮 Ігри-таймкіллери"
+    "games": "🎮 Ігри-таймкіллери",
+    "trash": "🗑️ Смітник"
 };
 
 let toolsData = [];
@@ -42,9 +44,9 @@ let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('toolbox_favorites')) || [];
 let usedTools = JSON.parse(localStorage.getItem('toolbox_used_tools')) || [];
 let ratings = JSON.parse(localStorage.getItem('toolbox_ratings')) || {};
+let trashedTools = JSON.parse(localStorage.getItem('toolbox_trashed')) || [];
 
 function updateRating(id, value, event) {
-    // Зупиняємо перехід за посиланням під час руху повзунка
     if (event) {
         event.preventDefault();
         event.stopPropagation();
@@ -93,6 +95,20 @@ function toggleFavorite(id, event) {
     filterAndRender();
 }
 
+function toggleTrash(id, event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    if (trashedTools.includes(id)) {
+        trashedTools = trashedTools.filter(t => t !== id);
+    } else {
+        trashedTools.push(id);
+    }
+    
+    localStorage.setItem('toolbox_trashed', JSON.stringify(trashedTools));
+    filterAndRender();
+}
+
 function toggleUsed(id, event) {
     event.preventDefault();
     usedTools = usedTools.includes(id) ? usedTools.filter(u => u !== id) : [...usedTools, id];
@@ -122,6 +138,7 @@ function renderTools(toolsToRender) {
         const badgeClass = getBadgeClass(tool.monetization);
         const isFav = favorites.includes(tool.id);
         const isUsed = usedTools.includes(tool.id);
+        const isTrashed = trashedTools.includes(tool.id);
 
         const card = document.createElement('a');
         card.href = tool.url;
@@ -161,7 +178,10 @@ function renderTools(toolsToRender) {
         card.innerHTML = `
             <div class="card-top">
                 ${visualElement}
-                <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${tool.id}', event)">${isFav ? '★' : '☆'}</button>
+                <div class="card-actions">
+                    <button class="icon-btn trash-btn ${isTrashed ? 'active' : ''}" onclick="toggleTrash('${tool.id}', event)" title="${isTrashed ? 'Відновити' : 'У смітник'}">🗑️</button>
+                    <button class="icon-btn fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${tool.id}', event)" title="В обране">${isFav ? '★' : '☆'}</button>
+                </div>
             </div>
             <h2 class="tool-name">${tool.name}</h2>
             <p class="tool-desc">${tool.desc}</p>
@@ -183,8 +203,17 @@ function filterAndRender() {
 
     let filtered = toolsData;
 
-    if (currentCategory !== 'all') {
-        filtered = filtered.filter(t => t.categories && t.categories.includes(currentCategory));
+    if (currentCategory === 'trash') {
+        filtered = filtered.filter(t => trashedTools.includes(t.id));
+    } else {
+        filtered = filtered.filter(t => !trashedTools.includes(t.id));
+        
+        if (currentCategory === 'own_dev') {
+            filtered = filtered.filter(t => t.monetization && t.monetization.includes('Власна розробка'));
+        } 
+        else if (currentCategory !== 'all') {
+            filtered = filtered.filter(t => t.categories && t.categories.includes(currentCategory));
+        }
     }
 
     if (query.trim() !== '') {
@@ -194,7 +223,6 @@ function filterAndRender() {
         );
     }
 
-    // Читаємо, які чекбокси натиснуті
     const checkedMonetizations = Array.from(document.querySelectorAll('#filterMonetization input:checked')).map(cb => cb.value);
 
     if (checkedMonetizations.length === 0) {
@@ -221,14 +249,12 @@ function filterAndRender() {
     renderTools(filtered);
 }
 
-// Event listeners
 document.getElementById('toolSearch').addEventListener('input', filterAndRender);
 document.querySelectorAll('#filterMonetization input').forEach(checkbox => {
     checkbox.addEventListener('change', filterAndRender);
 });
 document.getElementById('filterUsed').addEventListener('change', filterAndRender);
 
-// AI Widget functions
 function toggleAiWidget() {
     const widget = document.getElementById('aiChatWindow');
     widget.classList.toggle('open');
@@ -328,5 +354,4 @@ function clearAssistant() {
     document.getElementById('aiResponse').style.display = 'none';
 }
 
-// Запуск
 loadTools();
