@@ -23,6 +23,18 @@ function toggleTheme() {
 
 initTheme();
 
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 const categoryConfig = {
     "all": "Усі інструменти",
     "own_dev": "🚀 Власна розробка",
@@ -36,25 +48,32 @@ const categoryConfig = {
     "lifestyle": "💡 Лайфстайл та Трекінг",
     "security": "🛡️ OSINT & Безпека",
     "games": "🎮 Ігри-таймкіллери",
-    "tg_bots": "📱 Телеграм-боти",
-    "trash": "🗑️ Смітник"
+    "tg_bots": "📱 Телеграм-боти"
 };
 
 let toolsData = [];
 let currentCategory = 'all';
-let favorites = JSON.parse(localStorage.getItem('toolbox_favorites')) || [];
-let usedTools = JSON.parse(localStorage.getItem('toolbox_used_tools')) || [];
-let ratings = JSON.parse(localStorage.getItem('toolbox_ratings')) || {};
-let trashedTools = JSON.parse(localStorage.getItem('toolbox_trashed')) || [];
+
+let userPreferences = JSON.parse(localStorage.getItem('toolbox_prefs')) || {};
+
+function savePrefs() {
+    localStorage.setItem('toolbox_prefs', JSON.stringify(userPreferences));
+}
+
+function initToolPref(id) {
+    if (!userPreferences[id]) {
+        userPreferences[id] = { fav: false, used: false, rating: 5 };
+    }
+}
 
 function updateRating(id, value, event) {
     if (event) {
         event.preventDefault();
         event.stopPropagation();
     }
-
-    ratings[id] = parseInt(value);
-    localStorage.setItem('toolbox_ratings', JSON.stringify(ratings));
+    initToolPref(id);
+    userPreferences[id].rating = parseInt(value);
+    savePrefs();
     document.getElementById(`rating-val-${id}`).textContent = value;
 }
 
@@ -81,7 +100,6 @@ function buildNavigation() {
         let specialClass = '';
         if (key === 'own_dev') specialClass = 'cat-btn-own';
         if (key === 'tg_bots') specialClass = 'cat-btn-tg';
-        if (key === 'trash') specialClass = 'cat-btn-trash';
 
         btn.className = `cat-btn ${specialClass} ${key === currentCategory ? 'active' : ''}`;
         btn.textContent = name;
@@ -99,29 +117,17 @@ function buildNavigation() {
 
 function toggleFavorite(id, event) {
     event.preventDefault();
-    favorites = favorites.includes(id) ? favorites.filter(f => f !== id) : [...favorites, id];
-    localStorage.setItem('toolbox_favorites', JSON.stringify(favorites));
-    filterAndRender();
-}
-
-function toggleTrash(id, event) {
-    event.preventDefault();
-    event.stopPropagation();
-    
-    if (trashedTools.includes(id)) {
-        trashedTools = trashedTools.filter(t => t !== id);
-    } else {
-        trashedTools.push(id);
-    }
-    
-    localStorage.setItem('toolbox_trashed', JSON.stringify(trashedTools));
+    initToolPref(id);
+    userPreferences[id].fav = !userPreferences[id].fav;
+    savePrefs();
     filterAndRender();
 }
 
 function toggleUsed(id, event) {
     event.preventDefault();
-    usedTools = usedTools.includes(id) ? usedTools.filter(u => u !== id) : [...usedTools, id];
-    localStorage.setItem('toolbox_used_tools', JSON.stringify(usedTools));
+    initToolPref(id);
+    userPreferences[id].used = !userPreferences[id].used;
+    savePrefs();
     filterAndRender();
 }
 
@@ -145,9 +151,10 @@ function renderTools(toolsToRender) {
 
     toolsToRender.forEach((tool, index) => {
         const badgeClass = getBadgeClass(tool.monetization);
-        const isFav = favorites.includes(tool.id);
-        const isUsed = usedTools.includes(tool.id);
-        const isTrashed = trashedTools.includes(tool.id);
+        const prefs = userPreferences[tool.id] || { fav: false, used: false, rating: 5 };
+        const isFav = prefs.fav;
+        const isUsed = prefs.used;
+        const currentRating = prefs.rating;
 
         const card = document.createElement('a');
         card.href = tool.url;
@@ -175,7 +182,6 @@ function renderTools(toolsToRender) {
 
         let ratingHTML = '';
         if (isUsed) {
-            const currentRating = ratings[tool.id] || 5;
             ratingHTML = `
                 <div class="rating-wrapper" onclick="event.preventDefault(); event.stopPropagation();" onmousedown="event.stopPropagation();">
                     <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Оцінка:</span>
@@ -188,7 +194,6 @@ function renderTools(toolsToRender) {
             <div class="card-top">
                 ${visualElement}
                 <div class="card-actions">
-                    <button class="icon-btn trash-btn ${isTrashed ? 'active' : ''}" onclick="toggleTrash('${tool.id}', event)" title="${isTrashed ? 'Відновити' : 'У смітник'}">🗑️</button>
                     <button class="icon-btn fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${tool.id}', event)" title="В обране">${isFav ? '★' : '☆'}</button>
                 </div>
             </div>
@@ -212,12 +217,9 @@ function filterAndRender() {
 
     let filtered = toolsData;
 
-    if (currentCategory === 'trash') {
-        filtered = filtered.filter(t => trashedTools.includes(t.id));
-    } else if (currentCategory === 'tg_bots') {
-        filtered = filtered.filter(t => t.categories && t.categories.includes('tg_bots') && !trashedTools.includes(t.id));
+    if (currentCategory === 'tg_bots') {
+        filtered = filtered.filter(t => t.categories && t.categories.includes('tg_bots'));
     } else {
-        filtered = filtered.filter(t => !trashedTools.includes(t.id));
         filtered = filtered.filter(t => !t.categories || !t.categories.includes('tg_bots'));
         
         if (currentCategory === 'own_dev') {
@@ -253,15 +255,16 @@ function filterAndRender() {
         });
     }
 
-    if (usedFilter === 'tested') filtered = filtered.filter(t => usedTools.includes(t.id));
-    if (usedFilter === 'untested') filtered = filtered.filter(t => !usedTools.includes(t.id));
+    if (usedFilter === 'tested') filtered = filtered.filter(t => userPreferences[t.id] && userPreferences[t.id].used);
+    if (usedFilter === 'untested') filtered = filtered.filter(t => !userPreferences[t.id] || !userPreferences[t.id].used);
 
-    filtered.sort((a, b) => (favorites.includes(b.id) ? 1 : 0) - (favorites.includes(a.id) ? 1 : 0));
+    filtered.sort((a, b) => ((userPreferences[b.id] && userPreferences[b.id].fav) ? 1 : 0) - ((userPreferences[a.id] && userPreferences[a.id].fav) ? 1 : 0));
 
     renderTools(filtered);
 }
 
-document.getElementById('toolSearch').addEventListener('input', filterAndRender);
+const debouncedSearch = debounce(filterAndRender, 300);
+document.getElementById('toolSearch').addEventListener('input', debouncedSearch);
 document.querySelectorAll('#filterMonetization input').forEach(checkbox => {
     checkbox.addEventListener('change', filterAndRender);
 });

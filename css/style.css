@@ -295,16 +295,6 @@ header p {
     background: rgba(251, 191, 36, 0.1);
 }
 
-.trash-btn:hover {
-    color: #ef4444;
-    border-color: #fca5a5;
-}
-
-.trash-btn.active {
-    color: #ef4444;
-    background: rgba(239, 68, 68, 0.1);
-    border-color: rgba(239, 68, 68, 0.3);
-}
 
 .card-top {
     margin-bottom: 22px;
@@ -694,17 +684,4 @@ header p {
     border-color: #0ea5e9;
     color: white !important;
     box-shadow: 0 6px 15px rgba(14, 165, 233, 0.3) !important;
-}
-
-.cat-btn-trash {
-    border-color: rgba(239, 68, 68, 0.4);
-    color: #dc2626;
-    margin-left: 10px; 
-}
-[data-theme="dark"] .cat-btn-trash { color: #f87171; }
-.cat-btn-trash:hover, .cat-btn-trash.active {
-    background: #ef4444;
-    border-color: #ef4444;
-    color: white !important;
-    box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3) !important;
 }
