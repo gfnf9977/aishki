@@ -161,6 +161,21 @@ function buildNavigation() {
     });
 }
 
+function selectCategoryFromCard(event, catKey) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    currentCategory = catKey;
+    
+    document.getElementById('toolSearch').value = '';
+    
+    buildNavigation();
+    
+    filterAndRender();
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function toggleFavorite(id, event) {
     event.preventDefault();
     initToolPref(id);
@@ -238,6 +253,11 @@ function renderTools(toolsToRender) {
         const isUsed = prefs.used;
         const currentRating = prefs.rating;
 
+        let displayMonetization = tool.monetization || 'Інфо';
+        if (tool.is_own && displayMonetization.includes('Власна розробка')) {
+            displayMonetization = '🌍 Open Source';
+        }
+
         const card = document.createElement('a');
         card.href = tool.url;
         card.target = "_blank";
@@ -253,13 +273,37 @@ function renderTools(toolsToRender) {
                 <div class="tool-icon">${tool.icon || '🚀'}</div>
             </div>`;
 
-        let tagsHTML = '';
+        let tagsHTML = '<div class="tags-wrapper">';
+        let hasTags = false;
+
+        if (tool.is_own) {
+            tagsHTML += `<span class="category-tag" 
+                            style="cursor: pointer; background: rgba(236, 72, 153, 0.15); color: #db2777;" 
+                            onclick="selectCategoryFromCard(event, 'own_dev')" 
+                            title="Показати всі власні розробки">
+                            🚀 Власна розробка
+                         </span>`;
+            hasTags = true;
+        }
+
         if (tool.categories && tool.categories.length > 0) {
-            tagsHTML = '<div class="tags-wrapper">';
             tool.categories.forEach(catKey => {
-                tagsHTML += `<span class="category-tag">#${catKey}</span>`;
+                const displayName = categoryConfig[catKey] || catKey.charAt(0).toUpperCase() + catKey.slice(1);
+                
+                tagsHTML += `<span class="category-tag" 
+                                style="cursor: pointer;" 
+                                onclick="selectCategoryFromCard(event, '${catKey}')" 
+                                title="Показати всі інструменти з категорії ${displayName}">
+                                #${displayName}
+                             </span>`;
             });
-            tagsHTML += '</div>';
+            hasTags = true;
+        }
+
+        tagsHTML += '</div>';
+
+        if (!hasTags) {
+            tagsHTML = '';
         }
 
         let ratingHTML = '';
@@ -285,7 +329,7 @@ function renderTools(toolsToRender) {
             <p class="tool-desc">${tool.desc}</p>
             ${tagsHTML}
             <div class="badges-wrapper">
-                <div class="badge ${badgeClass}">${tool.monetization || 'Інфо'}</div>
+                <div class="badge ${badgeClass}">${displayMonetization}</div>
                 <button class="used-btn ${isUsed ? 'active' : ''}" onclick="toggleUsed('${tool.id}', event)">${isUsed ? '✓ Протестовано' : '○ Не тестовано'}</button>
             </div>
             ${ratingHTML}
@@ -307,7 +351,7 @@ function filterAndRender() {
         filtered = filtered.filter(t => !t.categories || !t.categories.includes('tg_bots'));
         
         if (currentCategory === 'own_dev') {
-            filtered = filtered.filter(t => t.monetization && t.monetization.includes('Власна розробка'));
+            filtered = filtered.filter(t => t.is_own);
         } 
         else if (currentCategory !== 'all') {
             filtered = filtered.filter(t => t.categories && t.categories.includes(currentCategory));
