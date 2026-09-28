@@ -640,4 +640,45 @@ async function saveNewTool() {
     }
 }
 
+function exportDataToJson() {
+    if (!toolsData || toolsData.length === 0) {
+        alert("Немає даних для експорту!");
+        return;
+    }
+
+    const dataToExport = toolsData.map(tool => {
+        const prefs = userPreferences[tool.id] || { fav: false, used: false, rating: null };
+
+        return {
+            id: tool.id,
+            name: tool.name,
+            url: tool.url,
+            image: tool.image,
+            description: tool.description || tool.desc,
+            categories: tool.categories || [],
+            monetization: tool.monetization,
+            is_own: tool.is_own,
+            personal_data: {
+                is_saved: prefs.fav,
+                is_tested: prefs.used,
+                rating: prefs.rating
+            }
+        };
+    });
+
+    const jsonString = JSON.stringify(dataToExport, null, 2);
+    
+    const blob = new Blob([jsonString], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ai_toolbox_backup_${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
 loadTools();
