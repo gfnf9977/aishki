@@ -42,6 +42,13 @@ function debounce(func, wait) {
     };
 }
 
+// Підрахунок реальних переходів на інструмент
+function registerToolClick(toolId) {
+    const key = `clicks_${toolId}`;
+    const currentClicks = parseInt(localStorage.getItem(key)) || 0;
+    localStorage.setItem(key, currentClicks + 1);
+}
+
 const categoryConfig = {
     "all": "Усі інструменти",
     "own_dev": "🚀 Власна розробка",
@@ -263,6 +270,7 @@ function renderTools(toolsToRender) {
         card.target = "_blank";
         card.className = 'tool-card';
         card.style.animationDelay = `${index * 0.04}s`;
+        card.onclick = () => registerToolClick(tool.id);
 
         let visualElement = (tool.image && tool.image.trim() !== '') ?
             `<div class="tool-img-wrapper">
@@ -386,7 +394,30 @@ function filterAndRender() {
     if (usedFilter === 'tested') filtered = filtered.filter(t => userPreferences[t.id] && userPreferences[t.id].used);
     if (usedFilter === 'untested') filtered = filtered.filter(t => !userPreferences[t.id] || !userPreferences[t.id].used);
 
-    filtered.sort((a, b) => ((userPreferences[b.id] && userPreferences[b.id].fav) ? 1 : 0) - ((userPreferences[a.id] && userPreferences[a.id].fav) ? 1 : 0));
+    // СОРТУВАННЯ:
+    // 1. Збережені (В обране)
+    // 2. За кількістю кліків (частотою використання)
+    // 3. За датою додавання (залишається дефолтним)
+    filtered.sort((a, b) => {
+        const favA = userPreferences[a.id] && userPreferences[a.id].fav;
+        const favB = userPreferences[b.id] && userPreferences[b.id].fav;
+
+        // Перевіряємо статус "В обране"
+        if (favA !== favB) {
+            return favA ? -1 : 1; // true йде вище за false
+        }
+
+        // Якщо статуси однакові (обидва збережені або обидва ні) — порівнюємо кліки
+        const clicksA = parseInt(localStorage.getItem(`clicks_${a.id}`)) || 0;
+        const clicksB = parseInt(localStorage.getItem(`clicks_${b.id}`)) || 0;
+        
+        if (clicksB !== clicksA) {
+            return clicksB - clicksA; // Від більшого до меншого (чим більше кліків, тим вище)
+        }
+
+        // Якщо і лайки, і кліки однакові — повертаємо 0 (залишаємо порядок із БД, тобто за датою)
+        return 0;
+    });
 
     renderTools(filtered);
 }
