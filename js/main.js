@@ -128,40 +128,59 @@ function buildNavigation() {
     const nav = document.getElementById('categoriesNav');
     nav.innerHTML = '';
     
+    // 1. Створюємо кнопку "Усі"
     const allBtn = document.createElement('button');
     allBtn.className = `cat-btn ${currentCategory === 'all' ? 'active' : ''}`;
     allBtn.textContent = 'Усі інструменти';
     allBtn.onclick = () => {
-        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        allBtn.classList.add('active');
         currentCategory = 'all';
         document.getElementById('toolSearch').value = '';
+        buildNavigation();
         filterAndRender();
     };
     nav.appendChild(allBtn);
 
+    // 2. Створюємо кнопку "Власна розробка" (якщо є хоча б один такий інструмент)
+    const hasOwnTools = toolsData.some(tool => tool.is_own);
+    if (hasOwnTools) {
+        const ownBtn = document.createElement('button');
+        ownBtn.className = `cat-btn cat-btn-own ${currentCategory === 'own_dev' ? 'active' : ''}`;
+        ownBtn.textContent = '🚀 Власна розробка';
+        
+        ownBtn.style.background = currentCategory === 'own_dev' ? '#db2777' : 'rgba(236, 72, 153, 0.15)';
+        ownBtn.style.color = currentCategory === 'own_dev' ? '#fff' : '#db2777';
+        ownBtn.style.borderColor = '#db2777';
+
+        ownBtn.onclick = () => {
+            currentCategory = 'own_dev';
+            document.getElementById('toolSearch').value = '';
+            buildNavigation();
+            filterAndRender();
+        };
+        nav.appendChild(ownBtn);
+    }
+
+    // 3. Витягуємо всі інші динамічні категорії з бази даних
     const dbCategories = new Set();
     toolsData.forEach(tool => {
         if (tool.categories) tool.categories.forEach(c => dbCategories.add(c));
     });
 
+    // 4. Створюємо кнопки для звичайних категорій
     dbCategories.forEach(cat => {
-        const btn = document.createElement('button');
-        
-        let specialClass = '';
-        if (cat === 'own_dev') specialClass = 'cat-btn-own';
-        if (cat === 'tg_bots') specialClass = 'cat-btn-tg';
+        // Пропускаємо own_dev, бо вже створили для неї фіксовану кнопку
+        if (cat === 'own_dev') return;
 
-        btn.className = `cat-btn ${specialClass} ${cat === currentCategory ? 'active' : ''}`;
+        const btn = document.createElement('button');
+        btn.className = `cat-btn ${cat === currentCategory ? 'active' : ''}`;
         
         const displayName = categoryConfig[cat] || cat.charAt(0).toUpperCase() + cat.slice(1);
         btn.textContent = displayName;
         
         btn.onclick = () => {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
             currentCategory = cat;
             document.getElementById('toolSearch').value = '';
+            buildNavigation();
             filterAndRender();
         };
         nav.appendChild(btn);
@@ -296,6 +315,9 @@ function renderTools(toolsToRender) {
 
         if (tool.categories && tool.categories.length > 0) {
             tool.categories.forEach(catKey => {
+                // Пропускаємо own_dev у тегах, бо він вже доданий вище
+                if (catKey === 'own_dev') return;
+
                 const displayName = categoryConfig[catKey] || catKey.charAt(0).toUpperCase() + catKey.slice(1);
                 
                 tagsHTML += `<span class="category-tag" 
@@ -351,20 +373,23 @@ function filterAndRender() {
     const query = document.getElementById('toolSearch').value.toLowerCase();
     const usedFilter = document.getElementById('filterUsed').value;
 
-    let filtered = toolsData;
-
-    if (currentCategory === 'tg_bots') {
-        filtered = filtered.filter(t => t.categories && t.categories.includes('tg_bots'));
-    } else {
-        filtered = filtered.filter(t => !t.categories || !t.categories.includes('tg_bots'));
+    // Фільтруємо масив за категорією
+    let filtered = toolsData.filter(tool => {
+        let matchesCategory = false;
         
-        if (currentCategory === 'own_dev') {
-            filtered = filtered.filter(t => t.is_own);
-        } 
-        else if (currentCategory !== 'all') {
-            filtered = filtered.filter(t => t.categories && t.categories.includes(currentCategory));
+        if (currentCategory === 'all') {
+            // "Усі інструменти" НЕ включає tg_bots (вони окремо)
+            matchesCategory = !tool.categories || !tool.categories.includes('tg_bots');
+        } else if (currentCategory === 'tg_bots') {
+            matchesCategory = tool.categories && tool.categories.includes('tg_bots');
+        } else if (currentCategory === 'own_dev') {
+            matchesCategory = tool.is_own === true;
+        } else {
+            matchesCategory = tool.categories && tool.categories.includes(currentCategory);
         }
-    }
+
+        return matchesCategory;
+    });
 
     if (query.trim() !== '') {
         filtered = filtered.filter(t =>
@@ -402,20 +427,17 @@ function filterAndRender() {
         const favA = userPreferences[a.id] && userPreferences[a.id].fav;
         const favB = userPreferences[b.id] && userPreferences[b.id].fav;
 
-        // Перевіряємо статус "В обране"
         if (favA !== favB) {
-            return favA ? -1 : 1; // true йде вище за false
+            return favA ? -1 : 1;
         }
 
-        // Якщо статуси однакові (обидва збережені або обидва ні) — порівнюємо кліки
         const clicksA = parseInt(localStorage.getItem(`clicks_${a.id}`)) || 0;
         const clicksB = parseInt(localStorage.getItem(`clicks_${b.id}`)) || 0;
         
         if (clicksB !== clicksA) {
-            return clicksB - clicksA; // Від більшого до меншого (чим більше кліків, тим вище)
+            return clicksB - clicksA;
         }
 
-        // Якщо і лайки, і кліки однакові — повертаємо 0 (залишаємо порядок із БД, тобто за датою)
         return 0;
     });
 
