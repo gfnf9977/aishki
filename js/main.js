@@ -204,6 +204,7 @@ function selectCategoryFromCard(event, catKey) {
 
 function toggleFavorite(id, event) {
     event.preventDefault();
+    event.stopPropagation();
     initToolPref(id);
     userPreferences[id].fav = !userPreferences[id].fav;
     savePrefs();
@@ -212,6 +213,7 @@ function toggleFavorite(id, event) {
 
 function toggleUsed(id, event) {
     event.preventDefault();
+    event.stopPropagation();
     initToolPref(id);
     userPreferences[id].used = !userPreferences[id].used;
     savePrefs();
@@ -354,7 +356,7 @@ function renderTools(toolsToRender) {
             <div class="card-top">
                 ${visualElement}
                 <div class="card-actions">
-                    <button class="icon-btn" onclick="event.preventDefault(); toggleAddModal('${tool.id}')" title="Редагувати">✏️</button>
+                    <button class="icon-btn" onclick="event.preventDefault(); event.stopPropagation(); toggleAddModal('${tool.id}')" title="Редагувати">✏️</button>
                     <button class="icon-btn trash-btn" onclick="deleteTool('${tool.id}', event)" title="Видалити">🗑️</button>
                     <button class="icon-btn fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${tool.id}', event)" title="В обране">${isFav ? '★' : '☆'}</button>
                 </div>
