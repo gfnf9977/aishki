@@ -614,7 +614,7 @@ function toggleAddModal(toolId = null) {
                 document.getElementById('newToolName').value = tool.name || '';
                 document.getElementById('newToolUrl').value = tool.url || '';
                 document.getElementById('newToolImage').value = tool.image || '';
-                document.getElementById('newToolDesc').value = tool.desc || '';
+                document.getElementById('newToolDesc').value = tool.description || tool.desc || '';
                 document.getElementById('newToolMonetization').value = tool.monetization || '🆓 Free';
                 document.getElementById('newToolIsOwn').checked = tool.is_own || false;
                 
