@@ -247,7 +247,7 @@ function getBadgeClass(str = "") {
     if (lower.includes('free') && !lower.includes('freemium')) return 'free';
     if (lower.includes('freemium')) return 'freemium';
     if (lower.includes('paid')) return 'paid';
-    if (lower.includes('open source')) return 'opensource';
+    if (lower.includes('open source') || lower.includes('opensource')) return 'opensource';
     return '';
 }
 
@@ -279,8 +279,13 @@ function renderTools(toolsToRender) {
         const isUsed = prefs.used;
         const currentRating = prefs.rating;
 
-        let displayMonetization = tool.monetization || 'Інфо';
-        if (tool.is_own && displayMonetization.includes('Власна розробка')) {
+        let rawMon = (tool.monetization || '').toLowerCase();
+        let displayMonetization = '🆓 Free';
+        if (rawMon.includes('freemium')) displayMonetization = '🎁 Freemium';
+        else if (rawMon.includes('paid')) displayMonetization = '🔴 Paid';
+        else if (rawMon.includes('open source') || rawMon.includes('opensource')) displayMonetization = '🌍 Open Source';
+
+        if (tool.is_own && rawMon.includes('власна розробка')) {
             displayMonetization = '🌍 Open Source';
         }
 
@@ -315,7 +320,6 @@ function renderTools(toolsToRender) {
 
         if (tool.categories && tool.categories.length > 0) {
             tool.categories.forEach(catKey => {
-                // Пропускаємо own_dev у тегах, бо він вже доданий вище
                 if (catKey === 'own_dev') return;
 
                 const displayName = categoryConfig[catKey] || catKey.charAt(0).toUpperCase() + catKey.slice(1);
@@ -373,12 +377,10 @@ function filterAndRender() {
     const query = document.getElementById('toolSearch').value.toLowerCase();
     const usedFilter = document.getElementById('filterUsed').value;
 
-    // Фільтруємо масив за категорією
     let filtered = toolsData.filter(tool => {
         let matchesCategory = false;
         
         if (currentCategory === 'all') {
-            // "Усі інструменти" НЕ включає tg_bots (вони окремо)
             matchesCategory = !tool.categories || !tool.categories.includes('tg_bots');
         } else if (currentCategory === 'tg_bots') {
             matchesCategory = tool.categories && tool.categories.includes('tg_bots');
@@ -405,7 +407,7 @@ function filterAndRender() {
     } else {
         filtered = filtered.filter(t => {
             const mon = (t.monetization || '').toLowerCase();
-            const isFreeOS = (mon.includes('free') && !mon.includes('freemium')) || mon.includes('open source');
+            const isFreeOS = (mon.includes('free') && !mon.includes('freemium')) || mon.includes('open source') || mon.includes('opensource');
             const isFreemium = mon.includes('freemium');
             const isPaid = mon.includes('paid');
 
@@ -419,10 +421,6 @@ function filterAndRender() {
     if (usedFilter === 'tested') filtered = filtered.filter(t => userPreferences[t.id] && userPreferences[t.id].used);
     if (usedFilter === 'untested') filtered = filtered.filter(t => !userPreferences[t.id] || !userPreferences[t.id].used);
 
-    // СОРТУВАННЯ:
-    // 1. Збережені (В обране)
-    // 2. За кількістю кліків (частотою використання)
-    // 3. За датою додавання (залишається дефолтним)
     filtered.sort((a, b) => {
         const favA = userPreferences[a.id] && userPreferences[a.id].fav;
         const favB = userPreferences[b.id] && userPreferences[b.id].fav;
@@ -614,8 +612,16 @@ function toggleAddModal(toolId = null) {
                 document.getElementById('newToolName').value = tool.name || '';
                 document.getElementById('newToolUrl').value = tool.url || '';
                 document.getElementById('newToolImage').value = tool.image || '';
-                document.getElementById('newToolDesc').value = tool.description || tool.desc || '';
-                document.getElementById('newToolMonetization').value = tool.monetization || '🆓 Free';
+                document.getElementById('newToolDesc').value = tool.desc || '';
+                
+                let dbMon = (tool.monetization || '').toLowerCase();
+                let selectVal = 'free';
+                if (dbMon.includes('freemium')) selectVal = 'freemium';
+                else if (dbMon.includes('paid')) selectVal = 'paid';
+                else if (dbMon.includes('open source') || dbMon.includes('opensource')) selectVal = 'opensource';
+
+                document.getElementById('newToolMonetization').value = selectVal;
+                
                 document.getElementById('newToolIsOwn').checked = tool.is_own || false;
                 
                 selectedCategoriesForNewTool = [...(tool.categories || [])];
@@ -628,6 +634,7 @@ function toggleAddModal(toolId = null) {
             document.getElementById('newToolUrl').value = '';
             document.getElementById('newToolImage').value = '';
             document.getElementById('newToolDesc').value = '';
+            document.getElementById('newToolMonetization').value = 'free';
             document.getElementById('newToolIsOwn').checked = false;
             
             selectedCategoriesForNewTool = [];
