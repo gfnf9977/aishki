@@ -423,14 +423,20 @@ function filterAndRender() {
     if (usedFilter === 'tested') filtered = filtered.filter(t => userPreferences[t.id] && userPreferences[t.id].used);
     if (usedFilter === 'untested') filtered = filtered.filter(t => !userPreferences[t.id] || !userPreferences[t.id].used);
 
+    // СОРТУВАННЯ:
+    // 1. Збережені (В обране)
+    // 2. За кількістю кліків (частотою використання)
+    // 3. За датою додавання (залишається дефолтним)
     filtered.sort((a, b) => {
-        const favA = userPreferences[a.id] && userPreferences[a.id].fav;
-        const favB = userPreferences[b.id] && userPreferences[b.id].fav;
+        // Додаємо || false, щоб жорстко перетворити undefined на false
+        const favA = (userPreferences[a.id] && userPreferences[a.id].fav) || false;
+        const favB = (userPreferences[b.id] && userPreferences[b.id].fav) || false;
 
         if (favA !== favB) {
             return favA ? -1 : 1;
         }
 
+        // Якщо обидва інструменти однакові за статусом "Обране" - йдемо до кліків
         const clicksA = parseInt(localStorage.getItem(`clicks_${a.id}`)) || 0;
         const clicksB = parseInt(localStorage.getItem(`clicks_${b.id}`)) || 0;
         
